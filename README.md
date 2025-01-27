@@ -23,20 +23,18 @@ SUPER + Arrows = Change focus
 ## Packages & Apps
 > Unless specified, packages can be installed through AUR
 
-Necessary packages and apps for this config
+Necessary
 - hyprland
 - kitty
-- swaylock
+- dolphin
+- rofi
+- hyprsome (Used for multi-monitor hyprland workspaces)
+
+Recommended
+- swaylock-effects
 - swayidle
 - wlogout
 - waybar
-- dolphin
-- rofi
-
-Aren't necessary, but recommended
-- nwg-look
-- qt5ct/qt6ct
-- hyprsome (Used for multi-monitor hyprland workspaces)
 - appimagelauncher
 - Blueberry (bluetooth)
 - pavucontrol (audio)
@@ -49,6 +47,8 @@ Packages used for customization
 - spicetify-cli
 - oh-my-posh
 - betterdiscord (install appimage)
+- nwg-look
+- qt5ct/qt6ct
 
 Apps that I use
 - obsidian

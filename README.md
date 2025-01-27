@@ -17,19 +17,22 @@ Necessary packages and apps for this config
 - kitty
 - swaylock
 - swayidle
+- wlogout
 - waybar
 - dolphin
 - rofi
-- wlogout
 
-These aren't necessary per se, but are recommended
+Aren't necessary, but very helpful
 - nwg-look
 - qt5ct/qt6ct
 - hyprsome (Used for multi-monitor setup)
+- appimagelauncher
+- Blueberry (bluetooth)
+- pavucontrol (audio)
 
 
 Packages used for customization of other apps
-- spicetify
+- spicetify-cli
 - oh-my-posh
 - betterdiscord (install appimage)
 

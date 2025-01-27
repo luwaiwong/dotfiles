@@ -10,11 +10,11 @@ Home Desktop Setup
 - Two monitors
 
 ## Hotkeys
-SUPER = Windows key
-SUPER + Number = Go to that number workspace
-SUPER + Space = Open App
-SUPER + Arrows = Change focus
-...and probably much more
+SUPER = Windows key 
+SUPER + Number = Go to that number workspace 
+SUPER + Space = Open App 
+SUPER + Arrows = Change focus 
+...and probably much more 
 
 ## Packages & Apps
 > Unless specified, packages can be installed through AUR

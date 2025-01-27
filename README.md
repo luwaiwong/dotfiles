@@ -29,6 +29,9 @@ Aren't necessary, but very helpful
 - appimagelauncher
 - Blueberry (bluetooth)
 - pavucontrol (audio)
+- ttf-joypixels
+- ttf-font-awesome
+- nerd-fonts
 
 
 Packages used for customization of other apps

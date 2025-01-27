@@ -9,6 +9,13 @@ Home Desktop Setup
 - Nvidia RTX 3070
 - Two monitors
 
+## Hotkeys
+SUPER = Windows key
+SUPER + Number = Go to that number workspace
+SUPER + Space = Open App
+SUPER + Arrows = Change focus
+...and probably much more
+
 ## Packages & Apps
 > Unless specified, packages can be installed through AUR
 
@@ -22,10 +29,10 @@ Necessary packages and apps for this config
 - dolphin
 - rofi
 
-Aren't necessary, but very helpful
+Aren't necessary, but recommended
 - nwg-look
 - qt5ct/qt6ct
-- hyprsome (Used for multi-monitor setup)
+- hyprsome (Used for multi-monitor hyprland workspaces)
 - appimagelauncher
 - Blueberry (bluetooth)
 - pavucontrol (audio)
@@ -34,7 +41,7 @@ Aren't necessary, but very helpful
 - nerd-fonts
 
 
-Packages used for customization of other apps
+Packages used for customization
 - spicetify-cli
 - oh-my-posh
 - betterdiscord (install appimage)

@@ -1,4 +1,5 @@
-Necessary Packages
+# Packages & Apps
+Necessary packages and apps for this config
 - hyprland
 - kitty
 - swaylock
@@ -6,12 +7,19 @@ Necessary Packages
 - waybar
 - dolphin
 - rofi
+- wlogout
 
-Other Useful Packages
+These aren't necessary per se, but are recommended
 - nwg-look
 - qt5ct/qt6ct
 
-apps
+
+These are packages used for customization of other apps
+- spicetify
+- oh-my-posh
+- betterdiscord
+
+These are just a list of apps that I use
 - obsidian
 - spotify
 - discord

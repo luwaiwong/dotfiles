@@ -11,9 +11,13 @@ Home Desktop Setup
 
 ## Hotkeys
 SUPER = Windows key 
+
 SUPER + Number = Go to that number workspace 
+
 SUPER + Space = Open App 
+
 SUPER + Arrows = Change focus 
+
 ...and probably much more 
 
 ## Packages & Apps

@@ -1,4 +1,17 @@
-# Packages & Apps
+My Arch Linux + Hyprland WM config
+
+Subfolders for specific settings for my devices:
+Framework Laptop 13:
+- Ryzen 5 7640
+
+Home Desktop Setup
+- Ryzen 7 3700X
+- Nvidia RTX 3070
+- Two monitors
+
+## Packages & Apps
+> Unless specified, packages can be installed through AUR
+
 Necessary packages and apps for this config
 - hyprland
 - kitty
@@ -12,16 +25,18 @@ Necessary packages and apps for this config
 These aren't necessary per se, but are recommended
 - nwg-look
 - qt5ct/qt6ct
+- hyprsome (Used for multi-monitor setup)
 
 
-These are packages used for customization of other apps
+Packages used for customization of other apps
 - spicetify
 - oh-my-posh
-- betterdiscord
+- betterdiscord (install appimage)
 
-These are just a list of apps that I use
+Apps that I use
 - obsidian
 - spotify
 - discord
 - steam
+- nvim
 

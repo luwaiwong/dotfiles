@@ -43,12 +43,13 @@ Recommended
 - nerd-fonts
 
 
-Packages used for customization
+Packages used for theming/customization
 - spicetify-cli
 - oh-my-posh
 - betterdiscord (install appimage)
 - nwg-look
 - qt5ct/qt6ct
+- nordic-theme
 
 Apps that I use
 - obsidian
@@ -56,4 +57,5 @@ Apps that I use
 - discord
 - steam
 - nvim
+- syncthing
 

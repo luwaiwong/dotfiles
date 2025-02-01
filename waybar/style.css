@@ -2,8 +2,20 @@
   min-height: 0;
   min-width: 0;
   font-family: "MartianMono Nerd Font";
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
+}
+
+#custom-music.Playing {
+    background: rgb(137, 180, 250);      
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+    font-weight: bold;
+    color: #fff;
+}
+
+#custom-music.Paused,
+#custom-music.Stopped {
+    background: #161925;
 }
 
 window#waybar {

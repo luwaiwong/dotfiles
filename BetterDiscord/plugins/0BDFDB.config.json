@@ -1,0 +1,24 @@
+{
+	"all": {
+		"changeLogs": {
+			"BDFDB": "3.8.9",
+			"PluginRepo": "2.6.0",
+			"SpotifyControls": "1.4.1",
+			"ThemeRepo": "2.6.0"
+		},
+		"choices": {
+			"toastPosition": "right"
+		},
+		"general": {
+			"shareData": true,
+			"showToasts": true,
+			"checkForUpdates": false,
+			"showSupportBadges": false,
+			"useChromium": false
+		},
+		"hashes": {
+			"0BDFDB.data.json": "333ef0bfdf7a2d001bac137375994f5f09742f15",
+			"0BDFDB.raw.css": "498113a3e8ad38c97fabe36388f244f17b55223d"
+		}
+	}
+}

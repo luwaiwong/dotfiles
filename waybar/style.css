@@ -28,6 +28,10 @@ window#waybar {
   padding: 10px
 }
 
+#window {
+  margin-right: 50px 
+}
+
 #workspaces button {
   padding: 0.3rem 0.3rem;
   margin: 0.4rem 0.3rem;

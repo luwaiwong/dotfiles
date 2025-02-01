@@ -3,10 +3,12 @@
     "ThemeRepo": false,
     "BDFDB": true,
     "CallTimeCounter": false,
-    "SpotifyControls": true,
+    "SpotifyControls": false,
     "InvisibleTyping": false,
     "BetterAnimations": false,
     "TypingIndicator": false,
     "DoNotTrack": true,
-    "FreeEmojis": true
+    "FreeEmojis": true,
+    "WhoReacted": true,
+    "CollapsibleUI": true
 }

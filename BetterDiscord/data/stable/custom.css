@@ -1,4 +1,3 @@
-html:not(.visual-refresh) div .sidebar_a4d4d9:not(.hidden_a4d4d9) {
-    width: fit-content !important;
-    max-width: 240px !important
+div.notice__6e2b9.colorDanger__6e2b9 {
+    display: none !important;
 }

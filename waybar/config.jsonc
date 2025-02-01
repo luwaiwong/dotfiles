@@ -18,6 +18,7 @@
     "custom/notification",
 //    "cpu",
 //    "memory",
+    "custom/bluetooth",
     "battery",
     "pulseaudio",
     "cava",
@@ -94,7 +95,8 @@
     "active-only": false,
   },
   "hyprland/window": {
-    "format": "{title}",
+    "format": "{class}: {title}",
+    "max-length": 40
   },
   "tray": {
     "show-passive-items": true,
@@ -135,7 +137,7 @@
       "headphone": "",
       "default": [" ", " ", " "],
     },
-    "on-click": "pavucontrol",
+    "on-click": "killall pavucontrol; pavucontrol",
   },
   "custom/sep": {
     "format": "|",
@@ -145,6 +147,11 @@
     "tooltip": false,
     "on-click": "wlogout --protocol layer-shell -b 4",
     "format": "⏻",
+  },
+  "custom/bluetooth": {
+    "tooltip": false,
+    "on-click": "killall blueberry; blueberry",
+    "format": "󰂯",
   },
   "custom/notification": {
     "escape": true,

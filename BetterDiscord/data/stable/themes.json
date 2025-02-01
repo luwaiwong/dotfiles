@@ -1,7 +1,7 @@
 {
     "Comfy": false,
-    "midnight": false,
-    "Nordic": true,
+    "midnight": true,
+    "Nordic": false,
     "DiscordNight": false,
-    "Float": true
+    "Float": false
 }

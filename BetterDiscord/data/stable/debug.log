@@ -1,0 +1,819 @@
+
+
+================= Starting Debug Log (2025-02-01 20:53:35.502) =================
+[2025-02-01 20:53:35.509][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 20:53:38.025][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:53:38.174][CONSOLE:LOG] [BetterDiscord] [DevTools] Enabled
+[2025-02-01 20:53:39.100][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:53:39.721][CONSOLE:LOG] [BetterDiscord] [Debugger] Enabled
+[2025-02-01 20:53:40.970][CONSOLE:LOG] [BetterDiscord] [Debugger] Disabled
+[2025-02-01 20:53:41.370][CONSOLE:LOG] [BetterDiscord] [Debugger] Enabled
+[2025-02-01 20:53:42.051][CONSOLE:LOG] [BetterDiscord] [ReactDevTools] Enabled
+[2025-02-01 20:53:43.252][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:53:45.297][CONSOLE:LOG] [BetterDiscord] [InspectElementHotkey] Enabled
+[2025-02-01 20:53:45.839][CONSOLE:LOG] [BetterDiscord] [StopDevToolsWarning] Enabled
+[2025-02-01 20:53:48.392][CONSOLE:INFO] [RunningGameStore] Running Games Changed {"runningGames":[],"added":[],"removed":[],"previousGames":{}}
+[2025-02-01 20:53:48.393][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:53:48.394][CONSOLE:INFO] [OverlayBridgeStore] updateIntendedOverlayPIDs {"added":[],"removed":[]}
+[2025-02-01 20:53:48.394][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs {"isConnectionOpened":true,"action":{"added":[],"removed":[]}}
+[2025-02-01 20:53:48.394][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs: Removing all. {} {"added":[],"removed":[]}
+[2025-02-01 20:53:49.704][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:53:56.805][CONSOLE:INFO] [DoNotTrack] version 0.1.0 has started.
+[2025-02-01 20:53:56.816][CONSOLE:LOG] [discord_protos.discord_users.v1.PreloadedUserSettings] Updating status with delay 0
+[2025-02-01 20:53:56.825][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:53:56.843][CONSOLE:LOG] [discord_protos.discord_users.v1.PreloadedUserSettings] Scheduling save from markDirty
+[2025-02-01 20:53:56.856][CONSOLE:LOG] [discord_protos.discord_users.v1.PreloadedUserSettings] Persisting proto
+[2025-02-01 20:53:56.929][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:53:57.438][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:53:57.513][CONSOLE:LOG] [SpotifyControls] (v1.4.1) has been started
+[2025-02-01 20:53:57.648][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:53:58.058][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:53:59.961][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:03.528][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:05.687][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:07.319][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:16.576][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:19.122][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:19.415][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:22.223][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:23.695][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:26.690][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:26.955][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:27.799][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:30.777][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:35.512][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 20:54:36.073][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 20:54:38.627][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:38.846][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:38.959][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:40.194][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:44.742][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:46.405][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:46.547][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:52.128][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:54.172][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:55.624][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:56.074][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:54:56.296][CONSOLE:LOG] [SpotifyControls] (v1.4.1) has been stopped
+[2025-02-01 20:54:57.030][CONSOLE:LOG] [SpotifyControls] (v1.4.1) has been started
+[2025-02-01 20:54:58.592][CONSOLE:LOG] [SpotifyControls] (v1.4.1) has been stopped
+[2025-02-01 20:54:59.579][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:00.712][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:01.415][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:09.520][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:13.069][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:17.526][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:21.395][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:23.718][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:24.297][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:27.214][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:31.960][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:35.738][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:35.968][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:36.073][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 20:55:36.760][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 20:55:37.135][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:39.784][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:48.693][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:48.787][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:55:59.695][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:56:04.104][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:56:04.311][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:56:11.833][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:56:16.760][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:56:24.744][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:56:26.843][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:56:34.245][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:56:36.760][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 20:56:37.529][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 20:56:41.073][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:56:50.291][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:56:52.308][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:00.350][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:00.561][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:05.144][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:05.402][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:06.954][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:07.142][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:07.884][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:08.055][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:08.571][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:08.780][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:08.955][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:10.847][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:11.038][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:12.573][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:12.755][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:13.780][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:13.898][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:13.998][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:14.161][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:20.157][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:20.347][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:29.947][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:33.915][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:34.059][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:34.791][CONSOLE:ERROR] [AddonStore] Failed to fetch addon 'CollapsibleUI.plugin.js':
+
+ {"statusCode":502,"statusMessage":"Bad Gateway","url":"","headers":{"date":"Sat, 01 Feb 2025 20:57:34 GMT","content-type":"text/plain; charset=UTF-8","content-length":"15","connection":"keep-alive","report-to":"{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=ovNCSB76cx1AaGBDeDjUTlfegpVIWPyxwqWMoDJHExFhriacx5Di8QxTF6vu3IyfLJ9E6a93Ifmpmzz0szivuI8ZlygpQv6WifGf1pToRdvLtySKFyd6MgRm7G%2FFjKrEAE4I8g%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}","nel":"{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}","x-frame-options":"SAMEORIGIN","referrer-policy":"same-origin","cache-control":"private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0","expires":"Thu, 01 Jan 1970 00:00:01 GMT","server":"cloudflare","cf-ray":"90b4dac3bf57ac1b-YYZ","alt-svc":"h3=\":443\"; ma=86400","server-timing":"cfL4;desc=\"?proto=TCP&rtt=143608&min_rtt=142660&rtt_var=55394&sent=3&recv=5&lost=0&retrans=0&sent_bytes=203&recv_bytes=721&delivery_rate=9637&cwnd=250&unsent_bytes=0&cid=f231c0e73042048a&ts=497&x=0\""},"method":null,"aborted":false,"complete":true,"rawHeaders":["Date","Sat, 01 Feb 2025 20:57:34 GMT","Content-Type","text/plain; charset=UTF-8","Content-Length","15","Connection","keep-alive","Report-To","{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=ovNCSB76cx1AaGBDeDjUTlfegpVIWPyxwqWMoDJHExFhriacx5Di8QxTF6vu3IyfLJ9E6a93Ifmpmzz0szivuI8ZlygpQv6WifGf1pToRdvLtySKFyd6MgRm7G%2FFjKrEAE4I8g%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}","NEL","{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}","X-Frame-Options","SAMEORIGIN","Referrer-Policy","same-origin","Cache-Control","private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0","Expires","Thu, 01 Jan 1970 00:00:01 GMT","Server","cloudflare","CF-RAY","90b4dac3bf57ac1b-YYZ","alt-svc","h3=\":443\"; ma=86400","server-timing","cfL4;desc=\"?proto=TCP&rtt=143608&min_rtt=142660&rtt_var=55394&sent=3&recv=5&lost=0&retrans=0&sent_bytes=203&recv_bytes=721&delivery_rate=9637&cwnd=250&unsent_bytes=0&cid=f231c0e73042048a&ts=497&x=0\""]}
+[2025-02-01 20:57:37.529][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 20:57:40.545][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 20:57:41.111][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:41.122][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:41.240][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:41.242][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:42.813][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:42.992][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:43.034][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:43.036][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:43.285][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:45.237][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:45.428][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:46.692][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:46.793][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.892][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.893][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.894][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.895][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.896][CONSOLE:WARN] Window state not initialized window-1
+[2025-02-01 20:57:46.896][CONSOLE:WARN] Window state not initialized window-1
+
+
+================= Starting Debug Log (2025-02-01 20:57:53.693) =================
+[2025-02-01 20:57:53.693][CONSOLE:LOG] [discord_protos.discord_users.v1.PreloadedUserSettings] Updating status with delay 0
+[2025-02-01 20:57:53.695][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:53.698][CONSOLE:LOG] [discord_protos.discord_users.v1.PreloadedUserSettings] Scheduling save from markDirty
+[2025-02-01 20:57:53.768][CONSOLE:LOG] [discord_protos.discord_users.v1.PreloadedUserSettings] Persisting proto
+[2025-02-01 20:57:53.989][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:54.119][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:54.122][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 1080ms
+[2025-02-01 20:57:56.814][CONSOLE:LOG] [BDFDB] (v3.9.2) Finished loading Library
+[2025-02-01 20:57:57.046][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 20:57:57.468][CONSOLE:DEBUG] [Flux] Slow dispatch on GAMES_DATABASE_UPDATE: 144.60000000149012ms
+[2025-02-01 20:57:57.488][CONSOLE:INFO] [RunningGameStore] Running Games Changed {"runningGames":[],"added":[],"removed":[],"previousGames":{}}
+[2025-02-01 20:57:57.490][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:57.490][CONSOLE:INFO] [OverlayBridgeStore] updateIntendedOverlayPIDs {"added":[],"removed":[]}
+[2025-02-01 20:57:57.490][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs {"isConnectionOpened":true,"action":{"added":[],"removed":[]}}
+[2025-02-01 20:57:57.490][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs: Removing all. {} {"added":[],"removed":[]}
+[2025-02-01 20:57:57.686][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 2631ms
+[2025-02-01 20:57:57.845][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:58.004][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:58.062][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:58.065][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:58.422][CONSOLE:LOG] [discord_protos.discord_users.v1.FrecencyUserSettings] Scheduling save from markDirty
+[2025-02-01 20:57:58.423][CONSOLE:LOG] [discord_protos.discord_users.v1.FrecencyUserSettings] Persisting proto
+[2025-02-01 20:57:58.579][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:57:58.631][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:00.316][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 20:58:00.655][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 5014ms
+[2025-02-01 20:58:04.680][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:04.685][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:05.668][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 20:58:06.118][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 17806ms
+[2025-02-01 20:58:07.047][CONSOLE:DEBUG] [FetchBlockedDomain] Fetching blocked domain list
+[2025-02-01 20:58:07.172][CONSOLE:DEBUG] [FetchBlockedDomain] Server revision: 901, Client revision: 898
+[2025-02-01 20:58:07.254][CONSOLE:DEBUG] [FetchBlockedDomain] Retrieved delta, domains added: 7, domains removed: 0
+[2025-02-01 20:58:07.254][CONSOLE:DEBUG] [FetchBlockedDomain] Blocked domains list length: undefined before update
+[2025-02-01 20:58:07.260][CONSOLE:DEBUG] [FetchBlockedDomain] Delta applied successfully
+[2025-02-01 20:58:07.260][CONSOLE:DEBUG] [FetchBlockedDomain] Blocked domains list length: 37292 after update
+[2025-02-01 20:58:16.644][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:16.650][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:19.888][CONSOLE:WARN] [RTCLatencyTestManager] RTC region latency test is not supported.
+Error: RTC region latency test is not supported.
+    at C.rankRtcRegions (https://discord.com/assets/web.8c201d347d72d5fd.js:12:8969036)
+    at h._handleTestRegionsResponse (https://discord.com/assets/web.8c201d347d72d5fd.js:12:6634884)
+    at https://discord.com/assets/web.8c201d347d72d5fd.js:12:6635169
+[2025-02-01 20:58:23.923][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 20:58:24.263][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 56512ms
+[2025-02-01 20:58:39.836][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:39.947][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:39.965][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:40.082][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:42.442][CONSOLE:LOG] [MessageActionCreators] Fetching messages for 1211863534607147049 between undefined and undefined. jump={"jumpType":"ANIMATED"}
+[2025-02-01 20:58:42.816][CONSOLE:LOG] [MessageActionCreators] Fetched 50 messages for 1211863534607147049 isBefore:false isAfter:false
+[2025-02-01 20:58:42.823][CONSOLE:INFO] [ChannelMessages] loadComplete: resetting state for channelId=1211863534607147049, sending.length=0
+[2025-02-01 20:58:43.219][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:44.815][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:44.951][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:46.670][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:46.835][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:46.896][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:47.024][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:51.274][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:51.421][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:53.381][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:53.543][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:53.603][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:58:53.747][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:12.706][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:12.881][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:20.775][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 20:59:21.292][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 20:59:22.374][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:22.501][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:22.607][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:22.797][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:22.816][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:22.818][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:26.171][CONSOLE:LOG] [CollapsibleUI] Attempting pre-load...
+[2025-02-01 20:59:26.455][CONSOLE:LOG] [CollapsibleUI] (v9.1.3) has started.
+[2025-02-01 20:59:37.125][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:37.317][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:40.383][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:40.391][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:41.330][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:41.485][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:45.414][CONSOLE:LOG] [MessageActionCreators] Fetching messages for 1211564644490280993 between undefined and undefined. jump={"jumpType":"ANIMATED"}
+[2025-02-01 20:59:45.496][CONSOLE:LOG] [Routing/Utils] transitionTo - Transitioning to /channels/1211564643542106142/1211564644490280993
+[2025-02-01 20:59:45.510][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:46.378][CONSOLE:LOG] [MessageActionCreators] Fetched 1 messages for 1211564644490280993 isBefore:false isAfter:false
+[2025-02-01 20:59:46.379][CONSOLE:INFO] [ChannelMessages] loadComplete: resetting state for channelId=1211564644490280993, sending.length=0
+[2025-02-01 20:59:46.427][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:46.430][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:52.636][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:52.724][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:52.873][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:52.916][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:53.266][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:54.718][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:55.479][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:55.613][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:55.991][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 20:59:56.512][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:02.918][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:21.344][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 21:00:23.460][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 21:00:34.704][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:34.715][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:35.118][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:35.119][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:37.451][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:37.451][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:39.254][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:39.255][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:39.312][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:41.593][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:41.705][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:41.794][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:41.965][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:44.318][CONSOLE:LOG] [Routing/Utils] transitionTo - Transitioning to /channels/1211564643542106142/1211564644490280993
+[2025-02-01 21:00:44.327][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:45.525][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:45.526][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:46.228][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:46.294][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:47.006][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:47.069][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:52.211][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:52.313][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:52.517][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:52.518][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:52.995][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:53.092][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:54.055][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:00:54.056][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:03.735][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:05.673][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:05.674][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:13.062][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:13.063][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:19.293][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:19.294][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:20.524][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:20.525][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:20.817][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:20.817][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:22.361][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:22.413][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:22.414][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:22.624][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:23.150][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:23.150][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:23.460][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 21:01:24.051][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 21:01:24.470][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:25.352][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:27.816][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:27.817][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:27.932][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:27.933][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:28.164][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:28.165][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:28.461][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:31.380][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:32.756][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:32.757][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:34.212][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:34.212][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:37.257][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:37.258][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:37.258][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:39.004][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:39.004][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:42.587][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:42.857][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:42.857][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:49.120][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:49.214][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:49.540][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:49.636][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:49.961][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:49.962][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:50.984][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:50.986][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:52.234][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:52.235][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:55.662][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:55.663][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:57.385][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:01:57.387][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:01.454][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:01.455][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:02.065][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:02.066][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:05.365][CONSOLE:LOG] [MessageActionCreators] Fetching messages for 1333247869863460894 between undefined and undefined. jump={"jumpType":"ANIMATED"}
+[2025-02-01 21:02:05.461][CONSOLE:LOG] [Routing/Utils] transitionTo - Transitioning to /channels/1211564643542106142/1333247869863460894
+[2025-02-01 21:02:06.684][CONSOLE:LOG] [MessageActionCreators] Fetched 1 messages for 1333247869863460894 isBefore:false isAfter:false
+[2025-02-01 21:02:06.685][CONSOLE:INFO] [ChannelMessages] loadComplete: resetting state for channelId=1333247869863460894, sending.length=0
+[2025-02-01 21:02:11.711][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:13.185][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:16.978][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:17.318][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:17.480][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:18.934][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:19.090][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:21.709][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:21.826][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:21.835][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:21.982][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:24.091][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 21:02:24.651][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 21:02:24.860][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:24.860][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:26.493][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:29.324][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:29.324][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:29.348][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:29.537][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:29.866][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:30.421][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:30.636][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:30.636][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:32.001][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:32.002][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:37.013][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:37.014][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:38.912][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:50.800][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:51.018][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:51.214][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:51.369][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:51.606][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:51.606][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:52.560][CONSOLE:INFO] [RunningGameStore] Running Games Changed {"runningGames":[],"added":[],"removed":[],"previousGames":{}}
+[2025-02-01 21:02:52.561][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:52.562][CONSOLE:INFO] [OverlayBridgeStore] updateIntendedOverlayPIDs {"added":[],"removed":[]}
+[2025-02-01 21:02:52.562][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs {"isConnectionOpened":true,"action":{"added":[],"removed":[]}}
+[2025-02-01 21:02:52.562][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs: Removing all. {} {"added":[],"removed":[]}
+[2025-02-01 21:02:53.962][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:02:53.962][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:01.454][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:01.455][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:03.481][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:03.482][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:03.782][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:05.323][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:05.324][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:08.703][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:08.704][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:10.116][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:10.117][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:17.408][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:17.409][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:19.661][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:19.662][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:20.477][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:20.631][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:20.764][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:20.923][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:24.127][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:24.127][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:24.664][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 21:03:26.187][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 21:03:33.762][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:33.762][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:34.454][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:36.042][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:36.221][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:36.536][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:36.624][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:36.766][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:36.956][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:37.287][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:37.437][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:41.412][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:41.499][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:41.626][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:41.843][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:41.994][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:41.995][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:42.552][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:42.555][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:43.523][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:44.454][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:44.455][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:49.475][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:49.553][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:49.646][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:49.796][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:49.995][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:51.679][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:55.821][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:55.974][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:57.577][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:57.739][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:59.052][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:03:59.186][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:02.575][CONSOLE:INFO] [RunningGameStore] Running Games Changed {"runningGames":[],"added":[],"removed":[],"previousGames":{}}
+[2025-02-01 21:04:02.581][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:02.590][CONSOLE:INFO] [OverlayBridgeStore] updateIntendedOverlayPIDs {"added":[],"removed":[]}
+[2025-02-01 21:04:02.590][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs {"isConnectionOpened":true,"action":{"added":[],"removed":[]}}
+[2025-02-01 21:04:02.590][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs: Removing all. {} {"added":[],"removed":[]}
+[2025-02-01 21:04:22.611][CONSOLE:INFO] [RunningGameStore] Running Games Changed {"runningGames":[],"added":[],"removed":[],"previousGames":{}}
+[2025-02-01 21:04:22.615][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:22.621][CONSOLE:INFO] [OverlayBridgeStore] updateIntendedOverlayPIDs {"added":[],"removed":[]}
+[2025-02-01 21:04:22.621][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs {"isConnectionOpened":true,"action":{"added":[],"removed":[]}}
+[2025-02-01 21:04:22.622][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs: Removing all. {} {"added":[],"removed":[]}
+[2025-02-01 21:04:26.188][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 21:04:26.754][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 21:04:27.584][CONSOLE:INFO] [RunningGameStore] Running Games Changed {"runningGames":[],"added":[],"removed":[],"previousGames":{}}
+[2025-02-01 21:04:27.585][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:27.586][CONSOLE:INFO] [OverlayBridgeStore] updateIntendedOverlayPIDs {"added":[],"removed":[]}
+[2025-02-01 21:04:27.586][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs {"isConnectionOpened":true,"action":{"added":[],"removed":[]}}
+[2025-02-01 21:04:27.586][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs: Removing all. {} {"added":[],"removed":[]}
+[2025-02-01 21:04:33.034][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:33.037][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:33.317][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:33.318][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:40.215][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:40.344][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:40.637][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:40.783][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:52.623][CONSOLE:INFO] [RunningGameStore] Running Games Changed {"runningGames":[],"added":[],"removed":[],"previousGames":{}}
+[2025-02-01 21:04:52.626][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:52.632][CONSOLE:INFO] [OverlayBridgeStore] updateIntendedOverlayPIDs {"added":[],"removed":[]}
+[2025-02-01 21:04:52.632][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs {"isConnectionOpened":true,"action":{"added":[],"removed":[]}}
+[2025-02-01 21:04:52.632][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs: Removing all. {} {"added":[],"removed":[]}
+[2025-02-01 21:04:52.966][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:52.967][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:55.763][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:55.765][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:57.529][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:57.529][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:57.585][CONSOLE:INFO] [RunningGameStore] Running Games Changed {"runningGames":[],"added":[],"removed":[],"previousGames":{}}
+[2025-02-01 21:04:57.586][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:04:57.586][CONSOLE:INFO] [OverlayBridgeStore] updateIntendedOverlayPIDs {"added":[],"removed":[]}
+[2025-02-01 21:04:57.587][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs {"isConnectionOpened":true,"action":{"added":[],"removed":[]}}
+[2025-02-01 21:04:57.587][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs: Removing all. {} {"added":[],"removed":[]}
+[2025-02-01 21:05:04.604][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:04.605][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:07.403][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:07.404][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:07.562][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:07.563][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:07.589][CONSOLE:INFO] [RunningGameStore] Running Games Changed {"runningGames":[],"added":[],"removed":[],"previousGames":{}}
+[2025-02-01 21:05:07.590][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:07.591][CONSOLE:INFO] [OverlayBridgeStore] updateIntendedOverlayPIDs {"added":[],"removed":[]}
+[2025-02-01 21:05:07.591][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs {"isConnectionOpened":true,"action":{"added":[],"removed":[]}}
+[2025-02-01 21:05:07.591][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs: Removing all. {} {"added":[],"removed":[]}
+[2025-02-01 21:05:08.613][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:08.613][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:22.672][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:22.673][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:24.577][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:24.578][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:26.755][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 21:05:27.407][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 21:05:28.790][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:32.916][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:32.917][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:37.816][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:37.817][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:40.178][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:40.179][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:43.686][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:43.687][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:47.056][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:47.069][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:56.108][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:05:58.317][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:08.223][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:13.120][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:13.956][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:19.029][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:22.765][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:27.410][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 21:06:27.972][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 21:06:41.985][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:41.986][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:42.401][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:42.402][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:50.673][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:50.674][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:56.574][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:56.576][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:59.359][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:06:59.360][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:03.933][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:03.935][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:04.157][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:04.157][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:06.681][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:06.681][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:11.254][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:11.255][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:12.011][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:12.012][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:16.212][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:16.212][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:16.315][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:16.316][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:21.266][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:21.268][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:23.801][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:23.802][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:27.974][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 21:07:30.103][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 21:07:51.269][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:07:56.673][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:06.827][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:12.407][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:18.079][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:25.021][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:25.023][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:26.256][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:26.256][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:28.108][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:30.103][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 21:08:31.221][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 21:08:31.858][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:31.859][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:33.562][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:49.356][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:49.359][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:54.521][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:56.162][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:56.163][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:57.404][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:57.404][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:59.225][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:08:59.226][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:00.714][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:00.716][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:03.424][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:03.425][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:03.750][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:03.750][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:07.316][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:19.420][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:20.529][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:20.753][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:20.954][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:23.110][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:23.807][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:31.251][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 21:09:32.360][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 21:09:42.687][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:43.058][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:43.059][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:09:48.431][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:01.279][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:01.507][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:03.060][CONSOLE:LOG] [MessageActionCreators] Fetching messages for 1035266122808823921 between undefined and undefined. jump={"jumpType":"ANIMATED"}
+[2025-02-01 21:10:04.071][CONSOLE:LOG] [MessageActionCreators] Fetched 50 messages for 1035266122808823921 isBefore:false isAfter:false
+[2025-02-01 21:10:04.074][CONSOLE:INFO] [ChannelMessages] loadComplete: resetting state for channelId=1035266122808823921, sending.length=0
+[2025-02-01 21:10:04.628][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:06.465][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:06.607][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:12.202][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:12.341][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:13.894][CONSOLE:INFO] [MessageQueue] Queueing message to be sent LogId:6751
+[2025-02-01 21:10:13.894][CONSOLE:LOG] [MessageQueue] Draining message from queue LogId:6751 QueueLength: 0
+[2025-02-01 21:10:13.894][CONSOLE:LOG] [MessageQueue] Draining Message Queue with:  0
+[2025-02-01 21:10:14.086][CONSOLE:LOG] [MessageQueue] Finished draining message from queue LogId:6751 QueueLength: 0
+[2025-02-01 21:10:16.393][CONSOLE:INFO] [MessageQueue] Queueing message to be sent LogId:6227
+[2025-02-01 21:10:16.393][CONSOLE:LOG] [MessageQueue] Draining message from queue LogId:6227 QueueLength: 0
+[2025-02-01 21:10:16.393][CONSOLE:LOG] [MessageQueue] Draining Message Queue with:  0
+[2025-02-01 21:10:17.373][CONSOLE:LOG] [MessageQueue] Finished draining message from queue LogId:6227 QueueLength: 0
+[2025-02-01 21:10:18.706][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:18.707][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:20.702][CONSOLE:INFO] [MessageQueue] Queueing message to be sent LogId:7680
+[2025-02-01 21:10:20.702][CONSOLE:LOG] [MessageQueue] Draining message from queue LogId:7680 QueueLength: 0
+[2025-02-01 21:10:20.702][CONSOLE:LOG] [MessageQueue] Draining Message Queue with:  0
+[2025-02-01 21:10:20.896][CONSOLE:LOG] [MessageQueue] Finished draining message from queue LogId:7680 QueueLength: 0
+[2025-02-01 21:10:23.013][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:23.014][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:23.081][CONSOLE:INFO] [MessageQueue] Queueing message to be sent LogId:8112
+[2025-02-01 21:10:23.081][CONSOLE:LOG] [MessageQueue] Draining message from queue LogId:8112 QueueLength: 0
+[2025-02-01 21:10:23.081][CONSOLE:LOG] [MessageQueue] Draining Message Queue with:  0
+[2025-02-01 21:10:23.351][CONSOLE:LOG] [MessageQueue] Finished draining message from queue LogId:8112 QueueLength: 0
+[2025-02-01 21:10:23.930][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:23.932][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:26.270][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:26.271][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:26.323][CONSOLE:INFO] [MessageQueue] Queueing message to be sent LogId:2257
+[2025-02-01 21:10:26.323][CONSOLE:LOG] [MessageQueue] Draining message from queue LogId:2257 QueueLength: 0
+[2025-02-01 21:10:26.323][CONSOLE:LOG] [MessageQueue] Draining Message Queue with:  0
+[2025-02-01 21:10:26.761][CONSOLE:LOG] [MessageQueue] Finished draining message from queue LogId:2257 QueueLength: 0
+[2025-02-01 21:10:26.799][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:26.800][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:27.169][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:27.170][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:28.077][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:28.077][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:28.078][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:28.357][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:30.344][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:30.474][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:32.360][CONSOLE:INFO] [Spotify] WS Connecting
+[2025-02-01 21:10:33.152][CONSOLE:INFO] [Spotify] WS Disconnected. Next retry in 60000ms
+[2025-02-01 21:10:35.232][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:35.232][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:35.456][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:35.460][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:37.062][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:37.365][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:37.659][CONSOLE:INFO] [RunningGameStore] Running Games Changed {"runningGames":[],"added":[],"removed":[],"previousGames":{}}
+[2025-02-01 21:10:37.660][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:37.662][CONSOLE:INFO] [OverlayBridgeStore] updateIntendedOverlayPIDs {"added":[],"removed":[]}
+[2025-02-01 21:10:37.662][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs {"isConnectionOpened":true,"action":{"added":[],"removed":[]}}
+[2025-02-01 21:10:37.662][CONSOLE:DEBUG] [OverlayBridgeStore] updateIntendedOverlayPIDs: Removing all. {} {"added":[],"removed":[]}
+[2025-02-01 21:10:40.008][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:41.532][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:51.257][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:51.258][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:53.865][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:10:53.866][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument
+[2025-02-01 21:11:04.170][CONSOLE:ERROR] [injectMediaEngine] Potentially corrupt installation: /home/luwai/.config/discord/0.0.82/modules/discord_voice/discord_voice.node: cannot enable executable stack as shared object requires: Invalid argument

@@ -26,15 +26,15 @@ SUPER + Arrows = Change focus
 Necessary
 - hyprland
 - kitty
-- dolphin
 - rofi
 - hyprsome (Used for multi-monitor hyprland workspaces)
 
 Recommended
+- Nemo (file manager)
 - swaylock-effects
 - swayidle
 - wlogout
-- waybar
+- waybar-cava
 - appimagelauncher
 - Blueberry (bluetooth)
 - pavucontrol (audio)
@@ -46,7 +46,7 @@ Recommended
 Packages used for theming/customization
 - spicetify-cli
 - oh-my-posh
-- betterdiscord (install appimage)
+- betterdiscord (install appimage from site)
 - nwg-look
 - qt5ct/qt6ct
 - nordic-theme

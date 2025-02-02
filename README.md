@@ -41,6 +41,7 @@ Recommended
 - ttf-joypixels
 - ttf-font-awesome
 - nerd-fonts
+- hyprshot (screenshot utility)
 
 
 Packages used for theming/customization

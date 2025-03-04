@@ -19,11 +19,11 @@
 //    "cpu",
 //    "memory",
     "custom/bluetooth",
-    "battery",
     "pulseaudio",
     "cava",
     "clock",
     "clock#simpleclock",
+    "battery",
     "custom/power",
   ],
   "cava": {
@@ -31,7 +31,7 @@
         "framerate": 30,
         "autosens": 1,
         //"sensitivity": 15,
-        "bars": 10,
+        "bars": 7,
         "lower_cutoff_freq": 50,
         "higher_cutoff_freq": 10000,
         "method": "pipewire",
@@ -86,6 +86,7 @@
     "player-icons": {
       "default": "",
     },
+    "max-length":40,
   },
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -95,7 +96,7 @@
     "active-only": false,
   },
   "hyprland/window": {
-    "format": "{class}: {title}",
+    "format": "{class} {title}",
     "max-length": 40
   },
   "tray": {
@@ -130,6 +131,28 @@
   "memory": {
     "format": " {used:0.1f}Gi",
   },
+  "battery":{
+	  
+	//"interval": 5,
+	"align": 0,
+	"rotate": 0,
+	//"bat": "BAT1",
+	//"adapter": "ACAD",
+	"full-at": 100,
+	"design-capacity": false,
+	"format": "{icon} {capacity}%",
+	"format-charging": " {capacity}%",
+	"format-plugged": "󱘖 {capacity}%",
+	"format-alt-click": "click",
+	"format-full": "{icon} Full",
+	"format-alt": "{icon} {time}",
+	"format-icons": [
+		"󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+	],
+	"format-time": "{H}h {M}min",
+	"tooltip": true,
+	"tooltip-format": "{timeTo} {power}w",
+},
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "format-muted": "  muted",

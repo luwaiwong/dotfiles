@@ -1,4 +1,4 @@
-My Arch Linux + Hyprland config
+My Nord themed Arch Linux + Hyprland config
 
 ## Gallery
 ![image](https://github.com/user-attachments/assets/3b18811f-b2f7-4057-adfa-5980ec7783dc)

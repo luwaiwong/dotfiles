@@ -1,5 +1,13 @@
 My Arch Linux + Hyprland config
 
+## Gallery
+![image](https://github.com/user-attachments/assets/3b18811f-b2f7-4057-adfa-5980ec7783dc)
+![image](https://github.com/user-attachments/assets/d8694b0a-b253-4366-9e0e-d8f248857541)
+![image](https://github.com/user-attachments/assets/aa4b35e7-57f3-43af-94ad-0537952156e4)
+![image](https://github.com/user-attachments/assets/86409d85-d1ff-4cd6-a402-36e81b36cdd3)
+
+
+
 ## Hotkeys
 SUP = Windows key 
 

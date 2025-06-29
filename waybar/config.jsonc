@@ -1,16 +1,16 @@
 {
   "layer": "bottom",
   "position": "top",
-  "height": 10,
+  "height": 2,
   "spacing": 0,
-  "margin": 2,
+  "margin": 0,
   "exclusive": true,
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,
   "modules-left": [
-	"hyprland/workspaces",
-  	"hyprland/window"
+	  "hyprland/workspaces",
+	  "hyprland/window",
   ],
   "modules-center": ["mpris"],
   "modules-right": [
@@ -21,7 +21,6 @@
     "custom/bluetooth",
     "pulseaudio",
     "cava",
-    "clock",
     "clock#simpleclock",
     "battery",
     "custom/power",
@@ -96,7 +95,7 @@
     "active-only": false,
   },
   "hyprland/window": {
-    "format": "{class} {title}",
+    "format": "{class}",
     "max-length": 40
   },
   "tray": {
@@ -154,8 +153,8 @@
 	"tooltip-format": "{timeTo} {power}w",
 },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "  muted",
+    "format": "{icon}{volume}%",
+    "format-muted": " ",
     "format-icons": {
       "headphone": "",
       "default": [" ", " ", " "],

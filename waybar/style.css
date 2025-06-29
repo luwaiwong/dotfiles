@@ -2,7 +2,7 @@
   min-height: 0;
   min-width: 0;
   font-family: "MartianMono Nerd Font";
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -25,17 +25,17 @@ window#waybar {
   /* background-color: #181825; */
   background-color: transparent;
   /* background-color: rgba(24, 24, 37, 0.6); */
-  padding: 10px
 }
 
 #window {
-  margin-right: 50px 
+  /* margin-right: 50px;
+  margin-left:100px */
 }
 
 #workspaces button {
-  padding: 0.3rem 0.3rem;
-  margin: 0.4rem 0.3rem;
-  border-radius: 6px;
+  padding: 0.1rem 0.1rem;
+  margin: 0.2rem 0.1rem;
+  border-radius: 16px;
   /* background-color: #181825; */
   color: #D8DEE9;
 }
@@ -70,11 +70,14 @@ window#waybar {
 #cava,
 #mpris {
   /* padding: 0.2rem 0.3rem; */
-  margin: 0.2rem 0.4rem;
+  margin: 0.2rem 0.2rem;
   /* border-radius: 6px; */
   /* background-color: #181825; */
 }
 
+#workspaces{
+  margin-left: 0.2rem;
+}
 #mpris.playing {
   color: #A3BE8C;
 }
@@ -126,6 +129,7 @@ window#waybar.empty #window {
 
 #custom-power {
   color: #BF616A;
+  margin-right: 0.4rem
 }
 
 #battery {

@@ -18,7 +18,13 @@ if ! pacman -Q yay &> /dev/null; then
     yay -Y --devel --save
 fi
 
-yay -S cava hyprland kitty omposh rofi waybar-cava wlogout --noconfirm
+read -p "Do you want to install packages? [y/N]: " install_packages
+
+if [[ "$install_packages" =~ ^[Yy]$ ]]; then
+    # Add the nvidia source line just after the monitor config line
+    yay -S cava hyprland kitty omposh rofi waybar-cava wlogout hyprsome --noconfirm
+fi
+
 
 # Copy config files to ~/.config
 for dir in cava hypr kitty omposh rofi spicetify waybar wlogout; do
@@ -44,10 +50,9 @@ select monitor_conf in "dualmonitor.conf" "singlemonitor.conf"; do
         echo "1 screen or 2 screens."
     fi
 done
-yay -S hyprsome --noconfirm
 
 # Add the correct source line at the top of hyprland.conf
-echo  "\nsource = \$hardware/$monitor_conf" >> "$hyprconf"
+echo  "source = \$hardware/$monitor_conf" >> "$hyprconf"
 
 # Ask for nvidia configuration
 # Ask user if they want to include nvidia.conf
@@ -58,7 +63,7 @@ sed -i '/source = .*\/hardware\/nvidia\.conf/d' "$hyprconf"
 
 if [[ "$include_nvidia" =~ ^[Yy]$ ]]; then
     # Add the nvidia source line just after the monitor config line
-    echo  "\nsource = \$hardware/nvidia.conf" >> "$hyprconf"    
+    echo  "source = \$hardware/nvidia.conf" >> "$hyprconf"    
 fi
 
 echo  "all done :)"    

@@ -1,16 +1,8 @@
 #! /bin/bash
 
 # list of apps to update
-list = (
-    cava
-    hypr
-    kitty
-    omposh
-    rofi
-    spicetify
-    waybar
-    wlogout
-)
+list="cava hypr kitty omposh rofi spicetify waybar wlogout"
+
 
 # Delete existing config files in dotfiles directory
 for dir in $list; do

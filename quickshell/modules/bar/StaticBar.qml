@@ -57,6 +57,12 @@ Scope{
                         }
                     }
                 }
+                Text{
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    text: "windowh"
+                    color: "black"
+                    
+                }
             }
 
         }

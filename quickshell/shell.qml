@@ -11,7 +11,6 @@ import "modules/bar"
 
 ShellRoot {
     ReloadPopup {}
-    DynamicBar {
-    }
+    DynamicBar {}
     // StaticBar {}
 }

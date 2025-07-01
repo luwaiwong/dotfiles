@@ -5,6 +5,7 @@ import Quickshell.Hyprland
 import QtQuick
 import QtQuick.Layouts
 import "widgets"
+import "root:/utils" 
 
 Scope{
     Variants {
@@ -17,21 +18,34 @@ Scope{
                 top: true
             }
 
-            // --- THE FIX STARTS HERE ---
+            // Show bar when workspace changes
+            Connections {
+                target: Hyprland
+                function onRawEvent(event) { 
+                    if (event.name === "workspace") {
+                        root.showBar()
 
-            // This single property will drive both the bar's position and its topCurveOffset
-            property real effectiveVerticalOffset: -  (barShape.implicitHeight - 10) // 0 means fully visible, negative means moving up
+                        // Find the biggest window in the current workspace
 
-            // Behavior for the new effectiveVerticalOffset property
-            Behavior on effectiveVerticalOffset {
-                NumberAnimation {
-                    // Use a single, consistent duration for the entire show/hide animation
-                    duration: 200 // Adjust this for your desired speed
-                    easing.type: Easing.OutCubic // A smoother easing curve for movement
+                        const windowsInThisWorkspace = HyprlandData.windowList.filter(w => w.workspace.id == event.data)
+                        // Check if there are windows in this workspace
+                        if (windowsInThisWorkspace.length > 0) {
+                            // ONly if there are windows,  hide the bar
+                            root.startLongHideTimer(); 
+                        }
+                        console.log(windowsInThisWorkspace.length)
+                    }
                 }
             }
+            
+            property real effectiveVerticalOffset: -  (barShape.implicitHeight - 8) 
 
-            // --- THE FIX ENDS HERE ---
+            Behavior on effectiveVerticalOffset {
+                NumberAnimation {
+                    duration: 200 
+                    easing.type: Easing.OutCubic //
+                }
+            }
 
             property bool isShown: false // Initially hidden
 
@@ -40,8 +54,13 @@ Scope{
             implicitWidth: modelData.width/2
 
             MouseArea {
-                anchors.fill: parent
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: barShape.implicitWidth
+                height: childrenRect.height
+                
                 hoverEnabled: true
+                    anchors.topMargin: root.effectiveVerticalOffset
 
                 onEntered: root.showBar();
                 onExited: root.startHideTimer();
@@ -58,7 +77,6 @@ Scope{
                     // Drive the bar's position directly from effectiveVerticalOffset
                     // When effectiveVerticalOffset is 0, bar is at top.
                     // When effectiveVerticalOffset is negative, bar moves up.
-                    anchors.topMargin: root.effectiveVerticalOffset
 
                     // Drive the BarBackgroundShape's internal topCurveOffset
                     // When effectiveVerticalOffset goes from 0 to -X, topCurveOffset goes from 0 to X
@@ -68,7 +86,7 @@ Scope{
 
                     // --- THE FIX ENDS HERE ---
 
-                    barWidth: childrenRect.width + 40
+                    barWidth: barContent.implicitWidth + 40
                     barHeight: 40 // Keep this constant, the topCurveOffset handles the visual change
                     barColor: "black"
 
@@ -77,6 +95,7 @@ Scope{
                     // The single Behavior on effectiveVerticalOffset handles all the animation.
 
                     BarContent {
+                        id: barContent
                         root: root
                     }
                 }
@@ -87,29 +106,41 @@ Scope{
             // --- Auto-hide Timer ---
             Timer {
                 id: hideBarTimer
-                interval: 800
+                interval: 200
+                repeat: false
+                onTriggered: root.hideBar()
+            }
+
+            Timer {
+                id: longHideBarTimer
+                interval: 1500
                 repeat: false
                 onTriggered: root.hideBar()
             }
 
             // --- Show/Hide Functions ---
             function showBar() {
+                hideBarTimer.stop();
+                longHideBarTimer.stop();
                 if (root.isShown) return;
                 root.isShown = true;
                 root.effectiveVerticalOffset = 0; // Set to 0 to show the bar (animates via Behavior)
-                hideBarTimer.stop();
             }
 
             function hideBar() {
                 if (!root.isShown) return;
                 root.isShown = false;
         
-                var hideAmount = barShape.implicitHeight - 10; // Adjust '10' for how much you want to remain visible
+                var hideAmount = barShape.implicitHeight - 8; // Adjust '10' for how much you want to remain visible
                 root.effectiveVerticalOffset = -hideAmount; // Animate to this negative value (animates via Behavior)
             }
 
             function startHideTimer() {
                 hideBarTimer.restart();
+            }
+
+            function startLongHideTimer() {
+                longHideBarTimer.restart();
             }
         }
     }

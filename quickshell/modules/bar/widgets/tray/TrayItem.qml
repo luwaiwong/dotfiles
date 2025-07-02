@@ -10,8 +10,8 @@ MouseArea {
     required property SystemTrayItem modelData
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton
-    implicitWidth: 20
-    implicitHeight: 20
+    implicitWidth: 17
+    implicitHeight: 17
     // anchors.leftMargin: 10
     // anchors.rightMargin: 10
 
@@ -28,7 +28,8 @@ MouseArea {
         id: menu
 
         menu: root.modelData.menu
-        anchor.window: this.QsWindow.window
+        anchor.item: root
+        // anchor
     
     }
 

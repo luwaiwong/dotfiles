@@ -10,8 +10,8 @@ MouseArea {
     id: root
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton
-    implicitWidth: 20 
-    implicitHeight: 20
+    implicitWidth: Math.max(powerText.width, 21)
+    implicitHeight: 18
 
     // --- Configuration for Icons and Formatting (from your provided snippet) ---
     // These are now properties of the PowerItem itself for easy access/modification
@@ -20,61 +20,97 @@ MouseArea {
     ]
     property string chargingIcon: ""
     property string pluggedIcon: "󱘖"
-    property string formatString: "{icon} {capacity}%"
-    property string formatDischargingString: " {capacity}%"
-    property string formatPluggedString: "󱘖 {capacity}%"
-    property string formatFullString: "{icon} Full"
-    property string formatBatteryString: "{icon} {time}"
-    property string formatTimeString: "{H}h {M}min"
+
     property int batteryIconLevelSteps: 10 // Your format-icons array has 11 elements (0-100, 10 steps)
 
     property int mode: 0
+    property int maxMode: 3
 
-    property string currentIconChar: {
+    function getCurrentIconChar() {
         if (!UPower.displayDevice.isLaptopBattery) {
             return root.pluggedIcon; // No battery, just show plugged icon
         }
 
         if (UPower.displayDevice.timeToFull != 0) {
-            return root.chargingIcon;
+            return root.pluggedIcon;
         }
 
         // Determine battery icon based on level
         // map 0-100% to indices 0-10 of format-icons (11 elements)
-        let index = Math.floor(UPower.batteryLevel / root.batteryIconLevelSteps);
+        let index = Math.floor(getRealPercentage()*100 / root.batteryIconLevelSteps);
         // Ensure index is within bounds [0, iconFormats.length - 1]
         index = Math.max(0, Math.min(index, root.iconFormats.length - 1));
         return root.iconFormats[index];
     }
 
-    property string formattedBatteryText: {
-        let text = "";
-
-        if (!UPower.displayDevice.isLaptopBattery) { // If there is no battery connected
-            text = root.pluggedIcon; 
-        } 
-        else if (UPower.displayDevice.timeToFull != 0) { // If Charging
-            text = root.formatPluggedString.arg("capacity", UPower.displayDevice.percentage.toFixed(0));
-        } 
-        else if (UPower.displayDevice.timeToEmpty != 0) { // If Discharging
-            text = root.formatDischargingString.arg("capacity", UPower.displayDevice.percentage.toFixed(0));
-        } 
-        return text;
+    property string formattedBatteryText: ""
+    
+    function setFormattedBatteryText() {
+        switch (mode) {
+            case 0: 
+                formattedBatteryText = getCurrentIconChar();
+                break
+            case 1: 
+                formattedBatteryText = getRealPercentage()*100 + "%"
+                break
+            case 2:
+                formattedBatteryText = getTime()
+                break
+            case 3:
+                formattedBatteryText = UPower.displayDevice.changeRate.toFixed(2)
+                break
+        }
     }
 
+    function getRealPercentage() {
+        if (UPower.displayDevice.healthSupported){
+
+            return UPower.displayDevice.percentage / UPower.displayDevice.healthPercentage
+        }
+        else {
+            return UPower.displayDevice.percentage
+        }
+    }
+
+    function getTime(){
+        if (UPower.displayDevice.state == UPowerDeviceState.Discharging){
+            return formatTime(UPower.displayDevice.timeToEmpty)
+        } else if (UPower.displayDevice.state == UPowerDeviceState.Charging){
+            return formatTime(UPower.displayDevice.timeToFull)
+        }
+    }
+
+    function formatTime(seconds) {
+        if (seconds <= 0) return "—:—";
+        let h = Math.floor(seconds / 3600);
+        let m = Math.floor((seconds % 3600) / 60);
+        return Qt.formatTime(new Date(0, 0, 0, h, m, 0), "hh:mm");
+    }
     // Connections to update displayed text and icon character
     Connections {
-        target: UPower
-        // Re-evaluate currentIconChar and formattedBatteryText on any relevant UPower change
-        function onBatteryLevelChanged() { root.currentIconChar = root.currentIconChar; root.formattedBatteryText = root.formattedBatteryText; }
-        function onIsChargingChanged() { root.currentIconChar = root.currentIconChar; root.formattedBatteryText = root.formattedBatteryText; }
-        function onStateChanged() { root.currentIconChar = root.currentIconChar; root.formattedBatteryText = root.formattedBatteryText; }
-        function onHasBatteryChanged() { root.currentIconChar = root.currentIconChar; root.formattedBatteryText = root.formattedBatteryText; }
+        target: UPower.displayDevice // Target the displayDevice object directly
+        function onPercentageChanged() {
+            root.setFormattedBatteryText()
+        }
+        function onTimeToFullChanged() { // This will implicitly cover charging state changes
+            root.setFormattedBatteryText()
+        }
+        function onTimeToEmptyChanged() { // This will implicitly cover discharging state changes
+            root.setFormattedBatteryText()
+        }
+        function onIsLaptopBatteryChanged() { // If a battery is connected/disconnected
+            root.setFormattedBatteryText()
+        }
+        function onStateChanged() { // Generic state changes if the above don't cover everything
+            root.setFormattedBatteryText()
+        }
     }
 
     onClicked: event => {
-        if (event.button === Qt.LeftButton || event.button === Qt.RightButton) {
-            powerMenu.open();
+        if (event.button === Qt.LeftButton) {
+            root.mode = (root.mode + 1) % (root.maxMode + 1);
+            console.log(mode)
+            root.setFormattedBatteryText(); 
         }
     }
 
@@ -82,12 +118,12 @@ MouseArea {
     Text {
         id: powerText
         text: root.formattedBatteryText // Display the dynamically formatted string
-        font.family: "Nerd Font" // You MUST have Nerd Font installed on your system
-        font.pixelSize: parent.height * 0.8 // Adjust size
-        color: "white" // Or your panel's text color
+        font.family: "Martian Mono Nerd Font" // You MUST have Nerd Font installed on your system
+        font.pixelSize: 15 // Adjust size
+        color: "#d8dee9" // Or your panel's text color
         anchors.centerIn: parent
-        // Ensure text doesn't clip if implicitWidth/Height is too small
-        // Might need to make parent (MouseArea) bigger or scale text
+
+        anchors.topMargin: 3
     }
 
     // --- Power Menu ---

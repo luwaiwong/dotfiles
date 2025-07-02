@@ -38,7 +38,7 @@ Scope{
                 top: true
             }
             implicitHeight: detectionArea.height+40
-            implicitWidth: modelData.width
+            implicitWidth: modelData.width/3
 
             // color: "white"
             color: "transparent"

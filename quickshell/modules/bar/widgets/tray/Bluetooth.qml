@@ -1,49 +1,48 @@
+// PowerItem.qml
 pragma ComponentBehavior: Bound
 import Quickshell
-import Quickshell.Widgets
-import Quickshell.Services.SystemTray
+import Quickshell.Widgets // Still useful for QsMenuAnchor
+import Quickshell.Services.UPower
 import QtQuick
+import QtQuick.Controls // For Menu, MenuItem
+import Quickshell.Io
 
 MouseArea {
     id: root
 
-    required property SystemTrayItem modelData
-
     acceptedButtons: Qt.LeftButton | Qt.RightButton
-    implicitWidth: 20
-    implicitHeight: 20
-    // anchors.leftMargin: 10
-    // anchors.rightMargin: 10
+    implicitWidth: Math.max(powerText.width, 20)
+    implicitHeight: 18
 
     onClicked: event => {
-        console.log(modelData.id)
-        if (event.button === Qt.LeftButton)
-            modelData.activate();
-        else if (modelData.hasMenu)
-            menu.open();
-    }
-
-    // TODO custom menu
-    QsMenuAnchor {
-        id: menu
-
-        menu: root.modelData.menu
-        anchor.window: this.QsWindow.window
-    
-    }
-
-    IconImage {
-        id: icon
-
-        source: {
-            let icon = root.modelData.icon;
-            if (icon.includes("?path=")) {
-                const [name, path] = icon.split("?path=");
-                icon = `file://${path}/${name.slice(name.lastIndexOf("/") + 1)}`;
-            }
-            return icon;
+        if (event.button === Qt.LeftButton) {
+            console.log("BRUH")
+            executeBlueberry.running = true
         }
-        asynchronous: true
-        anchors.fill: parent
+    }
+
+    // --- Visual Icon/Text (using Text instead of IconImage) ---
+    Text {
+        id: powerText
+        text: "󰂯" // Display the dynamically formatted string
+        font.family: "Martian Mono Nerd Font" // You MUST have Nerd Font installed on your system
+        font.pixelSize: 15 // Adjust size
+        color: "#d8dee9" // Or your panel's text color
+        anchors.centerIn: parent
+
+        anchors.topMargin: 3
+    }
+
+    Process {
+        id: executeBlueberry
+        command: [
+            "/bin/sh",    // Or "/bin/bash" if you prefer bash-specific features
+            "-c",         // The -c option tells the shell to read commands from the string argument
+            "killall blueberry; blueberry" // The actual command string to execute
+        ]
+
+        stdout: StdioCollector {
+            // onStreamFinished: root.time = this.text
+        }
     }
 }

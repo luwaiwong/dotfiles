@@ -46,7 +46,7 @@ Item {
         opacity: barContent.barState.isClockVisible ? 1 : 0
 
         Tray {
-            Layout.alignment: Qt.AlignCenter
+            Layout.alignment: Qt.AlignLeft
         }
         Date {
             Layout.alignment: Qt.AlignCenter
@@ -63,16 +63,6 @@ Item {
             }
         }
     }
-    // Main {
-    //     id: main
-    //     enabled: barContent.barState.isClockVisible
-    //     anchors.centerIn: parent
-    //     // anchors.horizontalCenter: parent.horizontalCenter
-    //     // anchors.bottom: parent.bottom
-    //     // anchors.bottomMargin: 15
-
-
-    // }
 
     Behavior on implicitWidth {
         NumberAnimation {

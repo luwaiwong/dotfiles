@@ -2,45 +2,98 @@ pragma ComponentBehavior: Bound
 import Quickshell
 import Quickshell.Services.SystemTray
 import QtQuick
+import QtQuick.Layouts
 
-Rectangle {
-    id: root
+MouseArea{
 
-    clip: true
-    visible: width > 0 && height > 0
-
-    implicitWidth: 100
+    implicitWidth: Math.max(100, layout.width+20)
     implicitHeight: 25
-    color: "#2e3440"
-    radius: 20
 
-    Row {
-        id: layout
-        anchors.centerIn: parent
-        spacing: 10
 
-        // Sort for only nm-applet
-        Repeater {
-            model: SystemTray.items
+    hoverEnabled: true
+    propagateComposedEvents: true
+    
+    onEntered: root.hovering = true;
+    onExited: root.hovering = false;
+    
+    Rectangle {
+        id: root
 
-            TrayItem {
-                width: modelData.id == "nm-applet" ? 16: 0
+        anchors.fill: parent
+        clip: true
+        visible: width > 0 && height > 0
+
+        color: "#2e3440"
+        radius: 20
+
+        property bool hovering: false
+            Row {
+                id: layout
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.verticalCenterOffset: 0
+                spacing: 2
+                
+                add: Transition {
+                    NumberAnimation {
+                        properties: "scale"
+                        from: 0
+                        to: 1
+                        duration: 200
+                        easing.type: Easing.OutCubic
+                    }
+                }
+
+                move: Transition {
+                    NumberAnimation {
+                        properties: "scale"
+                        from: 0
+                        to: 1
+                        duration: 200
+                        easing.type: Easing.OutCubic
+                    }
+
+                    NumberAnimation {
+                        properties: "x,y"
+                        duration: 200
+                        easing.type: Easing.OutCubic
+                    }
+                }
+                // Sort for only nm-applet
+                Repeater {
+                    model: SystemTray.items
+
+                    TrayItem {
+                        width: modelData.id == "nm-applet" ? 23: 0
+
+                        Layout.alignment: Qt.AlignCenter
+                    }
+                }   
+                Bluetooth {}
+                Power {
+
+                    Layout.alignment: Qt.AlignCenter
+                }
+
+                // Show rest of tray
+                Repeater {
+                    model: SystemTray.items
+                    TrayItem {
+                        width: (modelData.id != "nm-applet" && root.hovering)? 23: 0
+                        Component.onCompleted: {
+                            console.log(modelData.id)
+                        }
+                    }
+                }
+
             }
-        }   
-        Power {}
 
-        // Show rest of tray
-        Repeater {
-            model: SystemTray.items
 
-            TrayItem {
-                width: modelData.id != "nm-applet" ? 16: 0
+        Behavior on implicitWidth{
+            NumberAnimation {
+                duration: 1000
+                easing.type: Easing.Linear //
             }
         }
-
-    }
-
-    Component.onCompleted: {
-        sortTrayItems()
     }
 }

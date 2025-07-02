@@ -1,147 +1,137 @@
-// Your main QML file (e.g., in your project root or wherever PanelWindow is defined)
 import Quickshell
 import Quickshell.Io
 import Quickshell.Hyprland
+import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
+import Qt5Compat.GraphicalEffects
 import "widgets"
 import "root:/utils" 
 
 Scope{
     Variants {
         model: Quickshell.screens
+
         PanelWindow {
             id : root
+
+            property BarState barState: BarState {}
             property var modelData
+            property real effectiveVerticalOffset: barState.showTopBar? 0: -  (barShape.implicitHeight - 6) 
+            property bool isShown: false // Initially hidden
             screen: modelData
+
+            // Dictates the area that mouse inputs don't affect the panel window
+            // Otherwise, the whole area of the panel window would be unusable by other apps
+            WlrLayershell.exclusionMode: ExclusionMode.Ignore
+            mask: Region {
+                x: 0
+                y: detectionArea.height+effectiveVerticalOffset
+                width: 10000
+                height: 10000
+                intersection: Intersection.Xor
+
+                regions: regions.instances
+            }
+            
             anchors {
                 top: true
             }
+            implicitHeight: detectionArea.height+40
+            implicitWidth: modelData.width
 
-            // Show bar when workspace changes
-            Connections {
-                target: Hyprland
-                function onRawEvent(event) { 
-                    if (event.name === "workspace") {
-                        root.showBar()
+            // color: "white"
+            color: "transparent"
+            
+            // Top border bar, covers bar content when hidden
+            Rectangle{
+                width: barShape.implicitWidth
+                height: 5
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
+                // anchors.top
+                // anchors.topMargin: -root.effectiveVerticalOffset+5
 
-                        // Find the biggest window in the current workspace
+                color: "black"
+                z: 101
 
-                        const windowsInThisWorkspace = HyprlandData.windowList.filter(w => w.workspace.id == event.data)
-                        // Check if there are windows in this workspace
-                        if (windowsInThisWorkspace.length > 0) {
-                            // ONly if there are windows,  hide the bar
-                            root.startLongHideTimer(); 
-                        }
-                        console.log(windowsInThisWorkspace.length)
+            }
+            // Main detection area
+            MouseArea {
+                id: detectionArea
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: barShape.width
+                height: childrenRect.height+30
+                
+                hoverEnabled: true
+                anchors.topMargin: root.effectiveVerticalOffset-10
+
+                onEntered: root.barState.onMainTopBarHovered(true);
+                onExited: root.barState.onMainTopBarHovered(false);
+                z: 100
+                propagateComposedEvents: true // Ensure events propagate to children
+                
+                // layer.enabled: true // Essential to apply effects
+                // layer.effect: DropShadow {
+                //     color: "#af000000" // Shadow color (80 is 50% opacity black)
+                //     radius: 20       // Blur radius of the shadow
+                //     samples: 17         // Quality of the blur (higher = smoother, slower)
+                // }
+
+                BarBackgroundShape {
+                    id: barShape
+                    anchors.top: parent.top
+                    anchors.horizontalCenter: parent.horizontalCenter
+
+                    anchors.topMargin: 15
+                    topCurveOffset: Math.max(0, -root.effectiveVerticalOffset)
+
+                    barWidth: barContent.implicitWidth + 20
+                    barHeight: 40
+                    barColor: "black"
+                    BarContent {
+                        id: barContent
+                        root: root
+                        barState: root.barState
                     }
                 }
-            }
-            
-            property real effectiveVerticalOffset: -  (barShape.implicitHeight - 8) 
 
+                // Detecting when very top is hovered
+                MouseArea {
+
+                    width: 100
+                    height: 2
+                    anchors.topMargin: 15
+                    anchors.top: parent.top
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    hoverEnabled: true
+                    propagateComposedEvents: true 
+                    onEntered: root.barState.onTopMainTopBarHovered(true);
+                    onExited: root.barState.onTopMainTopBarHovered(false);
+
+                    z: 100000
+                    // Rectangle{
+                    //     anchors.fill:parent
+                    //     color: "white"
+                    // }
+                }
+                // Rectangle{
+                //     anchors.fill:parent
+                //     color: "white"
+                // }
+
+            }
+
+
+            //  Animations
             Behavior on effectiveVerticalOffset {
                 NumberAnimation {
                     duration: 200 
                     easing.type: Easing.OutCubic //
                 }
             }
-
-            property bool isShown: false // Initially hidden
-
-            color: "transparent"
-            implicitHeight: 40 // Total height of the PanelWindow
-            implicitWidth: modelData.width/2
-
-            MouseArea {
-                anchors.top: parent.top
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: barShape.implicitWidth
-                height: childrenRect.height
-                
-                hoverEnabled: true
-                    anchors.topMargin: root.effectiveVerticalOffset
-
-                onEntered: root.showBar();
-                onExited: root.startHideTimer();
-                z: 100
-                propagateComposedEvents: true // Ensure events propagate to children
-                
-                BarBackgroundShape {
-                    id: barShape
-                    anchors.top: parent.top
-                    anchors.horizontalCenter: parent.horizontalCenter
-
-                    // --- THE FIX STARTS HERE ---
-
-                    // Drive the bar's position directly from effectiveVerticalOffset
-                    // When effectiveVerticalOffset is 0, bar is at top.
-                    // When effectiveVerticalOffset is negative, bar moves up.
-
-                    // Drive the BarBackgroundShape's internal topCurveOffset
-                    // When effectiveVerticalOffset goes from 0 to -X, topCurveOffset goes from 0 to X
-                    // This makes the black rectangle grow downwards as the bar moves up,
-                    // creating a smooth "disappearing" effect of the curved top.
-                    topCurveOffset: Math.max(0, -root.effectiveVerticalOffset)
-
-                    // --- THE FIX ENDS HERE ---
-
-                    barWidth: barContent.implicitWidth + 40
-                    barHeight: 40 // Keep this constant, the topCurveOffset handles the visual change
-                    barColor: "black"
-
-                    // We no longer need separate Behaviors on topCurveOffset or anchors.topMargin here,
-                    // as their values are now directly bound to and driven by effectiveVerticalOffset.
-                    // The single Behavior on effectiveVerticalOffset handles all the animation.
-
-                    BarContent {
-                        id: barContent
-                        root: root
-                    }
-                }
-            }
-
-
-
-            // --- Auto-hide Timer ---
-            Timer {
-                id: hideBarTimer
-                interval: 200
-                repeat: false
-                onTriggered: root.hideBar()
-            }
-
-            Timer {
-                id: longHideBarTimer
-                interval: 1500
-                repeat: false
-                onTriggered: root.hideBar()
-            }
-
-            // --- Show/Hide Functions ---
-            function showBar() {
-                hideBarTimer.stop();
-                longHideBarTimer.stop();
-                if (root.isShown) return;
-                root.isShown = true;
-                root.effectiveVerticalOffset = 0; // Set to 0 to show the bar (animates via Behavior)
-            }
-
-            function hideBar() {
-                if (!root.isShown) return;
-                root.isShown = false;
-        
-                var hideAmount = barShape.implicitHeight - 8; // Adjust '10' for how much you want to remain visible
-                root.effectiveVerticalOffset = -hideAmount; // Animate to this negative value (animates via Behavior)
-            }
-
-            function startHideTimer() {
-                hideBarTimer.restart();
-            }
-
-            function startLongHideTimer() {
-                longHideBarTimer.restart();
-            }
+            
         }
     }
 }

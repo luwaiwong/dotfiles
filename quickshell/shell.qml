@@ -8,9 +8,18 @@ import QtQuick.Layouts
 import QtQuick.Window
 import Quickshell
 import "modules/bar"
+import "modules/border"
 
 ShellRoot {
     ReloadPopup {}
+    ShellRoot {
+
+        LeftBorder {}
+        RightBorder {}
+        TopBorder {}
+        BottomBorder {}
+    }
     DynamicBar {}
+
     // StaticBar {}
 }

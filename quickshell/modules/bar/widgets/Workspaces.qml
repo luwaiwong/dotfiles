@@ -9,7 +9,7 @@ import Quickshell.Widgets
 import Qt5Compat.GraphicalEffects
 import "root:/utils/"
 
-Item {
+MouseArea {
     required property var bar
     readonly property HyprlandMonitor monitor: Hyprland.monitorFor(bar.screen)
     readonly property Toplevel activeWindow: ToplevelManager.activeToplevel
@@ -94,7 +94,7 @@ Item {
                 z: 1
                 implicitWidth: workspaceButtonWidth
                 implicitHeight: workspaceButtonWidth
-                radius: Appearance.rounding.full
+                // radius: Appearance.rounding.full
                 property var leftOccupied: (workspaceOccupied[index-1] && !(!activeWindow?.activated && monitor.activeWorkspace?.id === index))
                 property var rightOccupied: (workspaceOccupied[index+1] && !(!activeWindow?.activated && monitor.activeWorkspace?.id === index+2))
                 property var radiusLeft: leftOccupied ? 0 : 20

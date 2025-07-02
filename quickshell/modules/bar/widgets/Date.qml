@@ -3,24 +3,20 @@ import Quickshell
 import Quickshell.Io
 import QtQuick
 import "../../../utils/"
-Rectangle {
-  id: root
+Item {
   property bool enabled: true
   
 
   // width: enabled ? contentText.implicitWidth : 0
   opacity: enabled ? 1 : 0
-  implicitWidth: Math.max(contentText.implicitWidth + 20, 100)
-  height: 25
-  color: "#2e3440"
-  radius: 20
+  implicitWidth: contentText.implicitWidth + 20 // Add padding for aesthetics
 
   Text {
-    anchors.centerIn: parent
     id: contentText
-    text : Time.time
-    color: "#d8dee9"
-    font.pixelSize: 14
+    anchors.centerIn: parent
+    text : Time.date
+    color: "#eceff4"
+    font.pixelSize: 16
 
     font.family: "Martian Mono Nerd Font"
     Behavior on font.pixelSize {
@@ -30,7 +26,6 @@ Rectangle {
       }
     }
   }
-  
 
   Behavior on opacity {
     NumberAnimation {

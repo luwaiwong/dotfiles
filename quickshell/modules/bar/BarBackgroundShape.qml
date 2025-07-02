@@ -1,6 +1,7 @@
 // modules/bar/widgets/BarBackgroundShape.qml
 import QtQuick 2.15
 import QtQuick.Shapes 1.15
+import Qt5Compat.GraphicalEffects
 
 Shape {
     id: root
@@ -16,16 +17,8 @@ Shape {
     readonly property bool flatten: (realHeight) < rounding * 2
     readonly property real roundingY: flatten ? (realHeight) / 2 : rounding
     
-    // Rectangle {
-    //     id: topOffsetRect
-    //     x: 0
-    //     y: 0
-    //     anchors.horizontalCenter: root.horizontalCenter // Center the rectangle in the Shape
-    //     width: root.width+root.rounding*2// Extend the rectangle to cover the full width
-    //     height: root.topCurveOffset
-    //     color: root.barColor // The black color for the offset area
-    //     visible: root.topCurveOffset > 0 // Only visible when there's an offset
-    // }
+    
+
     ShapePath {
         id: customBarPath
         strokeWidth: -1 // No stroke

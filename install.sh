@@ -27,7 +27,7 @@ fi
 
 
 # Copy config files to ~/.config
-for dir in cava hypr kitty omposh rofi spicetify waybar wlogout; do
+for dir in cava hypr kitty omposh rofi spicetify quickshell wlogout; do
     cp -r ./$dir ~/.config
 done
 
@@ -41,18 +41,18 @@ if [[ ! -f "$hyprconf" ]]; then
     exit 1
 fi
 
-echo "Choose a monitor config?"
-echo "You may have to change monitor settings manually in ~/.config/hypr/hardware/dualmonitor.conf"
-select monitor_conf in "dualmonitor.conf" "singlemonitor.conf"; do
-    if [[ -n "$monitor_conf" ]]; then
+echo "Pick hardware setup"
+echo "You may have to change monitor settings manually in ~/.config/hypr/hardware/"
+select hardware_conf in "dualmonitor.conf" "singlehighres.conf"; do
+    if [[ -n "$hardware_conf" ]]; then
         break
     else
-        echo "1 screen or 2 screens."
+        echo "pick"
     fi
 done
 
 # Add the correct source line at the top of hyprland.conf
-echo  "source = \$hardware/$monitor_conf" >> "$hyprconf"
+echo  "source = \$hardware/$hardware_conf" >> "$hyprconf"
 
 # Ask for nvidia configuration
 # Ask user if they want to include nvidia.conf

@@ -10,8 +10,8 @@ MouseArea {
     id: root
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton
-    implicitWidth: 18 // Still good for consistent sizing
-    implicitHeight: 18
+    implicitWidth: 20 
+    implicitHeight: 20
 
     // --- Configuration for Icons and Formatting (from your provided snippet) ---
     // These are now properties of the PowerItem itself for easy access/modification
@@ -21,20 +21,21 @@ MouseArea {
     property string chargingIcon: ""
     property string pluggedIcon: "󱘖"
     property string formatString: "{icon} {capacity}%"
-    property string formatChargingString: " {capacity}%"
+    property string formatDischargingString: " {capacity}%"
     property string formatPluggedString: "󱘖 {capacity}%"
     property string formatFullString: "{icon} Full"
-    property string formatAltString: "{icon} {time}"
+    property string formatBatteryString: "{icon} {time}"
     property string formatTimeString: "{H}h {M}min"
     property int batteryIconLevelSteps: 10 // Your format-icons array has 11 elements (0-100, 10 steps)
 
-    // Derived property for the currently displayed icon character
+    property int mode: 0
+
     property string currentIconChar: {
-        if (!UPower.hasBattery) {
+        if (!UPower.displayDevice.isLaptopBattery) {
             return root.pluggedIcon; // No battery, just show plugged icon
         }
 
-        if (UPower.isCharging) {
+        if (UPower.displayDevice.timeToFull != 0) {
             return root.chargingIcon;
         }
 
@@ -46,20 +47,18 @@ MouseArea {
         return root.iconFormats[index];
     }
 
-    // Derived property for the full formatted text to display
     property string formattedBatteryText: {
         let text = "";
-        let icon = root.currentIconChar; // Get the appropriate icon character
 
-        if (!UPower.hasBattery) {
-            text = root.pluggedIcon; // Just the icon if no battery
-        } else if (UPower.isCharging) {
-            text = root.formatChargingString.arg("icon", icon).arg("capacity", UPower.batteryLevel.toFixed(0));
-        } else if (UPower.state === UPower.StateFull) {
-            text = root.formatFullString.arg("icon", icon);
-        } else {
-            text = root.formatString.arg("icon", icon).arg("capacity", UPower.batteryLevel.toFixed(0));
-        }
+        if (!UPower.displayDevice.isLaptopBattery) { // If there is no battery connected
+            text = root.pluggedIcon; 
+        } 
+        else if (UPower.displayDevice.timeToFull != 0) { // If Charging
+            text = root.formatPluggedString.arg("capacity", UPower.displayDevice.percentage.toFixed(0));
+        } 
+        else if (UPower.displayDevice.timeToEmpty != 0) { // If Discharging
+            text = root.formatDischargingString.arg("capacity", UPower.displayDevice.percentage.toFixed(0));
+        } 
         return text;
     }
 

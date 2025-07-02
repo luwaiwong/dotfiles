@@ -35,6 +35,8 @@ Item {
         onEntered: barContent.barState.onWorkspaceHovered(true);
         onExited: barContent.barState.onWorkspaceHovered(false);
 
+        z: barContent.barState.isClockVisible ? 0 : 100
+
     }
 
     RowLayout {
@@ -44,6 +46,8 @@ Item {
 
         // width: enabled ? contentText.implicitWidth : 0
         opacity: barContent.barState.isClockVisible ? 1 : 0
+        z: barContent.barState.isClockVisible ? 100 : 0
+
 
         Tray {
             Layout.alignment: Qt.AlignLeft

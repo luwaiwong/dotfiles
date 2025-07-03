@@ -22,12 +22,12 @@ read -p "Do you want to install packages? [y/N]: " install_packages
 
 if [[ "$install_packages" =~ ^[Yy]$ ]]; then
     # Add the nvidia source line just after the monitor config line
-    yay -S cava hyprland kitty omposh rofi waybar-cava wlogout hyprsome --noconfirm
+    yay -S cava hyprland kitty omposh rofi waybar-cava wlogout hyprsome fish --noconfirm
 fi
 
 
 # Copy config files to ~/.config
-for dir in cava hypr kitty omposh rofi spicetify quickshell wlogout; do
+for dir in cava hypr kitty omposh rofi spicetify quickshell wlogout fish; do
     cp -r ./$dir ~/.config
 done
 

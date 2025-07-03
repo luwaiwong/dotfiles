@@ -18,7 +18,7 @@ Scope{
             
 
             implicitHeight: modelData.height-20
-            implicitWidth: 20
+            implicitWidth: 18
             color: "transparent"
 
             Rectangle { 
@@ -31,7 +31,7 @@ Scope{
                 layer.enabled: true // Essential to apply effects
                 layer.effect: DropShadow {
                     color: "#000000" // Shadow color (80 is 50% opacity black)
-                    radius: 10       // Blur radius of the shadow
+                    radius: 13       // Blur radius of the shadow
                     // verticalOffset: 3
                     samples: 17         // Quality of the blur (higher = smoother, slower)
                 }

@@ -31,7 +31,7 @@ Scope {
                 layer.enabled: true
                 layer.effect: DropShadow {
                     color: "#000000"
-                    radius: 10
+                    radius: 13
                     samples: 17
                 }
 

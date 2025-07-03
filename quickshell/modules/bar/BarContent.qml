@@ -7,7 +7,7 @@ import QtQuick.Layouts
 import "widgets"
 import "widgets/tray"
 
-Item {
+Rectangle {
     id : barContent
     required property var root
     required property BarState barState
@@ -16,8 +16,9 @@ Item {
     anchors.horizontalCenter: parent.horizontalCenter
     // anchors.topMargin: -20
     clip: true
+    color: "transparent"
 
-    implicitWidth: barContent.barState.isClockVisible ? main.implicitWidth: workspace.implicitWidth
+    implicitWidth: (barContent.barState.isClockVisible ? main.implicitWidth: workspace.implicitWidth)+20
     implicitHeight: 40
 
 
@@ -50,7 +51,7 @@ Item {
 
 
         Tray {
-            Layout.alignment: Qt.AlignLeft
+            Layout.alignment: Qt.AlignRight
         }
         Date {
             Layout.alignment: Qt.AlignCenter
@@ -62,7 +63,7 @@ Item {
 
         Behavior on opacity {
             NumberAnimation {
-            duration: 30
+            duration: 200
             easing.type: Easing.OutCubic
             }
         }
@@ -70,7 +71,7 @@ Item {
 
     Behavior on implicitWidth {
         NumberAnimation {
-            duration: 200
+            duration: 500
             easing.type: Easing.OutCubic
         }
     }

@@ -16,27 +16,42 @@ Item {
     property bool hoveringTopBar: false
     property bool hoveringWorkspaces: false
     property bool hoveringTopTopBar: false
-    
+    property real curWorkspace: 0
 
     Connections {
         target: Hyprland
         function onRawEvent(event) { 
             // console.log(event.name, event.data)
-            if ((event.name === "workspace" || 
-                event.name === "movewindow")
-                && Hyprland.focusedMonitor == Hyprland.monitorFor(modelData)
-            ) {
-                root.showBar()
+            // Only trigger event if the focused monitor is right
+            if (Hyprland.focusedMonitor == Hyprland.monitorFor(modelData)){
+                // Check if there are windows in this workspace, if one was opened hide bar
+                if (event.name === "openwindow" && !root.hoveringTopBar) {
+                    root.startHideTimer(); 
+                } 
 
-                // Find the biggest window in the current workspace
-                const windowsInThisWorkspace = HyprlandData.windowList.filter(w => w.workspace.id == event.data)
-                // Check if there are windows in this workspace
-                if (windowsInThisWorkspace.length > 0 && !root.hoveringTopBar) {
-                    // ONly if there are windows,  hide the bar
-                    root.startLongHideTimer(); 
+                // check if last window in workspace was just closed, show top bar
+                if (event.name === "closewindow") {
+                    // window count always laggs behind, if there was one window and you 
+                    // closed one, then there's probably 0 now
+
+                    const windowsInThisWorkspace = HyprlandData.windowList.filter(w => w.workspace.id == root.curWorkspace)
+                    if (windowsInThisWorkspace.length == 1) root.showBar()
                 }
+                if (event.name === "workspace" || event.name === "movewindow")
+                {
+                    root.curWorkspace = event.data
+                    root.showBar()
 
-                root.showWorkspaces()
+                    // Find the biggest window in the current workspace
+                    const windowsInThisWorkspace = HyprlandData.windowList.filter(w => w.workspace.id == event.data)
+                    // Check if there are windows in this workspace
+                    if (windowsInThisWorkspace.length > 0 && !root.hoveringTopBar) {
+                        // ONly if there are windows,  hide the bar
+                        root.startLongHideTimer(); 
+                    }
+
+                    root.showWorkspaces()
+                }
             }
         }
     }
@@ -114,7 +129,7 @@ Item {
     }
     Timer {
         id: longHideBarTimer
-        interval: 1500
+        interval: 1800
         repeat: false
         onTriggered: hideBar()
     }
@@ -133,7 +148,7 @@ Item {
 
     Timer {
         id: shortShowClockTimer
-        interval: 200
+        interval: 400
         repeat: false
         onTriggered: showClock()
     }

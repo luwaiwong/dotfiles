@@ -39,7 +39,7 @@ MouseArea{
                         properties: "scale"
                         from: 0
                         to: 1
-                        duration: 200
+                        duration: 400
                         easing.type: Easing.OutCubic
                     }
                 }
@@ -49,13 +49,13 @@ MouseArea{
                         properties: "scale"
                         from: 0
                         to: 1
-                        duration: 200
+                        duration: 400
                         easing.type: Easing.OutCubic
                     }
 
                     NumberAnimation {
                         properties: "x,y"
-                        duration: 200
+                        duration: 400
                         easing.type: Easing.OutCubic
                     }
                 }
@@ -71,7 +71,6 @@ MouseArea{
                 }   
                 Bluetooth {}
                 Power {
-
                     Layout.alignment: Qt.AlignCenter
                 }
 
@@ -85,15 +84,19 @@ MouseArea{
                         }
                     }
                 }
-
+                Behavior on width{
+                    NumberAnimation {
+                        duration: 500
+                        easing.type: Easing.OutCubic //
+                    }
+                }
             }
+    }
 
-
-        Behavior on implicitWidth{
-            NumberAnimation {
-                duration: 1000
-                easing.type: Easing.Linear //
-            }
+    Behavior on implicitWidth{
+        NumberAnimation {
+            duration: 500
+            easing.type: Easing.OutCubic //
         }
     }
 }

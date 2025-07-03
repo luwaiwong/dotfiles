@@ -72,12 +72,12 @@ Scope{
                 z: 100
                 propagateComposedEvents: true // Ensure events propagate to children
                 
-                // layer.enabled: true // Essential to apply effects
-                // layer.effect: DropShadow {
-                //     color: "#af000000" // Shadow color (80 is 50% opacity black)
-                //     radius: 20       // Blur radius of the shadow
-                //     samples: 17         // Quality of the blur (higher = smoother, slower)
-                // }
+                layer.enabled: true // Essential to apply effects
+                layer.effect: DropShadow {
+                    color: "#65000000" // Shadow color (80 is 50% opacity black)
+                    radius: 17    // Blur radius of the shadow
+                    samples: 17         // Quality of the blur (higher = smoother, slower)
+                }
 
                 BarBackgroundShape {
                     id: barShape
@@ -87,7 +87,7 @@ Scope{
                     anchors.topMargin: 15
                     topCurveOffset: Math.max(0, -root.effectiveVerticalOffset)
 
-                    barWidth: barContent.implicitWidth + 20
+                    barWidth: barContent.implicitWidth
                     barHeight: 40
                     barColor: "black"
                     BarContent {
@@ -101,8 +101,8 @@ Scope{
                 MouseArea {
 
                     width: 100
-                    height: 2
-                    anchors.topMargin: 15
+                    height: 5
+                    anchors.topMargin: 10
                     anchors.top: parent.top
                     anchors.horizontalCenter: parent.horizontalCenter
                     hoverEnabled: true
@@ -111,10 +111,10 @@ Scope{
                     onExited: root.barState.onTopMainTopBarHovered(false);
 
                     z: 100000
-                    // Rectangle{
-                    //     anchors.fill:parent
-                    //     color: "white"
-                    // }
+                    Rectangle{
+                        anchors.fill:parent
+                        color: "white"
+                    }
                 }
                 // Rectangle{
                 //     anchors.fill:parent

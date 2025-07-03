@@ -43,22 +43,27 @@ MouseArea {
         return root.iconFormats[index];
     }
 
-    property string formattedBatteryText: ""
+    property string formattedBatteryText: "󱘖"
     
     function setFormattedBatteryText() {
-        switch (mode) {
-            case 0: 
-                formattedBatteryText = getCurrentIconChar();
-                break
-            case 1: 
-                formattedBatteryText = getRealPercentage()*100 + "%"
-                break
-            case 2:
-                formattedBatteryText = getTime()
-                break
-            case 3:
-                formattedBatteryText = UPower.displayDevice.changeRate.toFixed(2)
-                break
+        if (UPower.displayDevice.isLaptopBattery){
+
+            switch (mode) {
+                case 0: 
+                    formattedBatteryText = getCurrentIconChar();
+                    break
+                case 1: 
+                    formattedBatteryText = getRealPercentage()*100 + "%"
+                    break
+                case 2:
+                    formattedBatteryText = getTime()
+                    break
+                case 3:
+                    formattedBatteryText = UPower.displayDevice.changeRate.toFixed(2)
+                    break
+            }
+        } else {
+            formattedBatteryText = getCurrentIconChar();
         }
     }
 

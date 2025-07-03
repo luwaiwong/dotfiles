@@ -53,7 +53,7 @@ MouseArea {
 
     Behavior on opacity {
         NumberAnimation {
-            duration: 300
+            duration: 500
             easing.type: Easing.OutCubic
         }
     }
@@ -195,11 +195,11 @@ MouseArea {
                 onPressed: Hyprland.dispatch(`workspace ${workspaceValue}`)
                 onHoveredChanged: {
                     if (hovered) {
-                        workspaceButtonIndicator.width = 14
-                        workspaceButtonIndicator.height = 14
+                        workspaceButtonIndicator.width = 18
+                        workspaceButtonIndicator.height = 18
                     } else {
-                        workspaceButtonIndicator.width = 10
-                        workspaceButtonIndicator.height = 10
+                        workspaceButtonIndicator.width = 12
+                        workspaceButtonIndicator.height = 12
                     }
                 }
                 width: workspaceButtonWidth
@@ -224,7 +224,7 @@ MouseArea {
                         width: workspaceOccupied[index] ? workspaceIconSize-1: 10
                         height: workspaceOccupied[index] ? workspaceIconSize-1: 10
                         radius: 20
-                        color: workspaceOccupied[index] ? "white": "#4c566a"
+                        color: workspaceOccupied[index] ? "#81a1c1": "#4c566a"
                         
                         Behavior on width {
                             NumberAnimation {

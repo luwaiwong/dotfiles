@@ -18,7 +18,7 @@ Scope {
                 top: true
             }
 
-            implicitHeight: 40
+            implicitHeight: 20
             implicitWidth: modelData.width
             color: "transparent"
 
@@ -30,7 +30,7 @@ Scope {
                 layer.enabled: true
                 layer.effect: DropShadow {
                     color: "#000000"
-                    radius: 10
+                    radius: 13
                     samples: 17
                 }
 

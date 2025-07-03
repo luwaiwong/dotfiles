@@ -52,9 +52,11 @@ Rectangle {
 
         Tray {
             Layout.alignment: Qt.AlignRight
+            z: 100
         }
         MediaAndDate {
             Layout.alignment: Qt.AlignCenter
+            // z: barContent.barState.isClockVisible: 100
         }
 
         Clock {

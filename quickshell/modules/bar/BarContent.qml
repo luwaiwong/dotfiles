@@ -53,7 +53,7 @@ Rectangle {
         Tray {
             Layout.alignment: Qt.AlignRight
         }
-        Date {
+        MediaAndDate {
             Layout.alignment: Qt.AlignCenter
         }
 
@@ -71,7 +71,7 @@ Rectangle {
 
     Behavior on implicitWidth {
         NumberAnimation {
-            duration: 500
+            duration: 200
             easing.type: Easing.OutCubic
         }
     }

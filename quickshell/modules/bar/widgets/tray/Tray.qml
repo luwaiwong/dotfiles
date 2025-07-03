@@ -79,9 +79,6 @@ MouseArea{
                     model: SystemTray.items
                     TrayItem {
                         width: (modelData.id != "nm-applet" && root.hovering)? 23: 0
-                        Component.onCompleted: {
-                            console.log(modelData.id)
-                        }
                     }
                 }
                 Behavior on width{

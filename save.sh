@@ -15,3 +15,6 @@ for dir in $list; do
     cp -r ~/.config/$dir ./
 done
 
+
+cp ~/.bashrc ./
+cp ~/.profile ./

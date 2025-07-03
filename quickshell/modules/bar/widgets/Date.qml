@@ -32,7 +32,7 @@ Rectangle {
 
   Behavior on opacity {
     NumberAnimation {
-      duration: 30
+      duration: 100
       easing.type: Easing.OutCubic
     }
   }

@@ -1,0 +1,91 @@
+/***************************************************
+ * Name:     Focus
+ * Author:   Me
+ * Date:     2024-09-28
+ ***************************************************/
+
+@import "colors.rasi"
+
+/* Comment */
+
+* {
+    spacing: 0;
+    background-color: transparent;
+    font: "MartianMono Nerd Font 16";
+    text-color: @text;
+}
+
+window {
+    transparency: "real";
+    fullscreen: false;
+    background-color: @black;
+}
+
+mainbox {
+    padding: 5% 5%;
+}
+
+inputbar {
+    margin: 0px 0px 30px 0px;
+    children: [prompt, textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+    text-color: @accent;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+    text-color: @fg-alt;
+}
+
+entry {
+    text-color: @fg;
+    margin: 0px 10px;
+}
+
+listview {
+    spacing: 10px;
+    dynamic: true;
+    scrollbar: false;
+}
+
+element {
+    padding: 8px;
+    text-color: @fg-alt;
+    highlight: @accent;
+    border-radius: 10px;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+element selected {
+    background-color: @sel;
+    text-color: @accent;
+}
+
+element urgent, element selected urgent {
+    text-color: @urgent;
+}
+
+element active, element selected active {
+    text-color: @fg-sel;
+}
+
+message {
+    padding: 10px;
+    border-radius: 3px;
+    background-color: @sel;
+    border: 1px;
+    border-color: @border;
+}
+
+button selected {
+    padding: 10px;
+    border-radius: 3px;
+    background-color: @sel;
+}

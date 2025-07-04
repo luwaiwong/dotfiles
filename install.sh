@@ -27,7 +27,7 @@ fi
 
 
 # Copy config files to ~/.config
-for dir in cava hypr kitty omposh rofi spicetify quickshell wlogout fish mako; do
+for dir in cava hypr kitty omposh rofi spicetify quickshell wlogout fish mako waybar; do
     cp -r ./$dir ~/.config
 done
 

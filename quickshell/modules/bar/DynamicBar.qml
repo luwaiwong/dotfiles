@@ -7,6 +7,7 @@ import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 import "widgets"
 import "root:/utils" 
+import "root:/"
 
 Scope{
     Variants {
@@ -25,20 +26,28 @@ Scope{
             // Otherwise, the whole area of the panel window would be unusable by other apps
             WlrLayershell.exclusionMode: ExclusionMode.Ignore
             mask: Region {
-                x: 0
-                y: detectionArea.height+effectiveVerticalOffset
-                width: 10000
-                height: 10000
-                intersection: Intersection.Xor
+                x: root.modelData.width/2 - detectionArea.width/2
+                y: root.effectiveVerticalOffset
+                width: detectionArea.width
+                height: detectionArea.height
+                intersection: Intersection.Union
 
-                regions: regions.instances
+                // regions: [
+                //     Region {
+                //         x: root.modelData.width/2 - detectionArea.width/2
+                //         y: effectiveVerticalOffset
+                //         width: detectionArea.width
+                //         height: detectionArea.height
+                //         intersection: Intersection.Xor
+                //     }
+                // ]
             }
             
             anchors {
                 top: true
             }
             implicitHeight: detectionArea.height+40
-            implicitWidth: modelData.width/3
+            implicitWidth: modelData.width
 
             // color: "white"
             color: "transparent"
@@ -46,7 +55,7 @@ Scope{
             // Top border bar, covers bar content when hidden
             Rectangle{
                 width: barShape.implicitWidth
-                height: 5
+                height: Style.borderWidth
                 anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
                 // anchors.top
@@ -62,10 +71,10 @@ Scope{
                 anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: barShape.width
-                height: childrenRect.height+30
+                height: childrenRect.height+Style.borderWidth*2
                 
                 hoverEnabled: true
-                anchors.topMargin: root.effectiveVerticalOffset-10
+                anchors.topMargin: root.effectiveVerticalOffset
 
                 onEntered: root.barState.onMainTopBarHovered(true);
                 onExited: root.barState.onMainTopBarHovered(false);
@@ -84,7 +93,7 @@ Scope{
                     anchors.top: parent.top
                     anchors.horizontalCenter: parent.horizontalCenter
 
-                    anchors.topMargin: 15
+                    anchors.topMargin: Style.borderWidth
                     topCurveOffset: Math.max(0, -root.effectiveVerticalOffset)
 
                     barWidth: barContent.implicitWidth
@@ -100,9 +109,9 @@ Scope{
                 // Detecting when very top is hovered
                 MouseArea {
 
-                    width: 100
-                    height: 5
-                    anchors.topMargin: 10
+                    width: 160
+                    height: 1
+                    anchors.topMargin: 0
                     anchors.top: parent.top
                     anchors.horizontalCenter: parent.horizontalCenter
                     hoverEnabled: true
@@ -111,10 +120,10 @@ Scope{
                     onExited: root.barState.onTopMainTopBarHovered(false);
 
                     z: 100000
-                    Rectangle{
-                        anchors.fill:parent
-                        color: "white"
-                    }
+                    // Rectangle{
+                    //     anchors.fill:parent
+                    //     color: "white"
+                    // }
                 }
                 // Rectangle{
                 //     anchors.fill:parent
@@ -127,8 +136,8 @@ Scope{
             //  Animations
             Behavior on effectiveVerticalOffset {
                 NumberAnimation {
-                    duration: 200 
-                    easing.type: Easing.OutCubic //
+                    duration: 200
+                    easing.type: Easing.OutQuad
                 }
             }
             

@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # list of apps to update
-list="cava hypr kitty omposh rofi spicetify quickshell wlogout fish mako"
+list="cava hypr kitty omposh rofi spicetify quickshell waybar wlogout fish mako"
 
 
 # Delete existing config files in dotfiles directory

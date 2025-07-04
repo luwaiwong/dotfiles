@@ -31,6 +31,7 @@ set -g fish_color_background "#2e3440" # Note: This sets the background for spec
 set -g fish_color_status "#fc5ef0" # Color for the exit status of the last command
 set -g fish_color_vcs "#94f936" # Color for version control system information (e.g., Git branch)
 
+bind \cx\040 accept-autosuggestion
 set fish_greeting ""
 function fish_prompt
     set_color $fish_color_user

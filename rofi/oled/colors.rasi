@@ -29,7 +29,7 @@
 
     /***** [ Elements ] *****/ 
 
-    background:             @black;
+    background:             @color1;
     background-alt:         @color2;
     background-selected:    white;
     background-active:      white;
@@ -43,7 +43,7 @@
                             
     background-color:       white;
     text-color:             @color4;
-    border-color:           @blue;
+    border-color:           @cyan;
     separator-color:        white;
     placeholder-color:      white; /* textbox placeholder */
     handle-color:           white; /* scrollbar handle */

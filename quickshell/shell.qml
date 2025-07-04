@@ -9,17 +9,16 @@ import QtQuick.Window
 import Quickshell
 import "modules/bar"
 import "modules/border"
+import "modules/rightdrawer"
+import "modules/"
+
 
 ShellRoot {
     ReloadPopup {}
-    ShellRoot {
-
-        LeftBorder {}
-        RightBorder {}
-        TopBorder {}
-        BottomBorder {}
-    }
+    TopPadding {}
+    Border {}
     DynamicBar {}
+    RightDrawer {}
 
     // StaticBar {}
 }

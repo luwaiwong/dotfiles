@@ -4,7 +4,9 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Window
 import Quickshell
+pragma Singleton
 
-Scope {
-	property string borderWidth: 5
+Singleton {
+	readonly property real borderWidth: 6
+	readonly property real radius: 15
 }

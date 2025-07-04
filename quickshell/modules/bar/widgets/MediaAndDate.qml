@@ -163,7 +163,7 @@ MouseArea {
                 Text {
                     id: contentText
                     // anchors.fill: parent // Make the text fill the MouseArea
-                    text: root.title.length > 30 ? root.title.substring(0, 32) + "..." : root.title
+                    text: root.title.length > 24 ? root.title.substring(0, 24) + "..." : root.title
                     color: root.player && root.player.isPlaying? "#a3be8c":"#eceff4"
                     font.pixelSize: 14
                     font.family: "Martian Mono Nerd Font"

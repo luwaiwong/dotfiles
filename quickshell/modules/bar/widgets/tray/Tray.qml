@@ -90,10 +90,10 @@ MouseArea{
             }
     }
 
-    Behavior on implicitWidth{
-        NumberAnimation {
-            duration: 500
-            easing.type: Easing.OutCubic //
-        }
-    }
+    // Behavior on implicitWidth{
+    //     NumberAnimation {
+    //         duration: 500
+    //         easing.type: Easing.OutCubic //
+    //     }
+    // }
 }

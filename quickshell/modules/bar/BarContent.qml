@@ -38,6 +38,12 @@ Rectangle {
 
         z: barContent.barState.isClockVisible ? 0 : 100
 
+        Behavior on opacity {
+            NumberAnimation {
+                duration: 200
+                easing.type: Easing.OutCubic
+            }
+        }
     }
 
     RowLayout {
@@ -65,7 +71,7 @@ Rectangle {
 
         Behavior on opacity {
             NumberAnimation {
-            duration: 200
+            duration: 100
             easing.type: Easing.OutCubic
             }
         }

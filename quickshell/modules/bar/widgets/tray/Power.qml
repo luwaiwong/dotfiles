@@ -10,7 +10,7 @@ MouseArea {
     id: root
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton
-    implicitWidth: Math.max(powerText.width, 21)
+    implicitWidth: mode == 0 ? Math.max(powerText.width, 21) : Math.max(powerText.width, 21) +5
     implicitHeight: 18
 
     // --- Configuration for Icons and Formatting (from your provided snippet) ---
@@ -124,11 +124,11 @@ MouseArea {
         id: powerText
         text: root.formattedBatteryText // Display the dynamically formatted string
         font.family: "Martian Mono Nerd Font" // You MUST have Nerd Font installed on your system
-        font.pixelSize: 15 // Adjust size
+        font.pixelSize: mode == 0 ? 15 : 13 // Adjust size
         color: "#d8dee9" // Or your panel's text color
         anchors.centerIn: parent
 
-        anchors.topMargin: 3
+        // anchors.verticalCenterOffset: mode == 0 ? 0 : 0
     }
 
     // --- Power Menu ---

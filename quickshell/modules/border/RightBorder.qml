@@ -5,6 +5,9 @@ import Quickshell.Hyprland
 import QtQuick
 import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
+import Quickshell.Wayland
+pragma ComponentBehavior: Bound
+import "../../"
 
 Scope{
     Variants {
@@ -12,18 +15,31 @@ Scope{
         PanelWindow {
             property var modelData
             screen: modelData
+            id: root
             anchors {
                 right: true
             }
             
 
-            implicitHeight: modelData.height-20
-            implicitWidth: 18
+            WlrLayershell.exclusionMode: ExclusionMode.Ignore
+            mask: Region {
+                x: 0
+                y: 0
+                width: 10000
+                height: 10000
+                intersection: Intersection.Xor
+
+                regions: regions.instances
+            }
+            property real borderWidth: Style.borderWidth
+            property real radius: Style.radius
+            implicitHeight: modelData.height-2*(borderWidth+radius)
+            implicitWidth: borderWidth+13
             color: "transparent"
 
             Rectangle { 
                 anchors.right: parent.right
-                width: 5
+                width: root.borderWidth
                 implicitHeight: parent.height
                 color: "black"
                 z: 0

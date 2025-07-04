@@ -6,6 +6,7 @@ import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 
 import QtQuick.Shapes 
+import "../../"
 
 Scope {
     Variants {
@@ -18,7 +19,10 @@ Scope {
                 bottom: true
             }
 
-            implicitHeight: 20
+            property real borderWidth: Style.borderWidth
+            property real radius: Style.radius
+
+            implicitHeight: borderWidth+radius
             implicitWidth: modelData.width
             color: "transparent"
 
@@ -26,7 +30,7 @@ Scope {
                 id: borderShape
                 anchors.bottom: parent.bottom
                 width: parent.width
-                height: 10 // same as your Rectangle's implicitHeight
+                height: root.implicitHeight // same as your Rectangle's implicitHeight
 
                 layer.enabled: true
                 layer.effect: DropShadow {
@@ -47,26 +51,26 @@ Scope {
                     PathLine { x: borderShape.width; y: borderShape.height}
                     // Corner
 
-                    PathLine { x: borderShape.width; y: borderShape.height-10}
-                    PathLine { x: borderShape.width-5; y: borderShape.height-10}
+                    PathLine { x: borderShape.width; y: borderShape.height-(root.borderWidth+root.radius)}
+                    PathLine { x: borderShape.width-root.borderWidth; y: borderShape.height-(root.borderWidth+root.radius)}
                     PathArc {
-                        x: borderShape.width-10
-                        y: borderShape.height-5
-                        radiusX: 5
-                        radiusY: 5
+                        x: borderShape.width-(root.borderWidth+root.radius)
+                        y: borderShape.height-root.borderWidth
+                        radiusX: root.radius
+                        radiusY: root.radius
                         direction: PathArc.Clockwise
                     }
                     // Bottom Line
-                    PathLine { x: 10; y: borderShape.height-5 }
+                    PathLine { x: root.borderWidth+root.radius; y: borderShape.height-root.borderWidth }
                     // Corner
                     PathArc {
-                        x: 5
-                        y: borderShape.height-10
-                        radiusX: 5
-                        radiusY: 5
+                        x: root.borderWidth
+                        y: borderShape.height-(root.borderWidth+root.radius)
+                        radiusX: root.radius
+                        radiusY: root.radius
                         direction: PathArc.Clockwise
                     }
-                    PathLine { x: 0; y: borderShape.height-10 }
+                    PathLine { x: 0; y: borderShape.height-(root.borderWidth+root.radius) }
                     // Leftline
                     PathLine { x: 0; y: borderShape.height}
                 }

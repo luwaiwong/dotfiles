@@ -2,6 +2,7 @@
 import QtQuick 2.15
 import QtQuick.Shapes 1.15
 import Qt5Compat.GraphicalEffects
+import "root:"
 
 Shape {
     id: root
@@ -12,7 +13,7 @@ Shape {
     property alias barColor: customBarPath.fillColor
 
     property real topCurveOffset: 0
-    readonly property real rounding: 20 // Example rounding value
+    readonly property real rounding: Style.radius // Example rounding value
     readonly property real realHeight: root.height - topCurveOffset
     readonly property bool flatten: (realHeight) < rounding * 2
     readonly property real roundingY: flatten ? (realHeight) / 2 : rounding

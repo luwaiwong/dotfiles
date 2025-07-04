@@ -16,7 +16,7 @@ Singleton {
   readonly property string date: {
     // The passed format string matches the default output of
     // the `date` command.
-    Qt.formatDateTime(clock.date, "ddd MMMM d") + getDayWithSuffix(clock.date)
+    Qt.formatDateTime(clock.date, "dddd, MMMM ") + getDayWithSuffix(clock.date)
   }
 
   // This function will return the day of the month with its ordinal suffix

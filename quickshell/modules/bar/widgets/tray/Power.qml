@@ -128,7 +128,7 @@ MouseArea {
         text: root.formattedBatteryText // Display the dynamically formatted string
         font.family: "Martian Mono Nerd Font" // You MUST have Nerd Font installed on your system
         font.pixelSize: mode == 0 ? 15 : 13 // Adjust size
-        color: "#d8dee9" // Or your panel's text color
+        color: getRealPercentage()< 0.1 ? "#d8dee9" : "bf616a" // Or your panel's text color
         anchors.centerIn: parent
 
         // anchors.verticalCenterOffset: mode == 0 ? 0 : 0

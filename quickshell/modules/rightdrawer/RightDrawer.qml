@@ -96,7 +96,7 @@ Scope{
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.rightMargin: Style.borderWidth
 
-                    barHeight: content.height
+                    barHeight: content.height+5
                     barWidth: content.implicitWidth
                     barColor: "black"
                     // rightCurveOffset: 0
@@ -139,7 +139,7 @@ Scope{
             Behavior on effectiveHorizontalOffset {
                 NumberAnimation {
                     duration: 200
-                    easing.type: Easing.OutQuad
+                    easing.type: Easing.OutCubic
                 }
             }
             

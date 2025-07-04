@@ -105,7 +105,7 @@ Scope{
                 // Detecting when very top is hovered
                 MouseArea {
 
-                    width: 160
+                    width: 40
                     height: 1
                     anchors.topMargin: 0
                     anchors.top: parent.top

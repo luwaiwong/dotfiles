@@ -18,7 +18,8 @@ Scope{
 
             property BarState barState: BarState {}
             property var modelData
-            property real effectiveVerticalOffset: barState.showTopBar? 0: -  (barShape.implicitHeight - 6) 
+            property real effectiveVerticalOffset: barState.showTopBar? 0: -  (barShape.height - 6) 
+            // property real effectiveVerticalOffset: 0
             property bool isShown: false // Initially hidden
             screen: modelData
 
@@ -31,30 +32,20 @@ Scope{
                 width: detectionArea.width
                 height: detectionArea.height
                 intersection: Intersection.Union
-
-                // regions: [
-                //     Region {
-                //         x: root.modelData.width/2 - detectionArea.width/2
-                //         y: effectiveVerticalOffset
-                //         width: detectionArea.width
-                //         height: detectionArea.height
-                //         intersection: Intersection.Xor
-                //     }
-                // ]
             }
             
             anchors {
                 top: true
             }
-            implicitHeight: detectionArea.height+40
-            implicitWidth: modelData.width
+            height: detectionArea.height+40
+            width: modelData.width
 
             // color: "white"
             color: "transparent"
             
             // Top border bar, covers bar content when hidden
             Rectangle{
-                width: barShape.implicitWidth
+                width: barShape.width
                 height: Style.borderWidth
                 anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -71,7 +62,7 @@ Scope{
                 anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: barShape.width
-                height: childrenRect.height+Style.borderWidth*2
+                height: barContent.height+Style.borderWidth*2
                 
                 hoverEnabled: true
                 anchors.topMargin: root.effectiveVerticalOffset
@@ -99,6 +90,11 @@ Scope{
                     barWidth: barContent.implicitWidth
                     barHeight: 40
                     barColor: "black"
+                    // Rectangle{
+                    //     id: barContent
+                    //     implicitWidth: 100
+                    //     implicitHeight:40
+                    // }
                     BarContent {
                         id: barContent
                         root: root
@@ -137,7 +133,7 @@ Scope{
             Behavior on effectiveVerticalOffset {
                 NumberAnimation {
                     duration: 200
-                    easing.type: Easing.OutQuad
+                    easing.type: Easing.OutCubic
                 }
             }
             

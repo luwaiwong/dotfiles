@@ -21,10 +21,10 @@
 window#waybar {
   /* background-color: #1e1e2e; */
   /* background-color: #181825; */
-  background-color: rgb(59, 66, 82);;
+  background-color: rgb(59, 66, 82);
   border-radius: 10px;
   padding: 10px;
-  border: 3px solid rgb(59, 66, 82);;
+  /* border: 3px solid rgb(59, 66, 82); */
   /* background-color: rgba(24, 24, 37, 0.6); */
 }
 

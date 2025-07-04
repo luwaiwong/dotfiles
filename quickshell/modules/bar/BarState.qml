@@ -156,7 +156,7 @@ Item {
     }
     Timer {
         id: showClockTimer
-        interval: 2500
+        interval: 2000
         repeat: false
         onTriggered: showClock()
     }

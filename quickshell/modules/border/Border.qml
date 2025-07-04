@@ -2,7 +2,6 @@
 import Quickshell
 
 ShellRoot {
-
     LeftBorder {
     }
     RightBorder {}

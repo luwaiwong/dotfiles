@@ -5,6 +5,7 @@ import QtQuick
 import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 
+import Quickshell.Wayland
 import QtQuick.Shapes 
 import "../../"
 
@@ -19,6 +20,17 @@ Scope {
                 bottom: true
             }
 
+            WlrLayershell.exclusionMode: ExclusionMode.Ignore
+            mask: Region {
+                x: 0
+                y: 0
+                width: 10000
+                height: 10000
+                intersection: Intersection.Xor
+
+                regions: regions.instances
+            }
+            
             property real borderWidth: Style.borderWidth
             property real radius: Style.radius
 

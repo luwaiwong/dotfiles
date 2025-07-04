@@ -51,12 +51,6 @@ MouseArea {
     implicitHeight: 40
     Layout.topMargin: -1.5  // Move up by 1.5 pixels
 
-    Behavior on opacity {
-        NumberAnimation {
-            duration: 500
-            easing.type: Easing.OutCubic
-        }
-    }
     // Background
     Rectangle {
         z: 0

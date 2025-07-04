@@ -11,7 +11,7 @@ MouseArea {
     id: root
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton
-    implicitWidth: Math.max(powerText.width, 20)
+    implicitWidth: Math.max(powerText.width, 21)
     implicitHeight: 18
 
     onClicked: event => {

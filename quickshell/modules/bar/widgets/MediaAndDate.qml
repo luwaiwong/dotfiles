@@ -51,18 +51,6 @@ MouseArea {
             }
         }
 
-        function onPlaybackStateChanged() {
-            if (root.player) {
-                if (root.player.isPlaying) {
-                    root.showMedia()
-                    timeout.stop()
-                } else {
-                    timeout.start()
-                }
-            } else {
-                timeout.start() // If player becomes null, revert to date
-            }
-        }
     }
 
     Row {

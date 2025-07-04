@@ -53,13 +53,13 @@ MouseArea {
                     formattedBatteryText = getCurrentIconChar();
                     break
                 case 1: 
-                    formattedBatteryText = getRealPercentage()*100 + "%"
+                    formattedBatteryText = (getRealPercentage()*100).toFixed(0) + "%"
                     break
                 case 2:
                     formattedBatteryText = getTime()
                     break
                 case 3:
-                    formattedBatteryText = UPower.displayDevice.changeRate.toFixed(2)
+                    formattedBatteryText = (UPower.displayDevice.state == UPowerDeviceState.Discharging? "-":"+")+UPower.displayDevice.changeRate.toFixed(2)
                     break
             }
         } else {
@@ -107,6 +107,9 @@ MouseArea {
             root.setFormattedBatteryText()
         }
         function onStateChanged() { // Generic state changes if the above don't cover everything
+            root.setFormattedBatteryText()
+        }
+        function onReadyChanged() { // Generic state changes if the above don't cover everything
             root.setFormattedBatteryText()
         }
     }

@@ -5,7 +5,6 @@ import Quickshell.Io
 import Quickshell.Services.Pipewire
 
 import "widgets" // Assuming AudioBar.qml and BrightnessBar.qml are in this directory
-import "root:/utils/Brightness.qml" as BrightnessSingleton 
 import Quickshell.Hyprland // Required to get the focused monitor from Hyprland
 
 
@@ -44,17 +43,16 @@ Rectangle {
         // Or, you can just pass BrightnessSingleton directly to BrightnessBar
         // and let BrightnessBar figure out its targetMonitor.
         // For clarity, I'll pass a specific monitor object.
-        property var brightnessTargetMonitor: {
-            const focusedScreenName = Hyprland.focusedMonitor.name;
-            return BrightnessSingleton.monitors.find(m => m.screen.name === focusedScreenName)
-                   || BrightnessSingleton.monitors[0]; // Fallback to the first monitor
-        }
+        // property var brightnessTargetMonitor: {
+        //     const focusedScreenName = Hyprland.focusedMonitor.name;
+        //     return BrightnessSingleton.monitors.find(m => m.screen.name === focusedScreenName)
+        //            || BrightnessSingleton.monitors[0]; // Fallback to the first monitor
+        // }
 
         BrightnessBar {
             // Pass the specific BrightnessMonitor object to your BrightnessBar
             // Note: Your BrightnessBar.qml needs a 'required property var targetMonitor'
             // instead of 'required property PwNode node;'
-            targetMonitor: main.brightnessTargetMonitor
             sliderHeight: 250
             sliderWidth: 30
         }

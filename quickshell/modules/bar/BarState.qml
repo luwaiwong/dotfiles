@@ -99,7 +99,8 @@ Item {
 
     function hideBar() {
         showTopBar = false
-        isClockVisible = true
+        // isClockVisible = true
+        shortShowClockTimer.start()
     }
 
     function startHideTimer() {
@@ -125,13 +126,13 @@ Item {
 
     Timer {
         id: mediumHideBarTimer
-        interval: 800
+        interval: 200
         repeat: false
         onTriggered: hideBar()
     }
     Timer {
         id: longHideBarTimer
-        interval: 1800
+        interval: 1000
         repeat: false
         onTriggered: hideBar()
     }
@@ -143,6 +144,7 @@ Item {
 
     function showWorkspaces() {
         isClockVisible = false;
+        shortShowClockTimer.stop()
         showClockTimer.stop();
         if (!hoveringWorkspaces) showClockTimer.start();
 
@@ -150,7 +152,7 @@ Item {
 
     Timer {
         id: shortShowClockTimer
-        interval: 300
+        interval: 200
         repeat: false
         onTriggered: showClock()
     }

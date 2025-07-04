@@ -71,7 +71,7 @@ Rectangle {
 
         Behavior on opacity {
             NumberAnimation {
-            duration: 100
+            duration: 200
             easing.type: Easing.OutCubic
             }
         }

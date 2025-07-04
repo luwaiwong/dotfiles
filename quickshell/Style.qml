@@ -8,5 +8,5 @@ pragma Singleton
 
 Singleton {
 	readonly property real borderWidth: 6
-	readonly property real radius: 15
+	readonly property real radius: 20
 }

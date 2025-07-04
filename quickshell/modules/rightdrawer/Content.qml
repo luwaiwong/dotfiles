@@ -23,7 +23,7 @@ Rectangle {
     implicitHeight: main.implicitHeight+20
     
 
-    ColumnLayout {
+    RowLayout {
 
         id: main        
         anchors.centerIn: parent

@@ -28,6 +28,7 @@ Slider {
 
     property real radius: 8
     property string icon: ""
+    property var onRightClicked: function() {}
 
     // Custom background for the slider groove
     background: Rectangle {
@@ -96,6 +97,13 @@ Slider {
                 handleRect.implicitHeight = root.handleSize
                 handleRect.color = root.handleColor
             }
+
+            // onClicked: event => {
+            //     if (event.button === Qt.RightButton && typeof root.onRightClicked === 'function') {
+            //         console.log("bruh")
+            //         root.onRightClicked();
+            //     }
+            // }
         }
 
         // Value label that appears when moved

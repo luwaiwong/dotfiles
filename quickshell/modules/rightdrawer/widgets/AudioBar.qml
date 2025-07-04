@@ -18,6 +18,9 @@ Column {
     spacing: 54
 
     property string currentVolumeIcon: {
+        if (node.audio.muted){
+            return "";
+        }
         const volume = node.audio.volume;
         if (volume > 0.80) {
             return "";
@@ -61,7 +64,15 @@ Column {
         // Bind the custom slider's value to the PwNode's volume
         value: root.node.audio.volume
         // When the custom slider's value changes, update the PwNode's volume
-        onValueChanged: root.node.audio.volume = value
+        onValueChanged: {
+            root.node.audio.volume = value
+            root.node.audio.muted = false
+            }
+
+        // onRightClicked: {
+        //     node.audio.muted = !node.audio.muted
+        //     console.log("bruh")
+        // }
         textSize: 14
         radius: Style.radius
 

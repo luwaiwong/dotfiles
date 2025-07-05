@@ -20,3 +20,7 @@ cp ~/.bashrc ./
 cp ~/.profile ./
 rm -rf ./wallpapers
 cp -r ~/pictures/wallpapers ./wallpapers
+
+
+cp -r ~/pictures/wallpapers+ ./wallpapers+
+

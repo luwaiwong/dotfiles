@@ -33,7 +33,8 @@ done
 
 cp ./.bashrc ~/
 cp ./.profile ~/
-cp ./wallpapers ~/pictures/wallpapers
+cp -r ./wallpapers ~/pictures/
+cp -r ./wallpapers+ ~/pictures/
 
 # Ask for monitor configuration
 hyprconf="$HOME/.config/hypr/hyprland.conf"

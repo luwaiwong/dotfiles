@@ -12,9 +12,9 @@ Shape {
     property alias barHeight: root.height
     property alias barColor: customBarPath.fillColor
 
-    property real rightCurveOffset: 0
-    readonly property real rounding: Style.radius // Example rounding value
-    readonly property real realWidth: root.width - rightCurveOffset
+    property real curveOffset: 0
+    readonly property real rounding: Style.radius
+    readonly property real realWidth: root.width - curveOffset
     readonly property bool flatten: (realWidth) < rounding * 2
     readonly property real roundingX: flatten ? (realWidth) / 2 : rounding
 
@@ -23,20 +23,22 @@ Shape {
         id: customBarPath
         strokeWidth: -1 // No stroke
         fillColor: "white" // Default color, will be overridden by barColor alias
-        startX: root.rightCurveOffset
+        startX: root.curveOffset
         startY: -root.rounding
         // Path definition, using 'root' for dimensions as this ShapePath is its direct child
         // and 'rounding' and 'roundingX' from the outer Shape (root)
 
         PathArc {
-            relativeX: root.roundingX
+            relativeX: root.roundingX 
             relativeY: root.rounding
             radiusX: Math.min(root.rounding, root.realWidth)
             radiusY: root.rounding
+            direction: PathArc.Counterclockwise
+            
         }
 
         PathLine {
-            relativeX: root.realWidth - root.roundingX * 2
+            relativeX: (root.realWidth - root.roundingX * 2)
             relativeY: 0
         }
 
@@ -45,7 +47,7 @@ Shape {
             relativeY: root.rounding
             radiusX: Math.min(root.rounding, root.realWidth)
             radiusY: root.rounding
-            direction: PathArc.Counterclockwise
+            direction: PathArc.Clockwise
         }
 
         PathLine {
@@ -58,7 +60,7 @@ Shape {
             relativeY: root.rounding
             radiusX: Math.min(root.rounding, root.realWidth)
             radiusY: root.rounding
-            direction: PathArc.Counterclockwise
+            direction: PathArc.Clockwise
         }
 
         PathLine {
@@ -71,6 +73,7 @@ Shape {
             relativeY: root.rounding
             radiusX: Math.min(root.rounding, root.realWidth)
             radiusY: root.rounding
+            direction: PathArc.Counterclockwise
         }
     }
 }

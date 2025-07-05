@@ -59,10 +59,12 @@ Singleton {
     }
 
 
+    // Sets brightness
     Process {
         id: setProc
-        // This process will be used by BrightnessMonitor to set brightness
-        // No command specified here, it will be set by the BrightnessMonitor.
+
+        // No command specified here, will be set by whoever calls.
+
         onExited: {
             if (setProc.exitCode !== 0) {
                 console.error(`brightnessctl error: ${setProc.stderr}`);

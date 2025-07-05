@@ -138,7 +138,7 @@ Scope{
             //  Animations
             Behavior on effectiveHorizontalOffset {
                 NumberAnimation {
-                    duration: 200
+                    duration: 400
                     easing.type: Easing.OutCubic
                 }
             }

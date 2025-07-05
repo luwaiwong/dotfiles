@@ -9,6 +9,7 @@ import QtQuick.Window
 import Quickshell
 import "modules/bar"
 import "modules/border"
+import "modules/leftdrawer"
 import "modules/rightdrawer"
 import "modules/"
 
@@ -19,6 +20,7 @@ ShellRoot {
     Border {}
     DynamicBar {}
     RightDrawer {}
+    LeftDrawer {}
 
     // StaticBar {}
 }

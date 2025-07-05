@@ -105,7 +105,7 @@ ClippingRectangle {
             interactive: true
             boundsBehavior: Flickable.DragAndOvershootBounds
             snapMode: ListView.SnapToItem // This helps in snapping to items after flicking
-            flickDeceleration: 0.0001
+            // flickDeceleration: 0.0001
             maximumFlickVelocity: 10000
             synchronousDrag: false
             z: 0

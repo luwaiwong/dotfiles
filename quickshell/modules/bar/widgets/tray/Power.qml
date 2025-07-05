@@ -68,8 +68,11 @@ MouseArea {
     }
 
     function getRealPercentage() {
-        if (UPower.displayDevice.healthSupported){
 
+        if (!UPower.displayDevice.isLaptopBattery){
+            return 100
+        }
+        if (UPower.displayDevice.healthSupported){
             return UPower.displayDevice.percentage / UPower.displayDevice.healthPercentage
         }
         else {
@@ -115,7 +118,7 @@ MouseArea {
     }
 
     onClicked: event => {
-        if (event.button === Qt.LeftButton) {
+        if (event.button === Qt.LeftButton || UPower.displayDevice.isLaptopBattery) {
             root.mode = (root.mode + 1) % (root.maxMode + 1);
             console.log(mode)
             root.setFormattedBatteryText(); 
@@ -128,7 +131,7 @@ MouseArea {
         text: root.formattedBatteryText // Display the dynamically formatted string
         font.family: "Martian Mono Nerd Font" // You MUST have Nerd Font installed on your system
         font.pixelSize: mode == 0 ? 15 : 13 // Adjust size
-        color: getRealPercentage()< 0.1 ? "#bf616a" :  "#d8dee9" // Or your panel's text color
+        color: getRealPercentage() < 0.1 ? "#bf616a" :  "#d8dee9" // Or your panel's text color
         anchors.centerIn: parent
 
         // anchors.verticalCenterOffset: mode == 0 ? 0 : 0

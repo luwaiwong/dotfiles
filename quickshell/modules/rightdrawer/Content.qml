@@ -33,8 +33,8 @@ Rectangle {
 
         AudioBar {
             node: Pipewire.defaultAudioSink
-            sliderHeight: 250
-            sliderWidth: 30
+            sliderHeight: 330
+            sliderWidth: 35
         }
 
         // Determine the target monitor for brightness control
@@ -53,8 +53,8 @@ Rectangle {
             // Pass the specific BrightnessMonitor object to your BrightnessBar
             // Note: Your BrightnessBar.qml needs a 'required property var targetMonitor'
             // instead of 'required property PwNode node;'
-            sliderHeight: 250
-            sliderWidth: 30
+            sliderHeight: 330
+            sliderWidth: 35
         }
 
         Behavior on opacity {

@@ -17,7 +17,7 @@ Scope{
 
             property RightDrawerState rightDrawerState: RightDrawerState {}
             property var modelData
-            property real effectiveHorizontalOffset: rightDrawerState.showTopBar? 0: -(background.width) + (rightDrawerState.hoveringTopBar? 6: 0)
+            property real effectiveHorizontalOffset: rightDrawerState.showTopBar? 0: -(background.width) + (rightDrawerState.hoveringTopBar? 5: 0)
             // property real effectiveHorizontalOffset: 20
             property bool isShown: false // Initially hidden
             screen: modelData

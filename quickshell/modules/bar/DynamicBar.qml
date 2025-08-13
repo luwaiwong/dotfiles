@@ -18,7 +18,7 @@ Scope{
 
             property BarState barState: BarState {}
             property var modelData
-            property real effectiveVerticalOffset: barState.showTopBar? 0: -  (barShape.height - 4) 
+            property real effectiveVerticalOffset: barState.showTopBar? 0: -  (barShape.height - 5) 
             property real extraPadding: 40
             // property real effectiveVerticalOffset: 0
             property bool isShown: false // Initially hidden

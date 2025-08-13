@@ -6,7 +6,7 @@ import QtQuick.Layouts
 
 MouseArea{
 
-    implicitWidth: Math.max(100, layout.width+20)
+    implicitWidth: Math.max(60, layout.width)
     implicitHeight: 25
 
 
@@ -23,7 +23,8 @@ MouseArea{
         clip: true
         visible: width > 0 && height > 0
 
-        color: "#2e3440"
+        // color: "#2e3440"
+        color: "transparent"
         radius: 20
 
         property bool hovering: false
@@ -75,12 +76,12 @@ MouseArea{
                 }
 
                 // Show rest of tray
-                Repeater {
-                    model: SystemTray.items
-                    TrayItem {
-                        width: (modelData.id != "nm-applet" && root.hovering)? 23: 0
-                    }
-                }
+                // Repeater {
+                //     model: SystemTray.items
+                //     TrayItem {
+                //         width: (modelData.id != "nm-applet" && root.hovering)? 23: 0
+                //     }
+                // }
                 Behavior on width{
                     NumberAnimation {
                         duration: 500

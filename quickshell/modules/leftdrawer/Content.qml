@@ -15,12 +15,13 @@ Rectangle {
 
     // anchors.centerIn: parent
     anchors.verticalCenter: parent.verticalCenter
+    anchors.right: parent.right
     // anchors.topMargin: -20
     clip: true
     color: "transparent"
 
 
-    implicitWidth: main.width+15
+    implicitWidth: main.width
     implicitHeight: main.height
 
 

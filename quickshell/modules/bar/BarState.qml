@@ -31,7 +31,7 @@ Item {
 
                 // check if last window in workspace was just closed, show top bar
                 if (event.name === "closewindow") {
-                    // window count always laggs behind, if there was one window and you 
+                    // window count sometimes lags behind, if there was one window and you 
                     // closed one, then there's probably 0 now
 
                     const windowsInThisWorkspace = HyprlandData.windowList.filter(w => w.workspace.id == root.curWorkspace)
@@ -70,17 +70,22 @@ Item {
     }
 
 
-    function onTopMainTopBarHovered(value) {
+    function onWorkspaceAreaHovered(value) {
         hoveringTopTopBar = value
         if (value){
             hoveringWorkspaces = true
-            showWorkspaces()
+            showWorkspaceTimer.start()
+            // showWorkspaces()
             shortShowClockTimer.stop()
             showClockTimer.stop()
+        } else {
+            showWorkspaceTimer.stop()
         }
     }
+    
 
     function onWorkspaceHovered(value){
+        // value is true if hovering over workspaces
         hoveringWorkspaces = value
         if (value || hoveringTopTopBar){
             showClockTimer.stop()
@@ -142,6 +147,12 @@ Item {
 
     }
 
+    Timer {
+        id: showWorkspaceTimer
+        interval: 200
+        repeat: false
+        onTriggered: showWorkspaces()
+    }
     function showWorkspaces() {
         isClockVisible = false;
         shortShowClockTimer.stop()
@@ -152,7 +163,7 @@ Item {
 
     Timer {
         id: shortShowClockTimer
-        interval: 200
+        interval: 250
         repeat: false
         onTriggered: showClock()
     }

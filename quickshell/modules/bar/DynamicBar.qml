@@ -18,7 +18,8 @@ Scope{
 
             property BarState barState: BarState {}
             property var modelData
-            property real effectiveVerticalOffset: barState.showTopBar? 0: -  (barShape.height - 6) 
+            property real effectiveVerticalOffset: barState.showTopBar? 0: -  (barShape.height - 4) 
+            property real extraPadding: 40
             // property real effectiveVerticalOffset: 0
             property bool isShown: false // Initially hidden
             screen: modelData
@@ -28,7 +29,7 @@ Scope{
             WlrLayershell.exclusionMode: ExclusionMode.Ignore
             mask: Region {
                 x: root.modelData.width/2 - detectionArea.width/2
-                y: root.effectiveVerticalOffset
+                y: root.effectiveVerticalOffset- root.extraPadding
                 width: detectionArea.width
                 height: detectionArea.height
                 intersection: Intersection.Union
@@ -62,10 +63,10 @@ Scope{
                 anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: barShape.width
-                height: barContent.height+Style.borderWidth*2
+                height: barContent.height+Style.borderWidth*2+root.extraPadding
                 
                 hoverEnabled: true
-                anchors.topMargin: root.effectiveVerticalOffset
+                anchors.topMargin: root.effectiveVerticalOffset-root.extraPadding/2
 
                 onEntered: root.barState.onMainTopBarHovered(true);
                 onExited: root.barState.onMainTopBarHovered(false);
@@ -79,14 +80,14 @@ Scope{
                     samples: 17         // Quality of the blur (higher = smoother, slower)
                 }
 
-                BarBackgroundShape {
+                RoundedBackground {
                     id: barShape
                     anchors.top: parent.top
                     anchors.horizontalCenter: parent.horizontalCenter
 
-                    anchors.topMargin: Style.borderWidth
-                    topCurveOffset: Math.max(0, -root.effectiveVerticalOffset)
-
+                    topMargin: Style.borderWidth+root.extraPadding/2
+                    topCurveOffset: -root.effectiveVerticalOffset
+                    margin: 10
                     barWidth: barContent.implicitWidth
                     barHeight: 40
                     barColor: "black"
@@ -99,21 +100,22 @@ Scope{
                         id: barContent
                         root: root
                         barState: root.barState
+                        anchors.bottomMargin: -10
                     }
                 }
 
                 // Detecting when very top is hovered
                 MouseArea {
 
-                    width: 40
-                    height: 1
-                    anchors.topMargin: 0
+                    width: 50
+                    height: 3
+                    anchors.topMargin: root.extraPadding/2
                     anchors.top: parent.top
                     anchors.horizontalCenter: parent.horizontalCenter
                     hoverEnabled: true
                     propagateComposedEvents: true 
-                    onEntered: root.barState.onTopMainTopBarHovered(true);
-                    onExited: root.barState.onTopMainTopBarHovered(false);
+                    onEntered: root.barState.onWorkspaceAreaHovered(true);
+                    onExited: root.barState.onWorkspaceAreaHovered(false);
 
                     z: 100000
                     // Rectangle{
@@ -132,8 +134,9 @@ Scope{
             //  Animations
             Behavior on effectiveVerticalOffset {
                 NumberAnimation {
-                    duration: 200
-                    easing.type: Easing.OutCubic
+                    duration: 400
+                    easing.type: root.barState.showTopBar?   Easing.InOutBack : Easing.OutBack
+                    // easing.type: Easing.OutCubic
                 }
             }
             

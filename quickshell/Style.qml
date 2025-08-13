@@ -7,6 +7,6 @@ import Quickshell
 pragma Singleton
 
 Singleton {
-	readonly property real borderWidth: 6
-	readonly property real radius: 20
+	readonly property real borderWidth: 0
+	readonly property real radius: 15
 }

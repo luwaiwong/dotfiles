@@ -52,7 +52,7 @@ Column {
         value: Brightness.brightnessPercentage
         // When the custom slider's value changes, update the targetMonitor's brightness
         onValueChanged:  {
-            Brightness.setBrightness(value);
+            // Brightness.setBrightness(value);
             // }
         }
 

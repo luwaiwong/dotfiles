@@ -29,7 +29,7 @@ Scope{
             WlrLayershell.exclusionMode: ExclusionMode.Ignore
             mask: Region {
                 x: root.modelData.width/2 - detectionArea.width/2
-                y: root.effectiveVerticalOffset- root.extraPadding
+                y: root.effectiveVerticalOffset- root.extraPadding+5
                 width: detectionArea.width
                 height: detectionArea.height
                 intersection: Intersection.Union

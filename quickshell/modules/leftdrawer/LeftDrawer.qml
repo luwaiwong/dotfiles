@@ -29,7 +29,7 @@ Scope{
             mask: Region {
                 x: 0
                 y: detectionArea.y
-                width: root.effectiveHorizontalOffset+detectionArea.width-root.extraPadding/2
+                width: root.effectiveHorizontalOffset+detectionArea.width-root.extraPadding
                 height: detectionArea.height
                 intersection: Intersection.Union
 
@@ -59,9 +59,8 @@ Scope{
             //     height: Style.borderWidth
             //     anchors.top: parent.top
             //     anchors.horizontalCenter: parent.horizontalCenter
-            //     // anchors.top
-            //     // anchors.topMargin: -root.effectiveVerticalOffset+5
-
+            // anchors.top
+            // anchors.topMargin: -root.effectiveVerticalOffset+5
             //     color: "black"
             //     z: 101
 
@@ -72,7 +71,7 @@ Scope{
                 anchors.left: parent.left
                 anchors.verticalCenter: parent.verticalCenter
                 height: background.height+40
-                width: content.width+Style.borderWidth+45
+                width: content.width+Style.borderWidth+42
                 
                 hoverEnabled: true
                 anchors.leftMargin: root.effectiveHorizontalOffset-root.extraPadding

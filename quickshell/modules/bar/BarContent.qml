@@ -14,7 +14,8 @@ Rectangle {
     
     // anchors.centerIn: parent
     anchors.horizontalCenter: parent.horizontalCenter
-    // anchors.topMargin: -20
+    anchors.bottom: parent.bottom
+    // anchors.bottomMargin: -10
     clip: true
     color: "transparent"
 
@@ -71,7 +72,7 @@ Rectangle {
 
         Behavior on opacity {
             NumberAnimation {
-            duration: 200
+            duration: 150
             easing.type: Easing.OutCubic
             }
         }

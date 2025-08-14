@@ -8,8 +8,9 @@ Shape {
     id: root
 
     // Properties to be set by the parent (Bar.qml)
-    property alias barWidth: root.width
-    property alias barHeight: root.height
+    property real barWidth
+    property real barHeight
+    property real leftMargin
     property alias barColor: customBarPath.fillColor
 
     property real curveOffset: 0
@@ -18,12 +19,18 @@ Shape {
     readonly property bool flatten: (realWidth) < rounding * 2
     readonly property real roundingX: flatten ? (realWidth) / 2 : rounding
 
+    property real margin // Gives extra margin for bounce animation
+    
+    anchors.leftMargin: leftMargin-margin
+
+    width: barWidth
+    height: barHeight
 
     ShapePath {
         id: customBarPath
         strokeWidth: -1 // No stroke
         fillColor: "white" // Default color, will be overridden by barColor alias
-        startX: root.curveOffset
+        startX: root.curveOffset+root.margin
         startY: -root.rounding
         // Path definition, using 'root' for dimensions as this ShapePath is its direct child
         // and 'rounding' and 'roundingX' from the outer Shape (root)

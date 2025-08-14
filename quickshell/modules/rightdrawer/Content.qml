@@ -11,10 +11,10 @@ import Quickshell.Hyprland // Required to get the focused monitor from Hyprland
 Rectangle {
     id : barContent
     required property var root
-    required property RightDrawerState state
 
     // anchors.centerIn: parent
     anchors.verticalCenter: parent.verticalCenter
+    anchors.left: parent.left
     // anchors.topMargin: -20
     clip: true
     color: "transparent"

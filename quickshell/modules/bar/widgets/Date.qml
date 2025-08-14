@@ -19,9 +19,9 @@ Rectangle {
     anchors.centerIn: parent
     text : Time.date
     color: "#eceff4"
-    font.pixelSize: 14
+    font.pixelSize: 18
 
-    font.family: "Martian Mono Nerd Font"
+    font.family: "CommitMono Nerd Font"
     Behavior on font.pixelSize {
       NumberAnimation {
         duration: 200

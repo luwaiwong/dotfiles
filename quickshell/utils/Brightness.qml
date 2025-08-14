@@ -86,17 +86,18 @@ Singleton {
         // Sets the brightness for the associated device
     function setBrightness(value: real): void {
 
-        const realValue = Math.round(value * maxBrightness);
+        const realValue = value * 100;
 
         // Avoid setting if the rounded percentage is already the same or is 0
-        if (Math.round(brightness) === realValue || realValue == 0)
+        if (Math.round(brightnessPercentage) === realValue)
             return;
 
-        brightness = value; // Optimistically update local property
+        console.log(value)
+        brightness = Math.round(value)*maxBrightness; // Optimistically update local property
 
         // Use the global setProc to avoid creating many processes
         // Ensure only one brightnessctl command runs at a time if possible
-        setProc.command = ["brightnessctl", "set", `${realValue}`, "--quiet"];
+        setProc.command = ["brightnessctl", "set", `${realValue}%`, "--quiet"];
         setProc.startDetached(); // Start the process without waiting for it to exit
         // Re-initialize after setting to get the true, updated brightness
         // A small delay might be useful if the system needs time to apply the change

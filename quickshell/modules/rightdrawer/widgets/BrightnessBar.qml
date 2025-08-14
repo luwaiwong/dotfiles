@@ -53,7 +53,6 @@ Column {
         // When the custom slider's value changes, update the targetMonitor's brightness
         onValueChanged:  {
             Brightness.setBrightness(value);
-            // }
         }
 
         textSize: 14

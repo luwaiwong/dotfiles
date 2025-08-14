@@ -18,7 +18,7 @@ MouseArea {
     readonly property int workspaceGroup: Math.floor((monitor.activeWorkspace?.id - 1) / workspacesShown)
     property list<bool> workspaceOccupied: []
     property int widgetPadding: 0
-    property int workspaceButtonWidth: 24
+    property int workspaceButtonWidth: 22
     property real workspaceIconSize: workspaceButtonWidth * 0.69
     property real workspaceIconSizeShrinked: workspaceButtonWidth * 0.55
     property real workspaceIconOpacityShrinked: 1
@@ -99,8 +99,8 @@ MouseArea {
                 topRightRadius: radiusRight
                 bottomRightRadius: radiusRight
                 
-                // color: "#2e3440"
-                color: "transparent"
+                color: "#2e3440"
+                // color: "transparent"
                 opacity: (workspaceOccupied[index] && !(!activeWindow?.activated && monitor.activeWorkspace?.id === index+1)) ? 1 : 0
 
                 // anchors.topMargin: 2
@@ -137,7 +137,7 @@ MouseArea {
         z: 2
         // Make active ws indicator, which has a brighter color, smaller to look like it is of the same size as ws occupied highlight
         property real activeWorkspaceMargin: 2
-        implicitHeight: 25
+        implicitHeight: workspaceButtonWidth
         radius: 20
         color: "#81a1c1"
         // color: "transparent"
@@ -189,11 +189,15 @@ MouseArea {
                 onPressed: Hyprland.dispatch(`workspace ${workspaceValue}`)
                 onHoveredChanged: {
                     if (hovered) {
-                        workspaceButtonIndicator.width = 18
-                        workspaceButtonIndicator.height = 18
+                        workspaceButtonIndicator.width = 16
+                        workspaceButtonIndicator.height = 16
+                        mainAppIcon.width = 22
+                        mainAppIcon.height = 22
                     } else {
                         workspaceButtonIndicator.width = 12
                         workspaceButtonIndicator.height = 12
+                        mainAppIcon.width = 16
+                        mainAppIcon.height = 16
                     }
                 }
                 width: workspaceButtonWidth
@@ -218,7 +222,7 @@ MouseArea {
                         width: workspaceOccupied[index] ? workspaceIconSize-1: 10
                         height: workspaceOccupied[index] ? workspaceIconSize-1: 10
                         radius: 20
-                        color: workspaceOccupied[index] ? "#81a1c1": "#4c566a"
+                        color: workspaceOccupied[index] ? "#d8dee9": "#4c566a"
                         
                         Behavior on width {
                             NumberAnimation {
@@ -261,12 +265,15 @@ MouseArea {
                         height: workspaceButtonWidth
                         IconImage {
                             id: mainAppIcon
-                            anchors.bottom: parent.bottom
-                            anchors.right: parent.right
-                            anchors.bottomMargin: (true) ? 
-                                (workspaceButtonWidth - workspaceIconSize) / 2 : workspaceIconMarginShrinked
-                            anchors.rightMargin: (true) ? 
-                                (workspaceButtonWidth - workspaceIconSize) / 2 : workspaceIconMarginShrinked
+                            anchors.centerIn: parent
+                            anchors.verticalCenterOffset: 0.5
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            // anchors.bottom: parent.bottom
+                            // anchors.right: parent.right
+                            // anchors.bottomMargin: (true) ? 
+                            //     (workspaceButtonWidth - workspaceIconSize) / 2 : workspaceIconMarginShrinked
+                            // anchors.rightMargin: (true) ? 
+                            //     (workspaceButtonWidth - workspaceIconSize) / 2 : workspaceIconMarginShrinked
 
                             opacity: workspaceButtonBackground.mainAppIconPath == "image-missing" ? 0 : 1
                             // visible: workspaceButtonBackground.mainAppIconSource == "image-missing" ? 0 : 1
@@ -295,6 +302,21 @@ MouseArea {
                                 }
                             }
                             Behavior on implicitSize {
+                                NumberAnimation {
+                                    // Use a single, consistent duration for the entire show/hide animation
+                                    duration: 200 // Adjust this for your desired speed
+                                    easing.type: Easing.OutCubic // A smoother easing curve for movement
+                                }
+                            }
+
+                            Behavior on width {
+                                NumberAnimation {
+                                    // Use a single, consistent duration for the entire show/hide animation
+                                    duration: 200 // Adjust this for your desired speed
+                                    easing.type: Easing.OutCubic // A smoother easing curve for movement
+                                }
+                            }
+                            Behavior on height {
                                 NumberAnimation {
                                     // Use a single, consistent duration for the entire show/hide animation
                                     duration: 200 // Adjust this for your desired speed

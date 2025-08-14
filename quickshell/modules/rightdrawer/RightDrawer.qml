@@ -17,7 +17,7 @@ Scope{
 
             property RightDrawerState rightDrawerState: RightDrawerState {}
             property var modelData
-            property real effectiveHorizontalOffset: rightDrawerState.showTopBar? 0: -(background.width)
+            property real effectiveHorizontalOffset: rightDrawerState.showTopBar? 0: -(background.width) + (rightDrawerState.hoveringTopBar? 5: 0)
             // property real effectiveHorizontalOffset: 20
             property bool isShown: false // Initially hidden
             screen: modelData
@@ -26,7 +26,7 @@ Scope{
             // Otherwise, the whole area of the panel window would be unusable by other apps
             WlrLayershell.exclusionMode: ExclusionMode.Ignore
             mask: Region {
-                x: root.implicitWidth-root.effectiveHorizontalOffset-detectionArea.width
+                x: root.implicitWidth-root.effectiveHorizontalOffset-90
                 y: detectionArea.y
                 width: 100000
                 height: detectionArea.height
@@ -71,10 +71,10 @@ Scope{
                 anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
                 height: background.height+40
-                width: childrenRect.width+Style.borderWidth*2
+                width: childrenRect.width+Style.borderWidth*2+40
                 
                 hoverEnabled: true
-                anchors.rightMargin: root.effectiveHorizontalOffset 
+                anchors.rightMargin: root.effectiveHorizontalOffset -20
                 // anchors.rightMargin: 20
 
                 onEntered: root.rightDrawerState.onMainTopBarHovered(true);
@@ -94,39 +94,24 @@ Scope{
                     id: background
                     anchors.right: detectionArea.right
                     anchors.verticalCenter: parent.verticalCenter
-                    anchors.rightMargin: Style.borderWidth
+                    // anchors.rightMargin: Style.borderWidth
+                    rightMargin: Style.borderWidth+20
 
                     barHeight: content.height+5
                     barWidth: content.implicitWidth
                     barColor: "black"
+
+                    margin: 30
                     // rightCurveOffset: 0
-                    rightCurveOffset: Math.max(0,-root.effectiveHorizontalOffset)
+                    rightCurveOffset: -root.effectiveHorizontalOffset
                     Content {
                         id: content
                         root: root
                         state: root.rightDrawerState
+                        anchors.leftMargin: 30
                     }
                 }
 
-                // Detecting when very top is hovered
-                // MouseArea {
-
-                //     width: 160
-                //     height: Style.borderWidth
-                //     anchors.topMargin: 0
-                //     anchors.top: parent.top
-                //     anchors.horizontalCenter: parent.horizontalCenter
-                //     hoverEnabled: true
-                //     propagateComposedEvents: true 
-                //     onEntered: root.barState.onTopMainTopBarHovered(true);
-                //     onExited: root.barState.onTopMainTopBarHovered(false);
-
-                //     z: 100000
-                //     // Rectangle{
-                //     //     anchors.fill:parent
-                //     //     color: "white"
-                //     // }
-                // // }
                 // Rectangle{
                 //     anchors.fill:parent
                 //     color: "white"
@@ -138,8 +123,9 @@ Scope{
             //  Animations
             Behavior on effectiveHorizontalOffset {
                 NumberAnimation {
-                    duration: 400
-                    easing.type: Easing.OutCubic
+                    duration: 300
+                    easing.type: root.rightDrawerState.showTopBar?   Easing.InBack : Easing.OutBack
+                    // easing.type: Easing.OutBack
                 }
             }
             

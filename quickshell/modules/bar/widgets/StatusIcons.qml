@@ -12,7 +12,8 @@ Rectangle {
   opacity: enabled ? 1 : 0
   implicitWidth: Math.max(contentText.implicitWidth + 20, 40)
   height: contentText.height+5
-  color: "#2e3440"
+  // color: "#2e3440"
+  color: "transparent"
   radius: 20
 
   Text {

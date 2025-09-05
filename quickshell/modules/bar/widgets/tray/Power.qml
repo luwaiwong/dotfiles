@@ -20,6 +20,7 @@ MouseArea {
     ]
     property string chargingIcon: ""
     property string pluggedIcon: "󱘖"
+    property string color: "#d8dee9" // Default battery color
 
     property int batteryIconLevelSteps: 10 // Your format-icons array has 11 elements (0-100, 10 steps)
 
@@ -46,8 +47,21 @@ MouseArea {
     property string formattedBatteryText: "󱘖"
     
     function setFormattedBatteryText() {
-        if (UPower.displayDevice.isLaptopBattery){
+        // Determine color based on battery level
+        if (getRealPercentage() <= 0.1) {
+            root.color = "#bf616a"; 
+        } else if (getRealPercentage()<= 0.2){
+            root.color = "#d08770";
+        } else if (getRealPercentage() <= 0.4) {
+            root.color = "#ebcb8b";
+        } else if (getRealPercentage() >= 0.8) {
+            root.color = "#a3be8c"; 
+        } else {
+            root.color = "#d8dee9";
+        }
 
+        // Determine the text to display based on mode and battery status
+        if (UPower.displayDevice.isLaptopBattery){
             switch (mode) {
                 case 0: 
                     formattedBatteryText = getCurrentIconChar();
@@ -131,7 +145,7 @@ MouseArea {
         text: root.formattedBatteryText // Display the dynamically formatted string
         font.family: "CommitMono Nerd Font" // You MUST have Nerd Font installed on your system
         font.pixelSize: mode == 0 ? 16 : 16 // Adjust size
-        color: getRealPercentage() < 0.1 ? "#bf616a" :  "#d8dee9" // Or your panel's text color
+        color: root.color // Or your panel's text color
         anchors.centerIn: parent
 
         // anchors.verticalCenterOffset: mode == 0 ? 0 : 0

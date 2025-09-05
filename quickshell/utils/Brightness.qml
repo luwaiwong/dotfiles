@@ -26,6 +26,7 @@ Singleton {
     // --- Brightness Device Discovery ---
     Component.onCompleted: {
         // Run the discovery process when the component is created
+        getMaxBrightness.running = true;
         getBrightness.running = true;
         brightnessMonitorTimer.start()
     }
@@ -45,7 +46,7 @@ Singleton {
         }
     }
 
-    Process {
+    Process { 
         id: getMaxBrightness
         // List all detected backlight devices and their associated output names
         // e.g., "Device 'intel_backlight': Found 1 outputs (eDP-1,)"

@@ -132,7 +132,8 @@ MouseArea {
     }
     //////////
 
-    // Active workspace
+    // Active workspace indicator
+    // Sliding circle behind active icon
     Rectangle {
         z: 2
         // Make active ws indicator, which has a brighter color, smaller to look like it is of the same size as ws occupied highlight
@@ -170,7 +171,7 @@ MouseArea {
         }
     }
 
-    // Workspaces - numbers
+    // Workspaces icons and white color
     RowLayout {
         id: rowLayoutNumbers
         z: 3
@@ -191,8 +192,8 @@ MouseArea {
                     if (hovered) {
                         workspaceButtonIndicator.width = 16
                         workspaceButtonIndicator.height = 16
-                        mainAppIcon.width = 22
-                        mainAppIcon.height = 22
+                        mainAppIcon.width = 18
+                        mainAppIcon.height = 18
                     } else {
                         workspaceButtonIndicator.width = 12
                         workspaceButtonIndicator.height = 12

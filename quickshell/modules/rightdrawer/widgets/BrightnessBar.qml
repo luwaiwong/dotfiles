@@ -13,19 +13,6 @@ Column {
 
     spacing: 54
 
-    // Access the Brightness singleton
-    // You typically don't instantiate singletons with "id:" directly in QML
-    // You access them via their exposed 'qmlName' (defined by 'pragma Singleton')
-    // and the file's alias.
-    // For a singleton named Brightness.qml with pragma Singleton, you can access it as BrightnessSingleton.
-    // However, since it's a pragma Singleton and accessible by its file name as a type,
-    // you can directly use `BrightnessSingleton.monitors` etc.
-
-    // If you need a specific monitor, you'll want to pass it as a property
-    // or determine it dynamically, for example, based on the focused Hyprland monitor.
-    // For simplicity, let's assume we're controlling the brightness of the *first* monitor
-    // or the one associated with the focused screen for now.
-
     property string currentBrightnessIcon: {
 
             return "󰛨"; // Brightness off icon or similar

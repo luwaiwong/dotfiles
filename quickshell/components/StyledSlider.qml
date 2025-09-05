@@ -69,7 +69,7 @@ Slider {
         property bool moving
         property bool hovering
 
-        y: root.visualPosition * (root.availableHeight-height/2+2)
+        y: root.visualPosition * (root.availableHeight-height/2+2)-handleRect.implicitHeight/5
         anchors.horizontalCenter: root.horizontalCenter
 
         // Animation for size change on hover

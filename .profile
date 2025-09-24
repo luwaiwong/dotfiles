@@ -1,5 +1,5 @@
 #! /bin/bash
-pfetch
+# pfetch
 
 alias hp="Hyprland"
 alias sp="spotify_player"

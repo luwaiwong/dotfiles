@@ -31,8 +31,8 @@ set -g fish_color_keyword $nord9
 set -g fish_color_option $nord13
 set -g fish_color_nolog $nord8
 set -g fish_color_selection_background $nord2 # This is for text selection in the terminal
-set -g fish_color_host $nord7
-set -g fish_color_user $nord7
+set -g fish_color_host $nord9
+set -g fish_color_user $nord9
 
 # Other UI elements
 set -g fish_color_cwd $nord8
@@ -64,8 +64,9 @@ function fish_prompt
     set_color $fish_color_cwd
     echo -n (prompt_pwd)
     set_color normal
-    echo -n "> "
+    echo -n " 🐟 "
 end
 
 # Alias for 'ls' with common options
-alias ll "ls -laF"
+alias hp "hyprland"
+alias sp "spotify_player"

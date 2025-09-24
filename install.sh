@@ -53,7 +53,7 @@ select hardware_conf in "dualmonitor.conf" "singlehighres.conf"; do
     fi
 done
 
-# Add the correct source line at the top of hyprland.conf
+# Add the correct source line at the bottom of hyprland.conf
 echo  "source = \$hardware/$hardware_conf" >> "$hyprconf"
 
 # Ask for nvidia configuration

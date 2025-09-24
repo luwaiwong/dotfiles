@@ -135,7 +135,7 @@ Scope{
             Behavior on effectiveVerticalOffset {
                 NumberAnimation {
                     duration: 400
-                    easing.type: root.barState.showTopBar?   Easing.InOutBack : Easing.OutBack
+                    easing.type: root.barState.showTopBar?   Easing.OutCubic : Easing.OutBack
                     // easing.type: Easing.OutCubic
                 }
             }

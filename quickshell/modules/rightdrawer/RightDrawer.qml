@@ -26,7 +26,7 @@ Scope{
             // Otherwise, the whole area of the panel window would be unusable by other apps
             WlrLayershell.exclusionMode: ExclusionMode.Ignore
             mask: Region {
-                x: root.implicitWidth-root.effectiveHorizontalOffset-90
+                x: root.implicitWidth-root.effectiveHorizontalOffset-95
                 y: detectionArea.y
                 width: 100000
                 height: detectionArea.height

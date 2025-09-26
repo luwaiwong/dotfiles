@@ -145,7 +145,7 @@ Scope{
             Behavior on effectiveHorizontalOffset {
                 NumberAnimation {
                     duration: 400
-                    easing.type: root.state.showTopBar?   Easing.InBack : Easing.OutBack
+                    easing.type: root.state.showTopBar?   Easing.OutCubic : Easing.OutBack
                 }
             }
             

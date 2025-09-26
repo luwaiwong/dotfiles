@@ -124,7 +124,7 @@ Scope{
             Behavior on effectiveHorizontalOffset {
                 NumberAnimation {
                     duration: 300
-                    easing.type: root.rightDrawerState.showTopBar?   Easing.InBack : Easing.OutBack
+                    easing.type: root.rightDrawerState.showTopBar?   Easing.OutCubic : Easing.OutBack
                     // easing.type: Easing.OutBack
                 }
             }

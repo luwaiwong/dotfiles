@@ -22,7 +22,7 @@ read -p "Do you want to install packages? [y/N]: " install_packages
 
 if [[ "$install_packages" =~ ^[Yy]$ ]]; then
     # Add the nvidia source line just after the monitor config line
-    yay -S cava hyprland kitty omposh rofi waybar-cava wlogout hyprsome fish mako--noconfirm
+    yay -S cava hyprland kitty omposh rofi waybar-cava wlogout hyprsome fish mako betterdiscordctl--noconfirm
 fi
 
 

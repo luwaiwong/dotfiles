@@ -134,7 +134,7 @@ Scope{
             //  Animations
             Behavior on effectiveVerticalOffset {
                 NumberAnimation {
-                    duration: 400
+                  duration: 350
                     easing.type: root.barState.showTopBar?   Easing.OutCubic : Easing.OutBack
                     // easing.type: Easing.OutCubic
                 }

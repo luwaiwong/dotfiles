@@ -15,6 +15,7 @@ Scope{
 
         PanelWindow {
             id : root
+            
 
             property BarState barState: BarState {}
             property var modelData

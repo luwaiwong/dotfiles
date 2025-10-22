@@ -22,7 +22,7 @@ Scope {
                 left: true
                 right: true
             }
-
+            
 
             WlrLayershell.exclusionMode: ExclusionMode.Ignore
             mask: Region {

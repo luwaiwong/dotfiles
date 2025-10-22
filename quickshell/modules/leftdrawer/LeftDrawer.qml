@@ -14,7 +14,7 @@ Scope{
 
         PanelWindow {
             id : root
-
+            
             property LeftDrawerState state: LeftDrawerState {}
             property var modelData
             property real effectiveHorizontalOffset: state.showTopBar? 0 : -(background.width)+ (state.hoveringTopBar? 5: 0)

@@ -13,8 +13,6 @@ Scope{
             model: Quickshell.screens
             PanelWindow {
                 id: root
-
-
                 property var modelData
                 screen: modelData
                 anchors {

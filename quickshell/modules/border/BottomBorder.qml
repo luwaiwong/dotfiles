@@ -20,8 +20,6 @@ Scope {
                 bottom: true
             }
 
-
-
             WlrLayershell.exclusionMode: ExclusionMode.Ignore
             mask: Region {
                 x: 0

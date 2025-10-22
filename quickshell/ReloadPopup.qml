@@ -34,7 +34,6 @@ Scope {
 		PanelWindow {
 			id: popup
 
-
 			anchors.top: true
 			margins.top: 0
 

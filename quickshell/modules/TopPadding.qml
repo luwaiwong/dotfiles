@@ -22,7 +22,6 @@ Scope {
                 left: true
                 right: true
             }
-            
 
             property real borderWidth: Style.borderWidth
             property real radius: Style.radius

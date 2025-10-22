@@ -19,9 +19,6 @@ Scope{
             anchors {
                 right: true
             }
-
-            
-
             
 
             WlrLayershell.exclusionMode: ExclusionMode.Ignore

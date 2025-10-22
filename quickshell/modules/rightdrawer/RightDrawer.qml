@@ -14,7 +14,7 @@ Scope{
 
         PanelWindow {
             id : root
-            
+
             property RightDrawerState rightDrawerState: RightDrawerState {}
             property var modelData
             property real effectiveHorizontalOffset: rightDrawerState.showTopBar? 0: -(background.width) + (rightDrawerState.hoveringTopBar? 5: 0)
@@ -60,6 +60,7 @@ Scope{
             //     anchors.horizontalCenter: parent.horizontalCenter
             //     // anchors.top
             //     // anchors.topMargin: -root.effectiveVerticalOffset+5
+
             //     color: "black"
             //     z: 101
 

@@ -1,6 +1,6 @@
 #! /bin/bash
 # pfetch
+export PATH=$HOME/.local/bin:$PATH
 
 alias hp="Hyprland"
 alias sp="spotify_player"
-# eval "$(oh-my-posh init bash --config ~/.config/omposh/nordtron.omp.json)"

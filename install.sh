@@ -18,16 +18,17 @@ if ! pacman -Q yay &> /dev/null; then
     yay -Y --devel --save
 fi
 
+
 read -p "Do you want to install packages? [y/N]: " install_packages
 
 if [[ "$install_packages" =~ ^[Yy]$ ]]; then
     # Add the nvidia source line just after the monitor config line
-    yay -S cava hyprland kitty omposh rofi waybar-cava wlogout hyprsome fish mako betterdiscordctl--noconfirm
+    yay -S cava hyprland kitty ghostty rofi waybar-cava wlogout hyprsome fish mako betterdiscordctl--noconfirm
 fi
 
 
 # Copy config files to ~/.config
-for dir in cava hypr kitty omposh rofi spicetify quickshell wlogout fish mako waybar; do
+for dir in cava hypr kitty ghostty rofi spicetify quickshell wlogout fish mako waybar; do
     cp -r ./$dir ~/.config
 done
 
@@ -60,13 +61,12 @@ echo  "source = \$hardware/$hardware_conf" >> "$hyprconf"
 # Ask user if they want to include nvidia.conf
 read -p "Do you want to include NVIDIA config (nvidia.conf)? [y/N]: " include_nvidia
 
-# Remove any previous source line for nvidia.conf 
+# Remove any previous source line for nvidia.conf
 sed -i '/source = .*\/hardware\/nvidia\.conf/d' "$hyprconf"
 
 if [[ "$include_nvidia" =~ ^[Yy]$ ]]; then
     # Add the nvidia source line just after the monitor config line
-    echo  "source = \$hardware/nvidia.conf" >> "$hyprconf"    
+    echo  "source = \$hardware/nvidia.conf" >> "$hyprconf"
 fi
 
-echo  "all done :)"    
-
+echo  "all done :)"

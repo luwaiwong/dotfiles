@@ -3,6 +3,9 @@ import QtQuick.Layouts
 import Quickshell
 import Qt5Compat.GraphicalEffects
 
+import Quickshell.Hyprland
+import Quickshell.Wayland
+
 Scope {
 	id: root
 	property bool failed
@@ -14,7 +17,8 @@ Scope {
 
 		function onReloadCompleted() {
 			root.failed = false;
-			popupLoader.loading = true;
+			root.errorString = "";
+			popupLoader.active = true;
 		}
 
 		function onReloadFailed(error: string) {
@@ -23,15 +27,16 @@ Scope {
 
 			root.failed = true;
 			root.errorString = error;
-			popupLoader.loading = true;
+			popupLoader.active = true;
 		}
 	}
 
 	// Keep the popup in a loader because it isn't needed most of the time
-	LazyLoader {
+	Loader {
 		id: popupLoader
+		active: false
 
-		PanelWindow {
+		sourceComponent: PanelWindow {
 			id: popup
 
 			anchors.top: true
@@ -39,6 +44,20 @@ Scope {
 
 			implicitWidth: rect.width + shadow.radius * 2
 			implicitHeight: rect.height + shadow.radius * 2
+
+			// Dictates the area that mouse inputs don't affect the panel window
+			// Otherwise, the whole area of the panel window would be unusable by other apps
+			WlrLayershell.exclusionMode: ExclusionMode.Ignore
+			mask: Region {
+				// Use rect coordinates (PanelWindow-local) so the exclusion region
+				// is centered on the visible popup rectangle/detectionArea.
+				x: rect.x + (rect.width - detectionArea.width) / 2
+				y: rect.y + (rect.height - detectionArea.height) / 2
+				width: detectionArea.width
+				height: detectionArea.height
+				intersection: Intersection.Union
+			}
+
 
 			// color blending is a bit odd as detailed in the type reference.
 			color: "transparent"
@@ -143,14 +162,14 @@ Scope {
 
 			DropShadow {
 				id: shadow
-                anchors.fill: rect
-                horizontalOffset: 0
-                verticalOffset: 2
-                radius: 6
-                samples: radius * 2 + 1 // Ideally should be 2 * radius + 1, see qt docs
-                color: "#44000000"
-                source: rect
-            }
+				anchors.fill: rect
+				horizontalOffset: 0
+				verticalOffset: 2
+				radius: 6
+				samples: radius * 2 + 1 // Ideally should be 2 * radius + 1, see qt docs
+				color: "#44000000"
+				source: rect
+			}
 		}
 	}
 }

@@ -16,7 +16,7 @@ Fonts are Martian Mono & Space Grotesk
 
 Core
 - hyprland
-- kitty
+- ghostty
 - rofi
 - hyprsome (Used for multi-monitor hyprland workspaces)
 
@@ -38,7 +38,6 @@ Fonts & Symbols
 
 Theming/Customization
 - spicetify-cli
-- oh-my-posh
 - betterdiscord (appimage from site)
 - nwg-look
 - qt5ct/qt6ct
@@ -52,4 +51,3 @@ Apps
 - discord
 - steam
 - nvim
-

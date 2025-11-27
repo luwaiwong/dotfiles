@@ -16,7 +16,7 @@ MouseArea {
     // anchors.rightMargin: 10
 
     onClicked: event => {
-        console.log(modelData.id)
+        console.log(modelData.id);
         if (event.button === Qt.LeftButton)
             modelData.activate();
         else if (modelData.hasMenu)
@@ -30,7 +30,7 @@ MouseArea {
         menu: root.modelData.menu
         anchor.item: root
         // anchor
-    
+
     }
 
     IconImage {

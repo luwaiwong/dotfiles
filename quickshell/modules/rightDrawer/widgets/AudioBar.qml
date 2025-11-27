@@ -1,24 +1,26 @@
-
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 import Quickshell.Services.Pipewire
 import "root:/components/"
 import "root:/"
+
 Column {
-	required property PwNode node;
-    id :root
+    id: root
+    required property PwNode node
 
     property real sliderHeight: 200
     property real sliderWidth: 20
 
-	// bind the node so we can read its properties
-	PwObjectTracker { objects: [ node ] }
+    // bind the node so we can read its properties
+    PwObjectTracker {
+        objects: [Pipewire.defaultAudioSink]
+    }
 
     spacing: 54
 
     property string currentVolumeIcon: {
-        if (node.audio.muted){
+        if (node.audio.muted) {
             return "";
         }
         const volume = node.audio.volume;
@@ -32,29 +34,29 @@ Column {
             return "";
         }
     }
-	// 	Label {
-	// 		text: {
-	// 			// application.name -> description -> name
-	// 			const app = node.properties["application.name"] ?? (node.description != "" ? node.description : node.name);
-	// 			const media = node.properties["media.name"];
-	// 			return media != undefined ? `${app} - ${media}` : app;
-	// 		}
-	// 	}
+    // 	Label {
+    // 		text: {
+    // 			// application.name -> description -> name
+    // 			const app = node.properties["application.name"] ?? (node.description != "" ? node.description : node.name);
+    // 			const media = node.properties["media.name"];
+    // 			return media != undefined ? `${app} - ${media}` : app;
+    // 		}
+    // 	}
 
-	// 	Button {
-	// 		text: node.audio.muted ? "unmute" : "mute"
-	// 		onClicked: node.audio.muted = !node.audio.muted
-	// 	}
-	// }
+    // 	Button {
+    // 		text: node.audio.muted ? "unmute" : "mute"
+    // 		onClicked: node.audio.muted = !node.audio.muted
+    // 	}
+    // }
 
-	// ColumnLayout {
-		// Label {
-        //     Layout.alignment: Qt.AlignCenter
-		// 	text: `${Math.floor(node.audio.volume * 100)}%`
-        //     color: "white"
-		// }
+    // ColumnLayout {
+    // Label {
+    //     Layout.alignment: Qt.AlignCenter
+    // 	text: `${Math.floor(node.audio.volume * 100)}%`
+    //     color: "white"
+    // }
 
-        // Integrate the CustomVerticalSlider here
+    // Integrate the CustomVerticalSlider here
     StyledSlider {
         // Layout properties to make it fill available height
         // Layout.fillHeight: true
@@ -65,9 +67,9 @@ Column {
         value: root.node.audio.volume
         // When the custom slider's value changes, update the PwNode's volume
         onValueChanged: {
-            root.node.audio.volume = value
-            root.node.audio.muted = false
-            }
+            root.node.audio.volume = value;
+            root.node.audio.muted = false;
+        }
 
         // onRightClicked: {
         //     node.audio.muted = !node.audio.muted
@@ -76,7 +78,7 @@ Column {
         textSize: 14
         radius: Style.radius
 
-        height: root.sliderHeight - sliderWidth/2
+        height: root.sliderHeight - sliderWidth / 2
         width: root.sliderWidth
         icon: root.currentVolumeIcon
         // Optionally, you can customize its appearance here:
@@ -100,5 +102,5 @@ Column {
     //     sourceSize.width: sliderWidth/2
     //     sourceSize.height: sliderWidth/2
     // }
-	// }
+    // }
 }

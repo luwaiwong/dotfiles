@@ -14,12 +14,11 @@ Singleton {
 
     // signal brightnessChanged()
 
-    property real brightness:0 
+    property real brightness: 0
     property real maxBrightness: 255
     property real brightnessPercentage: {
-        return (brightness/maxBrightness).toFixed(2)
+        return (brightness / maxBrightness).toFixed(2);
     }
-
 
     // reloadableId: "brightness"
 
@@ -28,7 +27,7 @@ Singleton {
         // Run the discovery process when the component is created
         getMaxBrightness.running = true;
         getBrightness.running = true;
-        brightnessMonitorTimer.start()
+        brightnessMonitorTimer.start();
     }
 
     Process {
@@ -39,14 +38,14 @@ Singleton {
         stdout: SplitParser {
             splitMarker: "\n" // Split by line
             onRead: data => {
-                if (root.brightness != data){
-                    root.brightness = data
+                if (root.brightness != data) {
+                    root.brightness = data;
                 }
             }
         }
     }
 
-    Process { 
+    Process {
         id: getMaxBrightness
         // List all detected backlight devices and their associated output names
         // e.g., "Device 'intel_backlight': Found 1 outputs (eDP-1,)"
@@ -54,11 +53,10 @@ Singleton {
         stdout: SplitParser {
             splitMarker: "\n" // Split by line
             onRead: data => {
-                root.maxBrightness = data
+                root.maxBrightness = data;
             }
         }
     }
-
 
     // Sets brightness
     Process {
@@ -84,28 +82,26 @@ Singleton {
         }
     }
 
-        // Sets the brightness for the associated device
+    // Sets the brightness for the associated device
     function setBrightness(value: real): void {
-
         const realValue = value * 100;
 
         // Avoid setting if the rounded percentage is already the same or is 0
         if (Math.round(brightnessPercentage) === realValue)
             return;
 
-        console.log(value)
-        brightness = Math.round(value)*maxBrightness; // Optimistically update local property
+        console.log(value);
+        brightness = Math.round(value) * maxBrightness; // Optimistically update local property
 
         // Use the global setProc to avoid creating many processes
         // Ensure only one brightnessctl command runs at a time if possible
         setProc.command = ["brightnessctl", "set", `${realValue}%`, "--quiet"];
         setProc.startDetached(); // Start the process without waiting for it to exit
-        // Re-initialize after setting to get the true, updated brightness
-        // A small delay might be useful if the system needs time to apply the change
-        // Or just listen to some external brightness change signals if available (e.g. udev events)
-        // For simplicity, we re-initialize immediately here.
-        // A small timeout ensures the `set` command has a chance to execute before `info` is called.
-        // Qt.callLater(getBrightness);
+    // Re-initialize after setting to get the true, updated brightness
+    // A small delay might be useful if the system needs time to apply the change
+    // Or just listen to some external brightness change signals if available (e.g. udev events)
+    // For simplicity, we re-initialize immediately here.
+    // A small timeout ensures the `set` command has a chance to execute before `info` is called.
+    // Qt.callLater(getBrightness);
     }
-
 }

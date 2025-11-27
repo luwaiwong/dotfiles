@@ -5,19 +5,21 @@ import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
-import "root:/utils" 
+import "root:/utils"
 import "root:/"
 
-Scope{
+// import "root:/modules/rightDrawer/State.qml"
+
+Scope {
     Variants {
         model: Quickshell.screens
 
         PanelWindow {
-            id : root
+            id: root
 
-            property RightDrawerState rightDrawerState: RightDrawerState {}
+            property RightDrawerState state: RightDrawerState {}
             property var modelData
-            property real effectiveHorizontalOffset: rightDrawerState.showTopBar? 0: -(background.width) + (rightDrawerState.hoveringTopBar? 5: 0)
+            property real effectiveHorizontalOffset: state.show ? 0 : -(background.width) + (state.hovering ? 5 : 0)
             // property real effectiveHorizontalOffset: 20
             property bool isShown: false // Initially hidden
             screen: modelData
@@ -26,7 +28,7 @@ Scope{
             // Otherwise, the whole area of the panel window would be unusable by other apps
             WlrLayershell.exclusionMode: ExclusionMode.Ignore
             mask: Region {
-                x: root.implicitWidth-root.effectiveHorizontalOffset-95
+                x: root.implicitWidth - root.effectiveHorizontalOffset - 95
                 y: detectionArea.y
                 width: 100000
                 height: detectionArea.height
@@ -42,16 +44,16 @@ Scope{
                 //     }
                 // ]
             }
-            
+
             anchors {
                 right: true
             }
             implicitHeight: modelData.height
-            implicitWidth: detectionArea.width+100
+            implicitWidth: detectionArea.width + 100
 
             // color: "white"
             color: "transparent"
-            
+
             // Top border bar, covers bar content when hidden
             // Rectangle{
             //     width: barShape.implicitWidth
@@ -70,19 +72,19 @@ Scope{
                 id: detectionArea
                 anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
-                height: background.height+40
-                width: childrenRect.width+Style.borderWidth*2+40
-                
+                height: background.height + 40
+                width: childrenRect.width + Style.borderWidth * 2 + 40
+
                 hoverEnabled: true
-                anchors.rightMargin: root.effectiveHorizontalOffset -20
+                anchors.rightMargin: root.effectiveHorizontalOffset - 20
                 // anchors.rightMargin: 20
 
-                onEntered: root.rightDrawerState.onMainTopBarHovered(true);
-                onExited: root.rightDrawerState.onMainTopBarHovered(false);
+                onEntered: root.state.onMainTopBarHovered(true)
+                onExited: root.state.onMainTopBarHovered(false)
                 z: 100
                 propagateComposedEvents: true // Ensure events propagate to children
                 // clip: true
-                
+
                 layer.enabled: true // Essential to apply effects
                 layer.effect: DropShadow {
                     color: "#65000000" // Shadow color (80 is 50% opacity black)
@@ -95,9 +97,9 @@ Scope{
                     anchors.right: detectionArea.right
                     anchors.verticalCenter: parent.verticalCenter
                     // anchors.rightMargin: Style.borderWidth
-                    rightMargin: Style.borderWidth+20
+                    rightMargin: Style.borderWidth + 20
 
-                    barHeight: content.height+5
+                    barHeight: content.height + 5
                     barWidth: content.implicitWidth
                     barColor: "black"
 
@@ -107,7 +109,7 @@ Scope{
                     Content {
                         id: content
                         root: root
-                        state: root.rightDrawerState
+                        state: root.state
                         anchors.leftMargin: 30
                     }
                 }
@@ -119,16 +121,14 @@ Scope{
 
             }
 
-
             //  Animations
             Behavior on effectiveHorizontalOffset {
                 NumberAnimation {
                     duration: 300
-                    easing.type: root.rightDrawerState.showTopBar?   Easing.OutCubic : Easing.OutBack
+                    easing.type: root.state.show ? Easing.OutCubic : Easing.OutBack
                     // easing.type: Easing.OutBack
                 }
             }
-            
         }
     }
 }

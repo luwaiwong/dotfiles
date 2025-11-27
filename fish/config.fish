@@ -70,4 +70,4 @@ end
 # Alias for 'ls' with common options
 alias hp "hyprland"
 alias sp "spotify_player"
-
+alias qs "killall quickshell; ~/.config/quickshell/launchshell.sh"

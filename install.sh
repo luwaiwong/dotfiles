@@ -37,15 +37,19 @@ cp ./.profile ~/
 cp -r ./wallpapers ~/pictures/
 cp -r ./wallpapers+ ~/pictures/
 
-# Ask for monitor configuration
-hyprconf="$HOME/.config/hypr/hyprland.conf"
+# Custom hypr config
+hyprconf="$HOME/.config/hypr/custom.conf"
 if [[ ! -f "$hyprconf" ]]; then
     echo "Hyprland configuration file not found at $hyprconf"
     exit 1
 fi
 
+# Wipe file
+: > $hyprconf
+
+
 echo "Pick hardware setup"
-echo "You may have to change monitor settings manually in ~/.config/hypr/hardware/"
+echo "You may have to change monitor settings manually in ~/.config/custom/hardware/"
 select hardware_conf in "dualmonitor.conf" "singlehighres.conf"; do
     if [[ -n "$hardware_conf" ]]; then
         break

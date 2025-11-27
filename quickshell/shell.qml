@@ -7,12 +7,11 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Window
 import Quickshell
-import "modules/bar"
+import "modules/topBar"
 import "modules/border"
-import "modules/leftdrawer"
-import "modules/rightdrawer"
+import "modules/leftDrawer"
+import "modules/rightDrawer"
 import "modules/"
-
 
 ShellRoot {
     ReloadPopup {}

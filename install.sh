@@ -59,18 +59,15 @@ select hardware_conf in "dualmonitor.conf" "singlehighres.conf"; do
 done
 
 # Add the correct source line at the bottom of hyprland.conf
-echo  "source = \$hardware/$hardware_conf" >> "$hyprconf"
+echo  "source = ./hardware/$hardware_conf" >> "$hyprconf"
 
 # Ask for nvidia configuration
 # Ask user if they want to include nvidia.conf
 read -p "Do you want to include NVIDIA config (nvidia.conf)? [y/N]: " include_nvidia
 
-# Remove any previous source line for nvidia.conf
-sed -i '/source = .*\/hardware\/nvidia\.conf/d' "$hyprconf"
-
 if [[ "$include_nvidia" =~ ^[Yy]$ ]]; then
     # Add the nvidia source line just after the monitor config line
-    echo  "source = \$hardware/nvidia.conf" >> "$hyprconf"
+    echo  "source = ./hardware/nvidia.conf" >> "$hyprconf"
 fi
 
 echo  "all done :)"

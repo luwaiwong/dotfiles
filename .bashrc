@@ -6,3 +6,7 @@ alias hp="hyprland"
 alias sp="spotify_player"
 alias quick="~/.config/quickshell/launchshell.sh"
 fish
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

@@ -6,6 +6,7 @@ import Quickshell.Services.UPower
 import QtQuick
 import QtQuick.Controls // For Menu, MenuItem
 import Quickshell.Io
+import "root:/"
 
 MouseArea {
     id: root
@@ -13,11 +14,13 @@ MouseArea {
     acceptedButtons: Qt.LeftButton | Qt.RightButton
     implicitWidth: Math.max(powerText.width, 21)
     implicitHeight: 18
+    hoverEnabled: true
+    cursorShape: Qt.PointingHandCursor
 
     onClicked: event => {
         if (event.button === Qt.LeftButton) {
-            console.log("BRUH")
-            executeBlueberry.running = true
+            console.log("BRUH");
+            executeBlueberry.running = true;
         }
     }
 
@@ -25,7 +28,7 @@ MouseArea {
     Text {
         id: powerText
         text: "󰂯" // Display the dynamically formatted string
-        font.family: "Martian Mono Nerd Font" // You MUST have Nerd Font installed on your system
+        font.family: Style.iconFontFamily
         font.pixelSize: 15 // Adjust size
         color: "#d8dee9" // Or your panel's text color
         anchors.centerIn: parent
@@ -35,14 +38,13 @@ MouseArea {
 
     Process {
         id: executeBlueberry
-        command: [
-            "/bin/sh",    // Or "/bin/bash" if you prefer bash-specific features
-            "-c",         // The -c option tells the shell to read commands from the string argument
-            "killall blueberry; blueberry" // The actual command string to execute
+        command: ["/bin/sh"    // Or "/bin/bash" if you prefer bash-specific features
+            , "-c"         // The -c option tells the shell to read commands from the string argument
+            , "killall blueberry; blueberry" // The actual command string to execute
         ]
 
-        stdout: StdioCollector {
-            // onStreamFinished: root.time = this.text
-        }
+        stdout:
+        // onStreamFinished: root.time = this.text
+        StdioCollector {}
     }
 }

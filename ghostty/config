@@ -49,3 +49,9 @@
 # resize-overlay-duration = 4s 200ms
 theme = Nord
 font-family = CommitMono Nerd Font
+
+gtk-toolbar-style = flat
+gtk-titlebar-style = native
+gtk-tabs-location = top
+gtk-wide-tabs = false
+desktop-notifications = true

@@ -11,7 +11,7 @@ MouseArea {
     property bool showingMedia: false
 
     opacity: enabled ? 1 : 0
-    implicitWidth: (showingMedia ? mediaContent.width : date.width )
+    implicitWidth: (showingMedia ? mediaContent.width : date.width)
 
     property MprisPlayer player: MprisController.activePlayer
     property string title: root.player ? root.player.trackTitle : ""
@@ -21,36 +21,36 @@ MouseArea {
         target: MprisController
 
         function onActivePlayerChanged() {
-            root.player = MprisController.activePlayer
-            if (root.player) {
-                root.title = root.player.trackTitle
-                root.albumArtUrl = root.player.trackArtUrl
+            player = MprisController.activePlayer;
+            if (player) {
+                root.player = MprisController.activePlayer;
+                root.title = root.player.trackTitle;
+                root.albumArtUrl = root.player.trackArtUrl;
                 if (root.player.isPlaying) {
-                    root.showMedia()
-                    timeout.stop()
+                    root.showMedia();
+                    timeout.stop();
                 } else {
-                    timeout.start()
+                    timeout.start();
                 }
             } else {
-                root.title = ""
-                root.albumArtUrl = ""
-                timeout.start() // No player, show date after timeout
+                root.title = "";
+                root.albumArtUrl = "";
+                timeout.start(); // No player, show date after timeout
             }
         }
 
         function onTrackChanged() {
             if (root.player) {
-                root.title = root.player.trackTitle
-                root.albumArtUrl = root.player.trackArtUrl
+                root.title = root.player.trackTitle;
+                root.albumArtUrl = root.player.trackArtUrl;
                 if (root.player.isPlaying) {
-                    root.showMedia()
-                    timeout.stop()
+                    root.showMedia();
+                    timeout.stop();
                 } else {
-                    timeout.start()
+                    timeout.start();
                 }
             }
         }
-
     }
 
     Row {
@@ -95,8 +95,9 @@ MouseArea {
             visible: root.player && root.player.canGoPrevious
             onClicked: root.player.previous()
             hoverEnabled: true
+            cursorShape: Qt.PointingHandCursor
             onEntered: hovered = true
-            onExited: hovered = false 
+            onExited: hovered = false
             anchors.verticalCenter: parent.verticalCenter
 
             property bool hovered: false
@@ -110,22 +111,25 @@ MouseArea {
                     anchors.centerIn: parent
                     text: "󰒮"
                     color: "#d8dee9"
-                    font.pixelSize: prevButton.hovered?25:20 // Default size
+                    font.pixelSize: prevButton.hovered ? 25 : 20 // Default size
                     Behavior on font.pixelSize {
-                        NumberAnimation { duration: 100; easing.type: Easing.OutCubic }
+                        NumberAnimation {
+                            duration: 100
+                            easing.type: Easing.OutCubic
+                        }
                     }
                 }
             }
         }
 
-
         // MouseArea wrapped around the Text component
         MouseArea {
             id: contentTextMouseArea // Give the MouseArea an ID
             width: childrenRect.width // Set width for the MouseArea, which will contain the text
-            implicitHeight: contentText.implicitHeight+20 // MouseArea height adapts to text height
+            implicitHeight: contentText.implicitHeight + 20 // MouseArea height adapts to text height
             anchors.verticalCenter: parent.verticalCenter
             hoverEnabled: true // Enable hover events if you plan to add them later
+            cursorShape: root.player ? Qt.PointingHandCursor : Qt.ArrowCursor
             Row {
                 anchors.centerIn: parent
                 spacing: 8
@@ -143,18 +147,20 @@ MouseArea {
 
                     // Fade in/out when image loads or becomes unavailable
                     Behavior on opacity {
-                        NumberAnimation { duration: 150 }
+                        NumberAnimation {
+                            duration: 150
+                        }
                     }
                 }
-            
+
                 // The Text component is now a child of the MouseArea
                 Text {
                     id: contentText
                     // anchors.fill: parent // Make the text fill the MouseArea
                     text: root.title.length > 24 ? root.title.substring(0, 24) + "..." : root.title
-                    color: root.player && root.player.isPlaying? "#a3be8c":"#eceff4"
-                    font.pixelSize: 14
-                    font.family: "Martian Mono Nerd Font"
+                    color: root.player && root.player.isPlaying ? "#a3be8c" : "#eceff4"
+                    font.family: Style.fontFamily
+                    font.pixelSize: 15
                     elide: Text.ElideRight
                     wrapMode: Text.NoWrap
                     horizontalAlignment: Text.AlignHCenter // Center text content
@@ -175,19 +181,17 @@ MouseArea {
                 }
             }
 
-
             // Click handler is on the MouseArea itself
             onClicked: handleTextClick(mouse)
 
             function handleTextClick(mouseEvent) {
                 // if (mouseEvent.button === Qt.RightButton) {
-                    if (root.player) {
-                        root.player.togglePlaying()
-                    }
-                // }
+                if (root.player) {
+                    root.player.togglePlaying();
+                }
+            // }
             }
         }
-        
 
         // Next button
         MouseArea {
@@ -197,8 +201,9 @@ MouseArea {
             visible: root.player && root.player.canGoNext
             onClicked: root.player.next()
             hoverEnabled: true
+            cursorShape: Qt.PointingHandCursor
             onEntered: hovered = true
-            onExited: hovered = false 
+            onExited: hovered = false
             anchors.verticalCenter: parent.verticalCenter
 
             property bool hovered: false
@@ -212,9 +217,12 @@ MouseArea {
                     anchors.centerIn: parent
                     text: "󰒭"
                     color: "#d8dee9"
-                    font.pixelSize: nextButton.hovered?25:20 // Default size
+                    font.pixelSize: nextButton.hovered ? 25 : 20 // Default size
                     Behavior on font.pixelSize {
-                        NumberAnimation { duration: 100; easing.type: Easing.OutCubic }
+                        NumberAnimation {
+                            duration: 100
+                            easing.type: Easing.OutCubic
+                        }
                     }
                 }
             }
@@ -241,11 +249,11 @@ MouseArea {
     }
 
     function showDate() {
-        root.showingMedia = false
+        root.showingMedia = false;
     }
 
     function showMedia() {
-        root.showingMedia = true
+        root.showingMedia = true;
     }
 
     Timer {
@@ -258,10 +266,10 @@ MouseArea {
     // Initialize state on component creation
     Component.onCompleted: {
         if (root.player && root.player.isPlaying) {
-            root.showMedia()
-            timeout.stop()
+            root.showMedia();
+            timeout.stop();
         } else {
-            timeout.start()
+            timeout.start();
         }
     }
 }

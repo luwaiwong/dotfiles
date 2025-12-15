@@ -14,23 +14,35 @@ MouseArea {
     readonly property HyprlandMonitor monitor: Hyprland.monitorFor(bar.screen)
     readonly property Toplevel activeWindow: ToplevelManager.activeToplevel
     property int workspacesShown: 10
-    
+
     readonly property int workspaceGroup: Math.floor((monitor.activeWorkspace?.id - 1) / workspacesShown)
     property list<bool> workspaceOccupied: []
+
+    // Size configuration
     property int widgetPadding: 0
     property int workspaceButtonWidth: 22
     property real workspaceIconSize: workspaceButtonWidth * 0.69
-    property real workspaceIconSizeShrinked: workspaceButtonWidth * 0.55
+    property real workspaceIconSizeShrinked: workspaceButtonWidth * 0.30
     property real workspaceIconOpacityShrinked: 1
     property real workspaceIconMarginShrinked: -4
+    property real workspaceBackgroundRadius: 20
+    property real workspaceIndicatorSize: 10
+    property real workspaceIndicatorSizeHover: 12
+    property real workspaceIndicatorSizeOccupied: workspaceIndicatorSize
+    property real workspaceIconSizeHover: 22
+    property real workspaceIconSizeDefault: 14
+
     property int workspaceIndexInGroup: (monitor.activeWorkspace?.id - 1) % workspacesShown
 
     property bool enabled: false
+    cursorShape: Qt.PointingHandCursor
     // Function to update workspaceOccupied
     function updateWorkspaceOccupied() {
-        workspaceOccupied = Array.from({ length: workspacesShown }, (_, i) => {
+        workspaceOccupied = Array.from({
+            length: workspacesShown
+        }, (_, i) => {
             return Hyprland.workspaces.values.some(ws => ws.id === workspaceGroup * workspacesShown + i + 1);
-        })
+        });
     }
 
     // Initialize workspaceOccupied when the component is created
@@ -45,9 +57,9 @@ MouseArea {
     }
 
     Layout.fillHeight: true
-    implicitWidth: rowLayout.implicitWidth + rowLayout.spacing * 2 
+    implicitWidth: rowLayout.implicitWidth + rowLayout.spacing * 2
     opacity: enabled ? 1 : 0
-    
+
     implicitHeight: 40
     Layout.topMargin: -1.5  // Move up by 1.5 pixels
 
@@ -58,12 +70,12 @@ MouseArea {
         implicitHeight: 32
         implicitWidth: rowLayout.implicitWidth
         radius: 10
-        color: "transparent" 
+        color: "transparent"
     }
 
     // Scroll to switch workspaces
     WheelHandler {
-        onWheel: (event) => {
+        onWheel: event => {
             if (event.angleDelta.y < 0)
                 Hyprland.dispatch(`workspace r+1`);
             else if (event.angleDelta.y > 0)
@@ -89,19 +101,19 @@ MouseArea {
                 implicitWidth: workspaceButtonWidth
                 implicitHeight: workspaceButtonWidth
                 // radius: Appearance.rounding.full
-                property var leftOccupied: (workspaceOccupied[index-1] && !(!activeWindow?.activated && monitor.activeWorkspace?.id === index))
-                property var rightOccupied: (workspaceOccupied[index+1] && !(!activeWindow?.activated && monitor.activeWorkspace?.id === index+2))
-                property var radiusLeft: leftOccupied ? 0 : 20
-                property var radiusRight: rightOccupied ? 0 : 20
+                property var leftOccupied: (workspaceOccupied[index - 1] && !(!activeWindow?.activated && monitor.activeWorkspace?.id === index))
+                property var rightOccupied: (workspaceOccupied[index + 1] && !(!activeWindow?.activated && monitor.activeWorkspace?.id === index + 2))
+                property var radiusLeft: leftOccupied ? 0 : workspaceBackgroundRadius
+                property var radiusRight: rightOccupied ? 0 : workspaceBackgroundRadius
 
                 topLeftRadius: radiusLeft
                 bottomLeftRadius: radiusLeft
                 topRightRadius: radiusRight
                 bottomRightRadius: radiusRight
-                
+
                 color: "#2e3440"
                 // color: "transparent"
-                opacity: (workspaceOccupied[index] && !(!activeWindow?.activated && monitor.activeWorkspace?.id === index+1)) ? 1 : 0
+                opacity: (workspaceOccupied[index] && !(!activeWindow?.activated && monitor.activeWorkspace?.id === index + 1)) ? 1 : 0
 
                 // anchors.topMargin: 2
 
@@ -139,31 +151,31 @@ MouseArea {
         // Make active ws indicator, which has a brighter color, smaller to look like it is of the same size as ws occupied highlight
         property real activeWorkspaceMargin: 2
         implicitHeight: workspaceButtonWidth
-        radius: 20
+        radius: workspaceBackgroundRadius
         color: "#81a1c1"
         // color: "transparent"
         // border.color: "#81a1c1" // Color of the border
         // border.width: 1         // Width of the border in pixels
-        
-        anchors.verticalCenter : parent.verticalCenter
-        anchors.verticalCenterOffset: 0.5
-        
+
+        anchors.verticalCenter: parent.verticalCenter
 
         property real idx1: workspaceIndexInGroup
         property real idx2: workspaceIndexInGroup
-        x: Math.min(idx1, idx2) * workspaceButtonWidth  -0.1 
-        implicitWidth: Math.abs(idx1 - idx2) * workspaceButtonWidth + workspaceButtonWidth 
+        x: Math.min(idx1, idx2) * workspaceButtonWidth - 0.1
+        implicitWidth: Math.abs(idx1 - idx2) * workspaceButtonWidth + workspaceButtonWidth
 
         Behavior on activeWorkspaceMargin {
             animation: Appearance.animation.elementMoveFast.numberAnimation.createObject(this)
         }
-        Behavior on idx1 { // Leading anim
+        Behavior on idx1 {
+            // Leading anim
             NumberAnimation {
                 duration: 100
                 easing.type: Easing.OutSine
             }
         }
-        Behavior on idx2 { // Following anim
+        Behavior on idx2 {
+            // Following anim
             NumberAnimation {
                 duration: 300
                 easing.type: Easing.OutSine
@@ -188,17 +200,18 @@ MouseArea {
                 property int workspaceValue: workspaceGroup * workspacesShown + index + 1
                 Layout.fillHeight: true
                 onPressed: Hyprland.dispatch(`workspace ${workspaceValue}`)
+                hoverEnabled: true
                 onHoveredChanged: {
                     if (hovered) {
-                        workspaceButtonIndicator.width = 16
-                        workspaceButtonIndicator.height = 16
-                        mainAppIcon.width = 18
-                        mainAppIcon.height = 18
+                        workspaceButtonIndicator.width = workspaceIndicatorSizeHover;
+                        workspaceButtonIndicator.height = workspaceIndicatorSizeHover;
+                        mainAppIcon.width = workspaceIconSizeHover;
+                        mainAppIcon.height = workspaceIconSizeHover;
                     } else {
-                        workspaceButtonIndicator.width = 12
-                        workspaceButtonIndicator.height = 12
-                        mainAppIcon.width = 16
-                        mainAppIcon.height = 16
+                        workspaceButtonIndicator.width = workspaceIndicatorSize;
+                        workspaceButtonIndicator.height = workspaceIndicatorSize;
+                        mainAppIcon.width = workspaceIconSizeDefault;
+                        mainAppIcon.height = workspaceIconSizeDefault;
                     }
                 }
                 width: workspaceButtonWidth
@@ -207,12 +220,12 @@ MouseArea {
                     implicitWidth: workspaceButtonWidth
                     implicitHeight: workspaceButtonWidth
                     property var biggestWindow: {
-                        const windowsInThisWorkspace = HyprlandData.windowList.filter(w => w.workspace.id == button.workspaceValue)
+                        const windowsInThisWorkspace = HyprlandData.windowList.filter(w => w.workspace.id == button.workspaceValue);
                         return windowsInThisWorkspace.reduce((maxWin, win) => {
-                            const maxArea = (maxWin?.size?.[0] ?? 0) * (maxWin?.size?.[1] ?? 0)
-                            const winArea = (win?.size?.[0] ?? 0) * (win?.size?.[1] ?? 0)
-                            return winArea > maxArea ? win : maxWin
-                        }, null)
+                            const maxArea = (maxWin?.size?.[0] ?? 0) * (maxWin?.size?.[1] ?? 0);
+                            const winArea = (win?.size?.[0] ?? 0) * (win?.size?.[1] ?? 0);
+                            return winArea > maxArea ? win : maxWin;
+                        }, null);
                     }
                     property var mainAppIconPath: AppSearch.guessIcon(biggestWindow?.class)
                     property var mainAppIconSource: Quickshell.iconPath(mainAppIconPath, "image-missing")
@@ -220,11 +233,14 @@ MouseArea {
                     Rectangle {
                         id: workspaceButtonIndicator
                         anchors.centerIn: parent
-                        width: workspaceOccupied[index] ? workspaceIconSize-1: 10
-                        height: workspaceOccupied[index] ? workspaceIconSize-1: 10
-                        radius: 20
-                        color: workspaceOccupied[index] ? "#d8dee9": "#4c566a"
-                        
+                        anchors.verticalCenterOffset: 0
+                        anchors.horizontalCenterOffset: 0.1
+                        width: workspaceOccupied[index] ? workspaceIndicatorSizeOccupied : workspaceIndicatorSize
+                        height: workspaceOccupied[index] ? workspaceIndicatorSizeOccupied : workspaceIndicatorSize
+                        radius: workspaceBackgroundRadius
+                        color: workspaceOccupied[index] ? "#d8dee9" : "#4c566a"
+                        // visible:
+
                         Behavior on width {
                             NumberAnimation {
                                 // Use a single, consistent duration for the entire show/hide animation
@@ -250,9 +266,9 @@ MouseArea {
                     //     font.pixelSize: Appearance.font.pixelSize.small - ((text.length - 1) * (text !== "10") * 2)
                     //     text: `${button.workspaceValue}`
                     //     elide: Text.ElideRight
-                    //     color: (monitor.activeWorkspace?.id == button.workspaceValue) ? 
-                    //         "white" : 
-                    //         (workspaceOccupied[index] ? "white" : 
+                    //     color: (monitor.activeWorkspace?.id == button.workspaceValue) ?
+                    //         "white" :
+                    //         (workspaceOccupied[index] ? "white" :
                     //             "white")
 
                     //     Behavior on opacity {
@@ -267,19 +283,18 @@ MouseArea {
                         IconImage {
                             id: mainAppIcon
                             anchors.centerIn: parent
-                            anchors.verticalCenterOffset: 0.5
-                            anchors.horizontalCenter: parent.horizontalCenter
                             // anchors.bottom: parent.bottom
                             // anchors.right: parent.right
-                            // anchors.bottomMargin: (true) ? 
+                            // anchors.bottomMargin: (true) ?
                             //     (workspaceButtonWidth - workspaceIconSize) / 2 : workspaceIconMarginShrinked
-                            // anchors.rightMargin: (true) ? 
+                            // anchors.rightMargin: (true) ?
                             //     (workspaceButtonWidth - workspaceIconSize) / 2 : workspaceIconMarginShrinked
 
                             opacity: workspaceButtonBackground.mainAppIconPath == "image-missing" ? 0 : 1
-                            // visible: workspaceButtonBackground.mainAppIconSource == "image-missing" ? 0 : 1
+                            visible: workspaceButtonBackground.mainAppIconSource == "image-missing" ? 0 : 1
                             source: workspaceButtonBackground.mainAppIconSource
                             implicitSize: workspaceIconSize
+                            // color: workspaceButtonBackground.mainAppIconPath == "image-missing" ? "#d8dee9" : "#4c566a"
 
                             Behavior on opacity {
                                 NumberAnimation {
@@ -327,12 +342,7 @@ MouseArea {
                         }
                     }
                 }
-                
-
             }
-
         }
-
     }
-
 }

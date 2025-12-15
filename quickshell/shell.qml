@@ -11,7 +11,9 @@ import "modules/topBar"
 import "modules/border"
 import "modules/leftDrawer"
 import "modules/rightDrawer"
+import "modules/bottomBar"
 import "modules/"
+import "components/"
 
 ShellRoot {
     ReloadPopup {}
@@ -20,6 +22,7 @@ ShellRoot {
     DynamicBar {}
     RightDrawer {}
     LeftDrawer {}
+    BottomBar {}
 
     // StaticBar {}
 }

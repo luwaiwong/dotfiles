@@ -1,11 +1,12 @@
 import QtQuick
 import QtQuick.Controls
-import QtQuick.Layouts 
-import Quickshell.Io 
+import QtQuick.Layouts
+import Quickshell.Io
 import Quickshell.Widgets
 
 import Qt5Compat.GraphicalEffects
 import "root:/"
+
 // pragma ComponentBehavior: Bound
 
 ClippingRectangle {
@@ -13,14 +14,13 @@ ClippingRectangle {
     width: 300
     height: 350
     color: "#000000"
-    radius: Style.radius/2
+    radius: Style.radius / 2
     clip: true
 
     property var imagePaths: []
     property int currentIndex: 0
     property real imageMargin: 10
     property string homePath: "" // New property to store the home path
-    
 
     ColumnLayout {
         anchors.fill: parent
@@ -46,12 +46,13 @@ ClippingRectangle {
             }
 
             Text {
-                text: imagePaths.length > 0 ? imagePaths.length+" Wallpapers" : "No images / Loading..."
+                text: imagePaths.length > 0 ? imagePaths.length + " Wallpapers" : "No images / Loading..."
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
                 horizontalAlignment: Text.Center
-                
-                font.pixelSize: 14
+
+                font.family: Style.fontFamily
+                font.pixelSize: 16
                 color: "white"
 
                 MouseArea {
@@ -67,7 +68,7 @@ ClippingRectangle {
             MouseArea {
                 id: reloadArea
                 width: reloadText.width
-                height: reloadText.height+10
+                height: reloadText.height + 10
 
                 cursorShape: Qt.PointingHandCursor
                 anchors.right: parent.right
@@ -79,20 +80,20 @@ ClippingRectangle {
                     id: reloadText
                     anchors.centerIn: parent
 
-                anchors.horizontalCenterOffset: -10
+                    anchors.horizontalCenterOffset: -10
                     text: "󰑓"
+                    font.family: Style.iconFontFamily
                     font.pixelSize: 20
                     color: "white"
                 }
             }
             z: 100
         }
-        
 
         ListView {
+            id: galleryListView
             Layout.fillWidth: true
             Layout.fillHeight: true
-            id: galleryListView
             model: root.imagePaths.length // Model is the count of image paths
             orientation: ListView.Vertical // Explicitly vertical
             spacing: 10 // Space between list items
@@ -111,19 +112,19 @@ ClippingRectangle {
             z: 0
 
             delegate: ClippingRectangle {
+                id: image
 
                 property bool hovered: false
-                id: image
                 Layout.alignment: Qt.AlignHCenter
-                Layout.margins: (image.hovered? root.imageMargin: 0)
+                Layout.margins: (image.hovered ? root.imageMargin : 0)
                 anchors.horizontalCenter: parent.horizontalCenter
                 // anchors.leftMargin: root.imageMargin/2
-                width: galleryListView.width + (image.hovered? 0 : -root.imageMargin)
-                height: galleryListView.height / 1.1  + (image.hovered? 0 : -root.imageMargin)
-                // color: galleryListView.currentIndex === index ? "gray" : "#333333" 
+                width: galleryListView.width + (image.hovered ? 0 : -root.imageMargin)
+                height: galleryListView.height / 1.1 + (image.hovered ? 0 : -root.imageMargin)
+                // color: galleryListView.currentIndex === index ? "gray" : "#333333"
                 color: "transparent"
 
-                radius: Style.radius/2
+                radius: Style.radius / 2
                 clip: true
 
                 Image {
@@ -132,17 +133,20 @@ ClippingRectangle {
                     anchors.fill: parent
                     fillMode: Image.PreserveAspectCrop
                     clip: true
-                    
                 }
 
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
                     cursorShape: Qt.PointingHandCursor
-                    onEntered: {image.hovered = true}
-                    onExited: {image.hovered= false}
+                    onEntered: {
+                        image.hovered = true;
+                    }
+                    onExited: {
+                        image.hovered = false;
+                    }
                     onClicked: {
-                        root.setWallpaper(root.imagePaths[index])
+                        root.setWallpaper(root.imagePaths[index]);
                     }
                 }
 
@@ -159,44 +163,34 @@ ClippingRectangle {
                         easing.type: Easing.OutCubic
                     }
                 }
-
-                
             }
         }
     }
 
-
-    function setWallpaper(value) { 
+    function setWallpaper(value) {
 
         // console.log(root.imagePaths[root.currentIndex])
-        changeWallpaper.command = [
-            "sh", "-c",
-            "swww img "+value +" --transition-type grow --transition-duration 1 --transition-fps 60",
-        ]
-        changeWallpaper.running = true
+        changeWallpaper.command = ["sh", "-c", "swww img " + value + " --transition-type grow --transition-duration 1 --transition-fps 60",];
+        changeWallpaper.running = true;
     }
-
 
     Process {
         id: changeWallpaper
         stdout: StdioCollector {
             onStreamFinished: {
-                console.log(text)
+                console.log(text);
             }
         }
-        
     }
-
 
     Process {
         id: openFolder
-        command: ["sh", "-c", "nemo ~/pictures/wallpapers"] 
+        command: ["sh", "-c", "nemo ~/pictures/wallpapers"]
         stdout: StdioCollector {
             onStreamFinished: {
-                console.log(text)
+                console.log(text);
             }
         }
-        
     }
     // Process to get the HOME directory
     Process {
@@ -227,17 +221,14 @@ ClippingRectangle {
         id: imageListProcess
         // Correct command format: list of strings.
         // Using 'sh -c' to run 'find' command with complex shell features like regex.
-        command: [
-            "sh",
-            root.homePath+"/.config/quickshell/utils/findImages.sh",
-        ]
+        command: ["sh", root.homePath + "/.config/quickshell/utils/findImages.sh",]
 
         stdout: StdioCollector {
             id: stdoutCollector
             onStreamFinished: {
-                console.log(text)
+                console.log(text);
                 var fullOutput = this.text; // Access collected text
-                var paths = fullOutput.split('\n').filter(function(path) {
+                var paths = fullOutput.split('\n').filter(function (path) {
                     return path.trim() !== "";
                 });
                 root.imagePaths = paths; // Update root's property
@@ -246,7 +237,6 @@ ClippingRectangle {
                 //     galleryFlickable.contentX = 0; // Flick to first image
                 // }
                 console.log("Loaded images:", root.imagePaths.length);
-                    
             }
         }
 
@@ -266,5 +256,4 @@ ClippingRectangle {
     Component.onCompleted: {
         loadImages();
     }
-
 }

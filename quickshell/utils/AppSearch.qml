@@ -23,7 +23,7 @@ Singleton {
             "wpsoffice": "wps-office2019-kprometheus",
             "footclient": "foot",
             "zen": "zen-browser",
-            "dev.zed.Zed": "zed"
+            "dev.zed.Zed": "notes"
         })
     property var regexSubstitutions: [
         {

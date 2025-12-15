@@ -16,9 +16,9 @@ Scope {
         PanelWindow {
             id: root
 
-            property BarState barState: BarState {}
+            property BarState state: BarState {}
             property var modelData
-            property real effectiveVerticalOffset: barState.showTopBar ? 0 : -(barShape.height - 5)
+            property real effectiveVerticalOffset: state.showTopBar ? 0 : -(barShape.height - 5)
             property real extraPadding: 40
             // property real effectiveVerticalOffset: 0
             property bool isShown: false // Initially hidden
@@ -67,8 +67,8 @@ Scope {
                 hoverEnabled: true
                 anchors.topMargin: root.effectiveVerticalOffset - root.extraPadding / 2
 
-                onEntered: root.barState.onMainTopBarHovered(true)
-                onExited: root.barState.onMainTopBarHovered(false)
+                onEntered: root.state.onMainTopBarHovered(true)
+                onExited: root.state.onMainTopBarHovered(false)
                 z: 100
                 propagateComposedEvents: true // Ensure events propagate to children
 
@@ -79,7 +79,7 @@ Scope {
                     samples: 17         // Quality of the blur (higher = smoother, slower)
                 }
 
-                RoundedBackground {
+                Background {
                     id: barShape
                     anchors.top: parent.top
                     anchors.horizontalCenter: parent.horizontalCenter
@@ -95,10 +95,10 @@ Scope {
                     //     implicitWidth: 100
                     //     implicitHeight:40
                     // }
-                    BarContent {
+                    Content {
                         id: barContent
                         root: root
-                        barState: root.barState
+                        state: root.state
                         anchors.bottomMargin: -10
                     }
                 }
@@ -113,8 +113,8 @@ Scope {
                     anchors.horizontalCenter: parent.horizontalCenter
                     hoverEnabled: true
                     propagateComposedEvents: true
-                    onEntered: root.barState.onWorkspaceAreaHovered(true)
-                    onExited: root.barState.onWorkspaceAreaHovered(false)
+                    onEntered: root.state.onWorkspaceAreaHovered(true)
+                    onExited: root.state.onWorkspaceAreaHovered(false)
 
                     z: 100000
                     // Rectangle{
@@ -133,7 +133,7 @@ Scope {
             Behavior on effectiveVerticalOffset {
                 NumberAnimation {
                     duration: 350
-                    easing.type: root.barState.showTopBar ? Easing.OutCubic : Easing.OutBack
+                    easing.type: root.state.showTopBar ? Easing.OutCubic : Easing.OutBack
                     // easing.type: Easing.OutCubic
                 }
             }

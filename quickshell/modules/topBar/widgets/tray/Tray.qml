@@ -11,6 +11,7 @@ MouseArea {
 
     hoverEnabled: true
     propagateComposedEvents: true
+    cursorShape: Qt.PointingHandCursor
 
     onEntered: root.hovering = true
     onExited: root.hovering = false

@@ -8,10 +8,10 @@ import "widgets"
 import "widgets/tray"
 
 Rectangle {
-    id : barContent
+    id: content
     required property var root
-    required property BarState barState
-    
+    required property BarState state
+
     // anchors.centerIn: parent
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.bottom: parent.bottom
@@ -19,25 +19,24 @@ Rectangle {
     clip: true
     color: "transparent"
 
-    implicitWidth: (barContent.barState.isClockVisible ? main.implicitWidth: workspace.implicitWidth)+20
+    implicitWidth: (content.state.isClockVisible ? main.implicitWidth : workspace.implicitWidth) + 20
     implicitHeight: 40
-
 
     Workspaces {
         id: workspace
-        bar: barContent.root
+        bar: content.root
         Layout.alignment: Qt.AlignCenter
         Layout.fillWidth: false  // Don't fill width to keep centered
 
         anchors.centerIn: parent
-        enabled: !barContent.barState.isClockVisible
+        enabled: !content.state.isClockVisible
 
         hoverEnabled: true
-                propagateComposedEvents: true 
-        onEntered: barContent.barState.onWorkspaceHovered(true);
-        onExited: barContent.barState.onWorkspaceHovered(false);
+        propagateComposedEvents: true
+        onEntered: content.state.onWorkspaceHovered(true)
+        onExited: content.state.onWorkspaceHovered(false)
 
-        z: barContent.barState.isClockVisible ? 0 : 100
+        z: content.state.isClockVisible ? 0 : 100
 
         Behavior on opacity {
             NumberAnimation {
@@ -48,14 +47,12 @@ Rectangle {
     }
 
     RowLayout {
-
-        id: main        
+        id: main
         anchors.centerIn: parent
 
         // width: enabled ? contentText.implicitWidth : 0
-        opacity: barContent.barState.isClockVisible ? 1 : 0
-        z: barContent.barState.isClockVisible ? 100 : 0
-
+        opacity: content.state.isClockVisible ? 1 : 0
+        z: content.state.isClockVisible ? 100 : 0
 
         Tray {
             Layout.alignment: Qt.AlignRight
@@ -63,7 +60,7 @@ Rectangle {
         }
         MediaAndDate {
             Layout.alignment: Qt.AlignCenter
-            // z: barContent.barState.isClockVisible: 100
+            // z: content.barState.isClockVisible: 100
         }
 
         Clock {
@@ -72,8 +69,8 @@ Rectangle {
 
         Behavior on opacity {
             NumberAnimation {
-            duration: 150
-            easing.type: Easing.OutCubic
+                duration: 150
+                easing.type: Easing.OutCubic
             }
         }
     }
@@ -84,5 +81,4 @@ Rectangle {
             easing.type: Easing.OutCubic
         }
     }
-
 }

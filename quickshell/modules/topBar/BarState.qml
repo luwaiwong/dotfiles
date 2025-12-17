@@ -18,6 +18,11 @@ Item {
     property bool hoveringTopTopBar: false
     property real curWorkspace: 0
 
+    // Launcher state
+    property bool isLauncherOpen: false
+    property string searchQuery: ""
+    property int selectedIndex: 0
+
     Connections {
         target: Hyprland
         function onRawEvent(event) {
@@ -56,11 +61,48 @@ Item {
         }
     }
 
+    // --- Launcher Functions ---
+    function openLauncher() {
+        hideBarTimer.stop()
+        longHideBarTimer.stop()
+        showTopBar = true
+        isClockVisible = false
+        isLauncherOpen = true
+        searchQuery = ""
+        selectedIndex = 0
+    }
+
+    function closeLauncher() {
+        isLauncherOpen = false
+        searchQuery = ""
+        selectedIndex = 0
+        shortShowClockTimer.start()
+    }
+
+    function setSearchQuery(query) {
+        searchQuery = query
+        selectedIndex = 0
+    }
+
+    function selectNext(maxItems) {
+        if (selectedIndex < maxItems - 1) {
+            selectedIndex++
+        }
+    }
+
+    function selectPrevious() {
+        if (selectedIndex > 0) {
+            selectedIndex--
+        }
+    }
+
     // --- Show/Hide Functions ---
     function onMainTopBarHovered(value) {
         hoveringTopBar = value;
         if (value == true) {
             showBar();
+        } else if (isLauncherOpen) {
+            // Don't auto-hide when launcher is open
         } else if (!isClockVisible) {
             startLongHideTimer();
         } else {

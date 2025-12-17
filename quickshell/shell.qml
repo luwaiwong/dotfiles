@@ -19,7 +19,7 @@ ShellRoot {
     ReloadPopup {}
     TopPadding {}
     Border {}
-    DynamicBar {}
+    TopBar {}
     RightDrawer {}
     LeftDrawer {}
     BottomBar {}

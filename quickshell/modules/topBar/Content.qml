@@ -19,8 +19,16 @@ Rectangle {
     clip: true
     color: "transparent"
 
-    implicitWidth: (content.state.isClockVisible ? main.implicitWidth : workspace.implicitWidth) + 20
-    implicitHeight: 40
+    implicitWidth: {
+        if (content.state.isLauncherOpen) {
+            return launcherView.implicitWidth + 20
+        } else if (content.state.isClockVisible) {
+            return main.implicitWidth + 20
+        } else {
+            return workspace.implicitWidth + 20
+        }
+    }
+    implicitHeight: content.state.isLauncherOpen ? launcherView.implicitHeight : 40
 
     Workspaces {
         id: workspace
@@ -29,7 +37,7 @@ Rectangle {
         Layout.fillWidth: false  // Don't fill width to keep centered
 
         anchors.centerIn: parent
-        enabled: !content.state.isClockVisible
+        enabled: !content.state.isClockVisible && !content.state.isLauncherOpen
 
         hoverEnabled: true
         propagateComposedEvents: true
@@ -51,8 +59,8 @@ Rectangle {
         anchors.centerIn: parent
 
         // width: enabled ? contentText.implicitWidth : 0
-        opacity: content.state.isClockVisible ? 1 : 0
-        z: content.state.isClockVisible ? 100 : 0
+        opacity: content.state.isClockVisible && !content.state.isLauncherOpen ? 1 : 0
+        z: content.state.isClockVisible && !content.state.isLauncherOpen ? 100 : 0
 
         Tray {
             Layout.alignment: Qt.AlignRight
@@ -75,7 +83,22 @@ Rectangle {
         }
     }
 
+    // Launcher view
+    Launcher {
+        id: launcherView
+        barState: content.state
+        anchors.centerIn: parent
+        focus: content.state.isLauncherOpen
+    }
+
     Behavior on implicitWidth {
+        NumberAnimation {
+            duration: 200
+            easing.type: Easing.OutCubic
+        }
+    }
+
+    Behavior on implicitHeight {
         NumberAnimation {
             duration: 200
             easing.type: Easing.OutCubic

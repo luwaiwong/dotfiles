@@ -73,7 +73,7 @@ Singleton {
     }
 
     function guessIcon(str) {
-        console.log("Guessing icon for:", str);
+        // console.log("Guessing icon for:", str);
         if (!str || str.length == 0)
             return "image-missing";
 

@@ -13,13 +13,13 @@ Scope {
     id: scope
 
     // Signal to toggle launcher on focused screen
-    signal toggleLauncher()
+    signal toggleLauncher
 
     // IPC handler for app launcher - call with: qs ipc call launcher toggle
     IpcHandler {
         target: "launcher"
         function toggle() {
-            scope.toggleLauncher()
+            scope.toggleLauncher();
         }
     }
 
@@ -45,9 +45,9 @@ Scope {
                     // Only toggle on the focused monitor
                     if (Hyprland.focusedMonitor === Hyprland.monitorFor(root.screen)) {
                         if (root.state.isLauncherOpen) {
-                            root.state.closeLauncher()
+                            root.state.closeLauncher();
                         } else {
-                            root.state.openLauncher()
+                            root.state.openLauncher();
                         }
                     }
                 }
@@ -60,10 +60,10 @@ Scope {
             WlrLayershell.keyboardFocus: root.state.isLauncherOpen ? KeyboardFocus.Exclusive : KeyboardFocus.None
             mask: Region {
                 x: root.state.isLauncherOpen ? 0 : root.modelData.width / 2 - detectionArea.width / 2
-                y: root.state.isLauncherOpen ? 0 : root.effectiveVerticalOffset - root.extraPadding + 5
+                y: root.state.isLauncherOpen ? 0 : root.effectiveVerticalOffset - root.extraPadding
                 width: root.state.isLauncherOpen ? root.modelData.width : detectionArea.width
                 height: root.state.isLauncherOpen ? root.modelData.height : detectionArea.height
-                intersection: Intersection.Union
+                intersection: Intersection.Combine
             }
 
             anchors {
@@ -146,9 +146,9 @@ Scope {
                 // Detecting when very top is hovered
                 MouseArea {
 
-                    width: 50
-                    height: 3
-                    anchors.topMargin: root.extraPadding / 2
+                    width: 75
+                    height: 8
+                    anchors.topMargin: root.extraPadding / 2 - 5
                     anchors.top: parent.top
                     anchors.horizontalCenter: parent.horizontalCenter
                     hoverEnabled: true
@@ -157,8 +157,8 @@ Scope {
                     onExited: root.state.onWorkspaceAreaHovered(false)
 
                     z: 100000
-                    // Rectangle{
-                    //     anchors.fill:parent
+                    // Rectangle {
+                    //     anchors.fill: parent
                     //     color: "white"
                     // }
                 }
@@ -172,7 +172,7 @@ Scope {
             //  Animations
             Behavior on effectiveVerticalOffset {
                 NumberAnimation {
-                    duration: 350
+                    duration: 250
                     easing.type: root.state.showTopBar ? Easing.OutCubic : Easing.OutBack
                     // easing.type: Easing.OutCubic
                 }

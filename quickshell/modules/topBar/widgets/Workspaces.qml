@@ -13,7 +13,7 @@ MouseArea {
     required property var bar
     readonly property HyprlandMonitor monitor: Hyprland.monitorFor(bar.screen)
     readonly property Toplevel activeWindow: ToplevelManager.activeToplevel
-    property int workspacesShown: 10
+    property int workspacesShown: 9
 
     readonly property int workspaceGroup: Math.floor((monitor.activeWorkspace?.id - 1) / workspacesShown)
     property list<bool> workspaceOccupied: []
@@ -21,7 +21,8 @@ MouseArea {
     // Size configuration
     property int widgetPadding: 0
     property int workspaceButtonWidth: 22
-    property real workspaceIconSize: workspaceButtonWidth * 0.69
+
+    property real workspaceIconSize: workspaceButtonWidth * 0.65
     property real workspaceIconSizeShrinked: workspaceButtonWidth * 0.30
     property real workspaceIconOpacityShrinked: 1
     property real workspaceIconMarginShrinked: -4
@@ -31,8 +32,15 @@ MouseArea {
     property real workspaceIndicatorSizeOccupied: workspaceIndicatorSize
     property real workspaceIconSizeHover: 22
     property real workspaceIconSizeDefault: 14
+    property real workspaceGroupSpacing: 8  // Spacing between workspace groups
+    property var workspaceGroupBoundaries: [3, 6]  // Indexes where separators appear (before these workspaces)
 
     property int workspaceIndexInGroup: (monitor.activeWorkspace?.id - 1) % workspacesShown
+
+    // Count how many boundaries are before a given index
+    function boundariesBefore(idx) {
+        return workspaceGroupBoundaries.filter(b => b <= idx).length;
+    }
 
     property bool enabled: false
     cursorShape: Qt.PointingHandCursor
@@ -57,7 +65,7 @@ MouseArea {
     }
 
     Layout.fillHeight: true
-    implicitWidth: rowLayout.implicitWidth + rowLayout.spacing * 2
+    implicitWidth: workspacesShown * workspaceButtonWidth + workspaceGroupBoundaries.length * workspaceGroupSpacing
     opacity: enabled ? 1 : 0
 
     implicitHeight: 40
@@ -68,7 +76,7 @@ MouseArea {
         z: 0
         anchors.centerIn: parent
         implicitHeight: 32
-        implicitWidth: rowLayout.implicitWidth
+        implicitWidth: workspacesShown * workspaceButtonWidth + workspaceGroupBoundaries.length * workspaceGroupSpacing
         radius: 10
         color: "transparent"
     }
@@ -84,25 +92,31 @@ MouseArea {
         acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad
     }
 
+    // Helper to get x position for a workspace index (accounting for group spacing)
+    function wsX(idx) {
+        return idx * workspaceButtonWidth + boundariesBefore(idx) * workspaceGroupSpacing;
+    }
+
     ///// Workspaces - background /////
-    RowLayout {
+    Item {
         id: rowLayout
         z: 1
-
-        spacing: 0
         anchors.fill: parent
-        implicitHeight: 40
 
         Repeater {
             model: workspacesShown
 
             Rectangle {
                 z: 1
-                implicitWidth: workspaceButtonWidth
-                implicitHeight: workspaceButtonWidth
-                // radius: Appearance.rounding.full
-                property var leftOccupied: (workspaceOccupied[index - 1] && !(!activeWindow?.activated && monitor.activeWorkspace?.id === index))
-                property var rightOccupied: (workspaceOccupied[index + 1] && !(!activeWindow?.activated && monitor.activeWorkspace?.id === index + 2))
+                x: wsX(index)
+                anchors.verticalCenter: parent.verticalCenter
+                width: workspaceButtonWidth
+                height: workspaceButtonWidth
+                // Don't connect backgrounds across group boundaries
+                property bool atGroupStart: workspaceGroupBoundaries.includes(index)
+                property bool atGroupEnd: workspaceGroupBoundaries.includes(index + 1)
+                property var leftOccupied: !atGroupStart && (workspaceOccupied[index - 1] && !(!activeWindow?.activated && monitor.activeWorkspace?.id === index))
+                property var rightOccupied: !atGroupEnd && (workspaceOccupied[index + 1] && !(!activeWindow?.activated && monitor.activeWorkspace?.id === index + 2))
                 property var radiusLeft: leftOccupied ? 0 : workspaceBackgroundRadius
                 property var radiusRight: rightOccupied ? 0 : workspaceBackgroundRadius
 
@@ -112,31 +126,24 @@ MouseArea {
                 bottomRightRadius: radiusRight
 
                 color: "#2e3440"
-                // color: "transparent"
                 opacity: (workspaceOccupied[index] && !(!activeWindow?.activated && monitor.activeWorkspace?.id === index + 1)) ? 1 : 0
-
-                // anchors.topMargin: 2
 
                 Behavior on opacity {
                     NumberAnimation {
-                        // Use a single, consistent duration for the entire show/hide animation
-                        duration: 30 // Adjust this for your desired speed
-                        easing.type: Easing.OutCubic // A smoother easing curve for movement
+                        duration: 30
+                        easing.type: Easing.OutCubic
                     }
                 }
                 Behavior on radiusLeft {
                     NumberAnimation {
-                        // Use a single, consistent duration for the entire show/hide animation
-                        duration: 50 // Adjust this for your desired speed
-                        easing.type: Easing.OutCubic // A smoother easing curve for movement
+                        duration: 50
+                        easing.type: Easing.OutCubic
                     }
                 }
-
                 Behavior on radiusRight {
                     NumberAnimation {
-                        // Use a single, consistent duration for the entire show/hide animation
-                        duration: 50 // Adjust this for your desired speed
-                        easing.type: Easing.OutCubic // A smoother easing curve for movement
+                        duration: 50
+                        easing.type: Easing.OutCubic
                     }
                 }
             }
@@ -148,34 +155,31 @@ MouseArea {
     // Sliding circle behind active icon
     Rectangle {
         z: 2
-        // Make active ws indicator, which has a brighter color, smaller to look like it is of the same size as ws occupied highlight
-        property real activeWorkspaceMargin: 2
         implicitHeight: workspaceButtonWidth
         radius: workspaceBackgroundRadius
         color: "#81a1c1"
-        // color: "transparent"
-        // border.color: "#81a1c1" // Color of the border
-        // border.width: 1         // Width of the border in pixels
 
         anchors.verticalCenter: parent.verticalCenter
 
-        property real idx1: workspaceIndexInGroup
-        property real idx2: workspaceIndexInGroup
-        x: Math.min(idx1, idx2) * workspaceButtonWidth - 0.1
-        implicitWidth: Math.abs(idx1 - idx2) * workspaceButtonWidth + workspaceButtonWidth
+        // Target position based on current workspace
+        property real targetX: wsX(workspaceIndexInGroup)
 
-        Behavior on activeWorkspaceMargin {
-            animation: Appearance.animation.elementMoveFast.numberAnimation.createObject(this)
-        }
-        Behavior on idx1 {
-            // Leading anim
+        // Two x positions that animate at different speeds for stretching effect
+        property real x1: targetX
+        property real x2: targetX
+
+        x: Math.min(x1, x2)
+        implicitWidth: Math.abs(x1 - x2) + workspaceButtonWidth
+
+        Behavior on x1 {
+            // Leading anim (faster)
             NumberAnimation {
                 duration: 100
                 easing.type: Easing.OutSine
             }
         }
-        Behavior on idx2 {
-            // Following anim
+        Behavior on x2 {
+            // Following anim (slower, creates stretch)
             NumberAnimation {
                 duration: 300
                 easing.type: Easing.OutSine
@@ -183,14 +187,30 @@ MouseArea {
         }
     }
 
+    // Group separator lines
+    Item {
+        z: 4
+        anchors.fill: parent
+
+        Repeater {
+            model: workspaceGroupBoundaries
+
+            Rectangle {
+                x: wsX(modelData) - workspaceGroupSpacing / 2 - 0.5
+                anchors.verticalCenter: parent.verticalCenter
+                width: 1
+                height: 16
+                color: "#4c566a"
+                opacity: 0.6
+            }
+        }
+    }
+
     // Workspaces icons and white color
-    RowLayout {
+    Item {
         id: rowLayoutNumbers
         z: 3
-
-        spacing: 0
         anchors.fill: parent
-        implicitHeight: 40
 
         Repeater {
             model: workspacesShown
@@ -198,7 +218,10 @@ MouseArea {
             Button {
                 id: button
                 property int workspaceValue: workspaceGroup * workspacesShown + index + 1
-                Layout.fillHeight: true
+                x: wsX(index) + 0.5
+                anchors.verticalCenter: parent.verticalCenter
+                width: workspaceButtonWidth
+                height: workspaceButtonWidth
                 onPressed: Hyprland.dispatch(`workspace ${workspaceValue}`)
                 hoverEnabled: true
                 onHoveredChanged: {
@@ -214,7 +237,6 @@ MouseArea {
                         mainAppIcon.height = workspaceIconSizeDefault;
                     }
                 }
-                width: workspaceButtonWidth
                 background: Item {
                     id: workspaceButtonBackground
                     implicitWidth: workspaceButtonWidth
@@ -239,43 +261,21 @@ MouseArea {
                         height: workspaceOccupied[index] ? workspaceIndicatorSizeOccupied : workspaceIndicatorSize
                         radius: workspaceBackgroundRadius
                         color: workspaceOccupied[index] ? "#d8dee9" : "#4c566a"
-                        // visible:
 
                         Behavior on width {
                             NumberAnimation {
-                                // Use a single, consistent duration for the entire show/hide animation
-                                duration: 200 // Adjust this for your desired speed
-                                easing.type: Easing.OutCubic // A smoother easing curve for movement
+                                duration: 200
+                                easing.type: Easing.OutCubic
                             }
                         }
                         Behavior on height {
                             NumberAnimation {
-                                // Use a single, consistent duration for the entire show/hide animation
-                                duration: 200 // Adjust this for your desired speed
-                                easing.type: Easing.OutCubic // A smoother easing curve for movement
+                                duration: 200
+                                easing.type: Easing.OutCubic
                             }
                         }
                     }
-                    // Text {
-                    //     opacity: 1
-                    //     z: 3
 
-                    //     anchors.centerIn: parent
-                    //     horizontalAlignment: Text.AlignHCenter
-                    //     verticalAlignment: Text.AlignVCenter
-                    //     font.pixelSize: Appearance.font.pixelSize.small - ((text.length - 1) * (text !== "10") * 2)
-                    //     text: `${button.workspaceValue}`
-                    //     elide: Text.ElideRight
-                    //     color: (monitor.activeWorkspace?.id == button.workspaceValue) ?
-                    //         "white" :
-                    //         (workspaceOccupied[index] ? "white" :
-                    //             "white")
-
-                    //     Behavior on opacity {
-                    //         animation: Appearance.animation.elementMoveFast.numberAnimation.createObject(this)
-                    //     }
-
-                    // }
                     Item {
                         anchors.centerIn: parent
                         width: workspaceButtonWidth
@@ -283,60 +283,33 @@ MouseArea {
                         IconImage {
                             id: mainAppIcon
                             anchors.centerIn: parent
-                            // anchors.bottom: parent.bottom
-                            // anchors.right: parent.right
-                            // anchors.bottomMargin: (true) ?
-                            //     (workspaceButtonWidth - workspaceIconSize) / 2 : workspaceIconMarginShrinked
-                            // anchors.rightMargin: (true) ?
-                            //     (workspaceButtonWidth - workspaceIconSize) / 2 : workspaceIconMarginShrinked
-
                             opacity: workspaceButtonBackground.mainAppIconPath == "image-missing" ? 0 : 1
                             visible: workspaceButtonBackground.mainAppIconSource == "image-missing" ? 0 : 1
                             source: workspaceButtonBackground.mainAppIconSource
                             implicitSize: workspaceIconSize
-                            // color: workspaceButtonBackground.mainAppIconPath == "image-missing" ? "#d8dee9" : "#4c566a"
 
                             Behavior on opacity {
                                 NumberAnimation {
-                                    // Use a single, consistent duration for the entire show/hide animation
-                                    duration: 200 // Adjust this for your desired speed
-                                    easing.type: Easing.OutCubic // A smoother easing curve for movement
-                                }
-                            }
-                            Behavior on anchors.bottomMargin {
-                                NumberAnimation {
-                                    // Use a single, consistent duration for the entire show/hide animation
-                                    duration: 200 // Adjust this for your desired speed
-                                    easing.type: Easing.OutCubic // A smoother easing curve for movement
-                                }
-                            }
-                            Behavior on anchors.rightMargin {
-                                NumberAnimation {
-                                    // Use a single, consistent duration for the entire show/hide animation
-                                    duration: 200 // Adjust this for your desired speed
-                                    easing.type: Easing.OutCubic // A smoother easing curve for movement
+                                    duration: 200
+                                    easing.type: Easing.OutCubic
                                 }
                             }
                             Behavior on implicitSize {
                                 NumberAnimation {
-                                    // Use a single, consistent duration for the entire show/hide animation
-                                    duration: 200 // Adjust this for your desired speed
-                                    easing.type: Easing.OutCubic // A smoother easing curve for movement
+                                    duration: 200
+                                    easing.type: Easing.OutCubic
                                 }
                             }
-
                             Behavior on width {
                                 NumberAnimation {
-                                    // Use a single, consistent duration for the entire show/hide animation
-                                    duration: 200 // Adjust this for your desired speed
-                                    easing.type: Easing.OutCubic // A smoother easing curve for movement
+                                    duration: 200
+                                    easing.type: Easing.OutCubic
                                 }
                             }
                             Behavior on height {
                                 NumberAnimation {
-                                    // Use a single, consistent duration for the entire show/hide animation
-                                    duration: 200 // Adjust this for your desired speed
-                                    easing.type: Easing.OutCubic // A smoother easing curve for movement
+                                    duration: 200
+                                    easing.type: Easing.OutCubic
                                 }
                             }
                         }

@@ -13,9 +13,13 @@ MouseArea {
     required property var bar
     readonly property HyprlandMonitor monitor: Hyprland.monitorFor(bar.screen)
     readonly property Toplevel activeWindow: ToplevelManager.activeToplevel
-    property int workspacesShown: 10
+    property int workspacesShown: 9
 
-    readonly property int workspaceGroup: Math.floor((monitor.activeWorkspace?.id - 1) / workspacesShown)
+    // Base workspace for each group (workspaces per monitor = 10, but we only show 9)
+    property int workspacesPerMonitor: 10
+    readonly property int workspaceGroup: Math.floor((monitor.activeWorkspace?.id - 1) / workspacesPerMonitor)
+    // First workspace ID for this monitor's group
+    readonly property int workspaceBase: workspaceGroup * workspacesPerMonitor + 1
     property list<bool> workspaceOccupied: []
 
     // Special workspaces
@@ -39,9 +43,9 @@ MouseArea {
     property real workspaceIconSizeHover: 22
     property real workspaceIconSizeDefault: 14
     property real workspaceGroupSpacing: 8  // Spacing between workspace groups
-    property var workspaceGroupBoundaries: [3, 6, 9]  // Indexes where separators appear (before these workspaces)
+    property var workspaceGroupBoundaries: [3, 6]  // Indexes where separators appear (before these workspaces)
 
-    property int workspaceIndexInGroup: (monitor.activeWorkspace?.id - (11 - workspacesShown)) % workspacesShown
+    property int workspaceIndexInGroup: monitor.activeWorkspace?.id - workspaceBase
 
     // Count how many boundaries are before a given index
     function boundariesBefore(idx) {
@@ -55,7 +59,7 @@ MouseArea {
         workspaceOccupied = Array.from({
             length: workspacesShown
         }, (_, i) => {
-            return Hyprland.workspaces.values.some(ws => ws.id === workspaceGroup * workspacesShown + i + 1);
+            return Hyprland.workspaces.values.some(ws => ws.id === workspaceBase + i);
         });
     }
 
@@ -433,7 +437,7 @@ MouseArea {
 
             Button {
                 id: button
-                property int workspaceValue: workspaceGroup * workspacesShown + index + 1
+                property int workspaceValue: workspaceBase + index
                 x: wsX(index) + 0.5
                 anchors.verticalCenter: parent.verticalCenter
                 width: workspaceButtonWidth

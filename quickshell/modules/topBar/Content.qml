@@ -21,11 +21,11 @@ Rectangle {
 
     implicitWidth: {
         if (content.state.isLauncherOpen) {
-            return launcherView.implicitWidth + 20
+            return launcherView.implicitWidth + 20;
         } else if (content.state.isClockVisible) {
-            return main.implicitWidth + 20
+            return main.implicitWidth + 20;
         } else {
-            return workspace.implicitWidth + 20
+            return workspace.implicitWidth + 20;
         }
     }
     implicitHeight: content.state.isLauncherOpen ? launcherView.implicitHeight : 40

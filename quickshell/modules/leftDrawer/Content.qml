@@ -7,9 +7,8 @@ import Quickshell.Services.Pipewire
 import "widgets" // Assuming AudioBar.qml and BrightnessBar.qml are in this directory
 import Quickshell.Hyprland // Required to get the focused monitor from Hyprland
 
-
 Rectangle {
-    id : barContent
+    id: barContent
     required property var root
     required property LeftDrawerState state
 
@@ -20,26 +19,21 @@ Rectangle {
     clip: true
     color: "transparent"
 
-
     implicitWidth: main.width
     implicitHeight: main.height
 
+    WallpaperPicker {
+        id: main
+        anchors.centerIn: parent
+        z: 100
+    }
 
-
-        WallpaperPicker {
-
-            id: main
-            anchors.centerIn: parent
-            z: 100
-        }
-
-        Behavior on opacity {
-            NumberAnimation {
+    Behavior on opacity {
+        NumberAnimation {
             duration: 100
             easing.type: Easing.OutCubic
-            }
         }
-    
+    }
 
     Behavior on implicitWidth {
         NumberAnimation {
@@ -47,5 +41,4 @@ Rectangle {
             easing.type: Easing.OutCubic
         }
     }
-
 }

@@ -11,7 +11,7 @@ import sys
 
 APPS = {
     "obsidian": ("obsidian", "obsidian", "obsidian"),
-    "spotify": ("music", "spotify", "spotify"),
+    "spotify": ("spotify", "spotify", "spotify"),
     "beeper": ("beeper", "beeper", "BeeperTexts"),
     "discord": ("discord", "discord", "discord"),
     "slack": ("slack", "slack", "Slack"),

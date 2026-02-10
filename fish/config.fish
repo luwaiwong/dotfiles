@@ -68,8 +68,9 @@ function fish_prompt
 end
 
 # Alias for 'ls' with common options
-alias hp "hyprland"
+alias hp "start-hyprland"
 alias sp "spotify_player"
 alias qs "killall quickshell; ~/.config/quickshell/launchshell.sh"
 alias lg "lazygit"
 alias nv "nvim"
+set -gx DOCKER_HOST unix:///var/run/docker.sock

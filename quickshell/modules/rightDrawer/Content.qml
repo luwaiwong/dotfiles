@@ -7,9 +7,8 @@ import Quickshell.Services.Pipewire
 import "widgets" // Assuming AudioBar.qml and BrightnessBar.qml are in this directory
 import Quickshell.Hyprland // Required to get the focused monitor from Hyprland
 
-
 Rectangle {
-    id : barContent
+    id: barContent
     required property var root
 
     // anchors.centerIn: parent
@@ -19,13 +18,10 @@ Rectangle {
     clip: true
     color: "transparent"
 
-
-    implicitWidth: main.implicitWidth+15
-    implicitHeight: main.implicitHeight+20
-
+    implicitWidth: main.implicitWidth + 15
+    implicitHeight: main.implicitHeight + 20
 
     RowLayout {
-
         id: main
         anchors.centerIn: parent
         z: 100
@@ -59,8 +55,8 @@ Rectangle {
 
         Behavior on opacity {
             NumberAnimation {
-            duration: 100
-            easing.type: Easing.OutCubic
+                duration: 100
+                easing.type: Easing.OutCubic
             }
         }
     }
@@ -71,5 +67,4 @@ Rectangle {
             easing.type: Easing.OutCubic
         }
     }
-
 }

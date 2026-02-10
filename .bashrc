@@ -2,7 +2,7 @@
 pfetch
 export PATH=$HOME/.local/bin:$PATH
 
-alias hp="hyprland"
+alias hp="start-hyprland"
 alias sp="spotify_player"
 alias quick="~/.config/quickshell/launchshell.sh"
 fish

@@ -13,7 +13,7 @@ MouseArea {
     required property var bar
     readonly property HyprlandMonitor monitor: Hyprland.monitorFor(bar.screen)
     readonly property Toplevel activeWindow: ToplevelManager.activeToplevel
-    property int workspacesShown: 9
+    property int workspacesShown: 10
 
     // Base workspace for each group (workspaces per monitor = 10, but we only show 9)
     property int workspacesPerMonitor: 10
@@ -43,7 +43,7 @@ MouseArea {
     property real workspaceIconSizeHover: 22
     property real workspaceIconSizeDefault: 14
     property real workspaceGroupSpacing: 8  // Spacing between workspace groups
-    property var workspaceGroupBoundaries: [3, 6]  // Indexes where separators appear (before these workspaces)
+    property var workspaceGroupBoundaries: [3, 6,9]  // Indexes where separators appear (before these workspaces)
 
     property int workspaceIndexInGroup: monitor.activeWorkspace?.id - workspaceBase
 
